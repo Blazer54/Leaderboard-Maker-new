@@ -35,563 +35,106 @@ namespace ProjetPerso
             lblequipe4.Text = equipe[4].NomEquipe;
             lblequipe5.Text = equipe[5].NomEquipe;
             lblequipe6.Text = equipe[6].NomEquipe;
-            
-            /*
-            //joueur 1//
-            if (joueur[1].NomEquipe == equipe[1].NomEquipe) // si le joueur appartient a l'équipe 1 //
+            int nombreDeJoueur = Convert.ToInt32(nombrejoueur);
+
+            if (nombrejoueur == "2")
+            { }
+
+            for (int i = 1; i <= nombreDeJoueur; i++)
             {
-                if (lbljoueur1equip1.Text == null)
-                { lbljoueur1equip1.Text = joueur[1].Nom; }
-                else if (lbljoueur2equip1.Text == null)
-                { lbljoueur2equip1.Text = joueur[1].Nom; }
-                else if (lbljoueur3equip1.Text == null)
-                { lbljoueur3equip1.Text = joueur[1].Nom; }
-                else if (lbljoueur4equip1.Text == null)
-                { lbljoueur4equip1.Text = joueur[1].Nom; }
-                else if (lbljoueur5equip1.Text == null)
-                { lbljoueur5equip1.Text = joueur[1].Nom; }
-                else if (lbljoueur6equip1.Text == null)
-                { lbljoueur6equip1.Text = joueur[1].Nom; }
+                if (joueur[i].NomEquipe == equipe[1].NomEquipe) // si le joueur appartient a l'équipe 1 //
+                {
+                    if (lbljoueur1equip1.Text == "") //si le lbl joueur1 equipe 1 est vide //
+                    { lbljoueur1equip1.Text = joueur[i].Nom; } //je met alors le nom du joueur a la place //
+                    else if (lbljoueur2equip1.Text == "")
+                    { lbljoueur2equip1.Text = joueur[i].Nom; }
+                    else if (lbljoueur3equip1.Text == "")
+                    { lbljoueur3equip1.Text = joueur[i].Nom; }
+                    else if (lbljoueur4equip1.Text == "")
+                    { lbljoueur4equip1.Text = joueur[i].Nom; }
+                    else if (lbljoueur5equip1.Text == "")
+                    { lbljoueur5equip1.Text = joueur[i].Nom; }
+                    else if (lbljoueur6equip1.Text == "")
+                    { lbljoueur6equip1.Text = joueur[i].Nom; }
+                }
+                else if (joueur[i].NomEquipe == equipe[2].NomEquipe) // si le joueur appartient a l'équipe 2 //
+                {
+                    if (lbljoueur1equip2.Text == "")
+                    { lbljoueur1equip2.Text = joueur[i].Nom; }
+                    else if (lbljoueur2equip2.Text == "")
+                    { lbljoueur2equip2.Text = joueur[i].Nom; }
+                    else if (lbljoueur3equip2.Text == "")
+                    { lbljoueur3equip2.Text = joueur[i].Nom; }
+                    else if (lbljoueur4equip2.Text == "")
+                    { lbljoueur4equip2.Text = joueur[i].Nom; }
+                    else if (lbljoueur5equip2.Text == "")
+                    { lbljoueur5equip2.Text = joueur[i].Nom; }
+                    else if (lbljoueur6equip2.Text == "")
+                    { lbljoueur6equip2.Text = joueur[i].Nom; }
+                }
+                else if (joueur[i].NomEquipe == equipe[3].NomEquipe) // si le joueur appartient a l'équipe 3 //
+                {
+                    if (lbljoueur1equip3.Text == "")
+                    { lbljoueur1equip3.Text = joueur[i].Nom; }
+                    else if (lbljoueur2equip3.Text == "")
+                    { lbljoueur2equip3.Text = joueur[i].Nom; }
+                    else if (lbljoueur3equip3.Text == "")
+                    { lbljoueur3equip3.Text = joueur[i].Nom; }
+                    else if (lbljoueur4equip3.Text == "")
+                    { lbljoueur4equip3.Text = joueur[i].Nom; }
+                    else if (lbljoueur5equip3.Text == "")
+                    { lbljoueur5equip3.Text = joueur[i].Nom; }
+                    else if (lbljoueur6equip3.Text == "")
+                    { lbljoueur6equip3.Text = joueur[i].Nom; }
+                }
+                else if (joueur[i].NomEquipe == equipe[4].NomEquipe) // si le joueur appartient a l'équipe 4 //
+                {
+                    if (lbljoueur1equip4.Text == "")
+                    { lbljoueur1equip4.Text = joueur[i].Nom; }
+                    else if (lbljoueur2equip4.Text == "")
+                    { lbljoueur2equip4.Text = joueur[i].Nom; }
+                    else if (lbljoueur3equip4.Text == "")
+                    { lbljoueur3equip4.Text = joueur[i].Nom; }
+                    else if (lbljoueur4equip4.Text == "")
+                    { lbljoueur4equip4.Text = joueur[i].Nom; }
+                    else if (lbljoueur5equip4.Text == "")
+                    { lbljoueur5equip4.Text = joueur[i].Nom; }
+                    else if (lbljoueur6equip4.Text == "")
+                    { lbljoueur6equip4.Text = joueur[i].Nom; }
+                }
+                else if (joueur[i].NomEquipe == equipe[5].NomEquipe) // si le joueur appartient a l'équipe 5 //
+                {
+                    if (lbljoueur1equip5.Text == "")
+                    { lbljoueur1equip5.Text = joueur[i].Nom; }
+                    else if (lbljoueur2equip5.Text == "")
+                    { lbljoueur2equip5.Text = joueur[i].Nom; }
+                    else if (lbljoueur3equip5.Text == "")
+                    { lbljoueur3equip5.Text = joueur[i].Nom; }
+                    else if (lbljoueur4equip5.Text == "")
+                    { lbljoueur4equip5.Text = joueur[i].Nom; }
+                    else if (lbljoueur5equip5.Text == "")
+                    { lbljoueur5equip5.Text = joueur[i].Nom; }
+                    else if (lbljoueur6equip5.Text == "")
+                    { lbljoueur6equip5.Text = joueur[i].Nom; }
+                }
+                else if (joueur[i].NomEquipe == equipe[6].NomEquipe) // si le joueur appartient a l'équipe 6 //
+                {
+                    if (lbljoueur1equip6.Text == "")
+                    { lbljoueur1equip6.Text = joueur[i].Nom; }
+                    else if (lbljoueur2equip6.Text == "")
+                    { lbljoueur2equip6.Text = joueur[i].Nom; }
+                    else if (lbljoueur3equip6.Text == "")
+                    { lbljoueur3equip6.Text = joueur[i].Nom; }
+                    else if (lbljoueur4equip6.Text == "")
+                    { lbljoueur4equip6.Text = joueur[i].Nom; }
+                    else if (lbljoueur5equip6.Text == "")
+                    { lbljoueur5equip6.Text = joueur[i].Nom; }
+                    else if (lbljoueur6equip6.Text == "")
+                    { lbljoueur6equip6.Text = joueur[i].Nom; }
+                }
+
             }
-            else if (joueur[1].NomEquipe == equipe[2].NomEquipe) // si le joueur appartient a l'équipe 2 //
-            {
-                if (lbljoueur1equip2.Text == null)
-                { lbljoueur1equip2.Text = joueur[1].Nom; }
-                else if (lbljoueur2equip2.Text == null)
-                { lbljoueur2equip2.Text = joueur[1].Nom; }
-                else if (lbljoueur3equip2.Text == null)
-                { lbljoueur3equip2.Text = joueur[1].Nom; }
-                else if (lbljoueur4equip2.Text == null)
-                { lbljoueur4equip2.Text = joueur[1].Nom; }
-                else if (lbljoueur5equip2.Text == null)
-                { lbljoueur5equip2.Text = joueur[1].Nom; }
-                else if (lbljoueur6equip2.Text == null)
-                { lbljoueur6equip2.Text = joueur[1].Nom; }
-            }
-            else if (joueur[1].NomEquipe == equipe[3].NomEquipe) // si le joueur appartient a l'équipe 3 //
-            {
-                if (lbljoueur1equip3.Text == null)
-                { lbljoueur1equip3.Text = joueur[1].Nom; }
-                else if (lbljoueur2equip3.Text == null)
-                { lbljoueur2equip3.Text = joueur[1].Nom; }
-                else if (lbljoueur3equip3.Text == null)
-                { lbljoueur3equip3.Text = joueur[1].Nom; }
-                else if (lbljoueur4equip3.Text == null)
-                { lbljoueur4equip3.Text = joueur[1].Nom; }
-                else if (lbljoueur5equip3.Text == null)
-                { lbljoueur5equip3.Text = joueur[1].Nom; }
-                else if (lbljoueur6equip3.Text == null)
-                { lbljoueur6equip3.Text = joueur[1].Nom; }
-            }
-            else if (joueur[1].NomEquipe == equipe[4].NomEquipe) // si le joueur appartient a l'équipe 4 //
-            {
-                if (lbljoueur1equip4.Text == null)
-                { lbljoueur1equip4.Text = joueur[1].Nom; }
-                else if (lbljoueur2equip4.Text == null)
-                { lbljoueur2equip4.Text = joueur[1].Nom; }
-                else if (lbljoueur3equip4.Text == null)
-                { lbljoueur3equip4.Text = joueur[1].Nom; }
-                else if (lbljoueur4equip4.Text == null)
-                { lbljoueur4equip4.Text = joueur[1].Nom; }
-                else if (lbljoueur5equip4.Text == null)
-                { lbljoueur5equip4.Text = joueur[1].Nom; }
-                else if (lbljoueur6equip4.Text == null)
-                { lbljoueur6equip4.Text = joueur[1].Nom; }
-            }
-            else if (joueur[1].NomEquipe == equipe[5].NomEquipe) // si le joueur appartient a l'équipe 5 //
-            {
-                if (lbljoueur1equip5.Text == null)
-                { lbljoueur1equip5.Text = joueur[1].Nom; }
-                else if (lbljoueur2equip5.Text == null)
-                { lbljoueur2equip5.Text = joueur[1].Nom; }
-                else if (lbljoueur3equip5.Text == null)
-                { lbljoueur3equip5.Text = joueur[1].Nom; }
-                else if (lbljoueur4equip5.Text == null)
-                { lbljoueur4equip5.Text = joueur[1].Nom; }
-                else if (lbljoueur5equip5.Text == null)
-                { lbljoueur5equip5.Text = joueur[1].Nom; }
-                else if (lbljoueur6equip5.Text == null)
-                { lbljoueur6equip5.Text = joueur[1].Nom; }
-            }
-            else if (joueur[1].NomEquipe == equipe[6].NomEquipe) // si le joueur appartient a l'équipe 6 //
-            {
-                if (lbljoueur1equip6.Text == null)
-                { lbljoueur1equip6.Text = joueur[1].Nom; }
-                else if (lbljoueur2equip6.Text == null)
-                { lbljoueur2equip6.Text = joueur[1].Nom; }
-                else if (lbljoueur3equip6.Text == null)
-                { lbljoueur3equip6.Text = joueur[1].Nom; }
-                else if (lbljoueur4equip6.Text == null)
-                { lbljoueur4equip6.Text = joueur[1].Nom; }
-                else if (lbljoueur5equip6.Text == null)
-                { lbljoueur5equip6.Text = joueur[1].Nom; }
-                else if (lbljoueur6equip6.Text == null)
-                { lbljoueur6equip6.Text = joueur[1].Nom; }
-            }
-            //joueur 2 //
-            if (joueur[2].NomEquipe == equipe[1].NomEquipe) // si le joueur appartient a l'équipe 1 //
-            {
-                if (lbljoueur1equip1.Text == null)
-                { lbljoueur1equip1.Text = joueur[2].Nom; }
-                else if (lbljoueur2equip1.Text == null)
-                { lbljoueur2equip1.Text = joueur[2].Nom; }
-                else if (lbljoueur3equip1.Text == null)
-                { lbljoueur3equip1.Text = joueur[2].Nom; }
-                else if (lbljoueur4equip1.Text == null)
-                { lbljoueur4equip1.Text = joueur[2].Nom; }
-                else if (lbljoueur5equip1.Text == null)
-                { lbljoueur5equip1.Text = joueur[2].Nom; }
-                else if (lbljoueur6equip1.Text == null)
-                { lbljoueur6equip1.Text = joueur[2].Nom; }
-            }
-            else if (joueur[2].NomEquipe == equipe[2].NomEquipe) // si le joueur appartient a l'équipe 2 //
-            {
-                if (lbljoueur1equip2.Text == null)
-                { lbljoueur1equip2.Text = joueur[2].Nom; }
-                else if (lbljoueur2equip2.Text == null)
-                { lbljoueur2equip2.Text = joueur[2].Nom; }
-                else if (lbljoueur3equip2.Text == null)
-                { lbljoueur3equip2.Text = joueur[2].Nom; }
-                else if (lbljoueur4equip2.Text == null)
-                { lbljoueur4equip2.Text = joueur[2].Nom; }
-                else if (lbljoueur5equip2.Text == null)
-                { lbljoueur5equip2.Text = joueur[2].Nom; }
-                else if (lbljoueur6equip2.Text == null)
-                { lbljoueur6equip2.Text = joueur[2].Nom; }
-            }
-            else if (joueur[2].NomEquipe == equipe[3].NomEquipe) // si le joueur appartient a l'équipe 3 //
-            {
-                if (lbljoueur1equip3.Text == null)
-                { lbljoueur1equip3.Text = joueur[2].Nom; }
-                else if (lbljoueur2equip3.Text == null)
-                { lbljoueur2equip3.Text = joueur[2].Nom; }
-                else if (lbljoueur3equip3.Text == null)
-                { lbljoueur3equip3.Text = joueur[2].Nom; }
-                else if (lbljoueur4equip3.Text == null)
-                { lbljoueur4equip3.Text = joueur[2].Nom; }
-                else if (lbljoueur5equip3.Text == null)
-                { lbljoueur5equip3.Text = joueur[2].Nom; }
-                else if (lbljoueur6equip3.Text == null)
-                { lbljoueur6equip3.Text = joueur[2].Nom; }
-            }
-            else if (joueur[2].NomEquipe == equipe[4].NomEquipe) // si le joueur appartient a l'équipe 4 //
-            {
-                if (lbljoueur1equip4.Text == null)
-                { lbljoueur1equip4.Text = joueur[2].Nom; }
-                else if (lbljoueur2equip4.Text == null)
-                { lbljoueur2equip4.Text = joueur[2].Nom; }
-                else if (lbljoueur3equip4.Text == null)
-                { lbljoueur3equip4.Text = joueur[2].Nom; }
-                else if (lbljoueur4equip4.Text == null)
-                { lbljoueur4equip4.Text = joueur[2].Nom; }
-                else if (lbljoueur5equip4.Text == null)
-                { lbljoueur5equip4.Text = joueur[2].Nom; }
-                else if (lbljoueur6equip4.Text == null)
-                { lbljoueur6equip4.Text = joueur[2].Nom; }
-            }
-            else if (joueur[2].NomEquipe == equipe[5].NomEquipe) // si le joueur appartient a l'équipe 5 //
-            {
-                if (lbljoueur1equip5.Text == null)
-                { lbljoueur1equip5.Text = joueur[2].Nom; }
-                else if (lbljoueur2equip5.Text == null)
-                { lbljoueur2equip5.Text = joueur[2].Nom; }
-                else if (lbljoueur3equip5.Text == null)
-                { lbljoueur3equip5.Text = joueur[2].Nom; }
-                else if (lbljoueur4equip5.Text == null)
-                { lbljoueur4equip5.Text = joueur[2].Nom; }
-                else if (lbljoueur5equip5.Text == null)
-                { lbljoueur5equip5.Text = joueur[2].Nom; }
-                else if (lbljoueur6equip5.Text == null)
-                { lbljoueur6equip5.Text = joueur[2].Nom; }
-            }
-            else if (joueur[2].NomEquipe == equipe[6].NomEquipe) // si le joueur appartient a l'équipe 6 //
-            {
-                if (lbljoueur1equip6.Text == null)
-                { lbljoueur1equip6.Text = joueur[2].Nom; }
-                else if (lbljoueur2equip6.Text == null)
-                { lbljoueur2equip6.Text = joueur[2].Nom; }
-                else if (lbljoueur3equip6.Text == null)
-                { lbljoueur3equip6.Text = joueur[2].Nom; }
-                else if (lbljoueur4equip6.Text == null)
-                { lbljoueur4equip6.Text = joueur[2].Nom; }
-                else if (lbljoueur5equip6.Text == null)
-                { lbljoueur5equip6.Text = joueur[2].Nom; }
-                else if (lbljoueur6equip6.Text == null)
-                { lbljoueur6equip6.Text = joueur[2].Nom; }
-            }
-            //joueur 3 //
-            if (joueur[3].NomEquipe == equipe[1].NomEquipe) // si le joueur appartient a l'équipe 1 //
-            {
-                if (lbljoueur1equip1.Text == null)
-                { lbljoueur1equip1.Text = joueur[3].Nom; }
-                else if (lbljoueur2equip1.Text == null)
-                { lbljoueur2equip1.Text = joueur[3].Nom; }
-                else if (lbljoueur3equip1.Text == null)
-                { lbljoueur3equip1.Text = joueur[3].Nom; }
-                else if (lbljoueur4equip1.Text == null)
-                { lbljoueur4equip1.Text = joueur[3].Nom; }
-                else if (lbljoueur5equip1.Text == null)
-                { lbljoueur5equip1.Text = joueur[3].Nom; }
-                else if (lbljoueur6equip1.Text == null)
-                { lbljoueur6equip1.Text = joueur[3].Nom; }
-            }
-            else if (joueur[3].NomEquipe == equipe[2].NomEquipe) // si le joueur appartient a l'équipe 2 //
-            {
-                if (lbljoueur1equip2.Text == null)
-                { lbljoueur1equip2.Text = joueur[3].Nom; }
-                else if (lbljoueur2equip2.Text == null)
-                { lbljoueur2equip2.Text = joueur[3].Nom; }
-                else if (lbljoueur3equip2.Text == null)
-                { lbljoueur3equip2.Text = joueur[3].Nom; }
-                else if (lbljoueur4equip2.Text == null)
-                { lbljoueur4equip2.Text = joueur[3].Nom; }
-                else if (lbljoueur5equip2.Text == null)
-                { lbljoueur5equip2.Text = joueur[3].Nom; }
-                else if (lbljoueur6equip2.Text == null)
-                { lbljoueur6equip2.Text = joueur[3].Nom; }
-            }
-            else if (joueur[3].NomEquipe == equipe[3].NomEquipe) // si le joueur appartient a l'équipe 3 //
-            {
-                if (lbljoueur1equip3.Text == null)
-                { lbljoueur1equip3.Text = joueur[3].Nom; }
-                else if (lbljoueur2equip3.Text == null)
-                { lbljoueur2equip3.Text = joueur[3].Nom; }
-                else if (lbljoueur3equip3.Text == null)
-                { lbljoueur3equip3.Text = joueur[3].Nom; }
-                else if (lbljoueur4equip3.Text == null)
-                { lbljoueur4equip3.Text = joueur[3].Nom; }
-                else if (lbljoueur5equip3.Text == null)
-                { lbljoueur5equip3.Text = joueur[3].Nom; }
-                else if (lbljoueur6equip3.Text == null)
-                { lbljoueur6equip3.Text = joueur[3].Nom; }
-            }
-            else if (joueur[3].NomEquipe == equipe[4].NomEquipe) // si le joueur appartient a l'équipe 4 //
-            {
-                if (lbljoueur1equip4.Text == null)
-                { lbljoueur1equip4.Text = joueur[3].Nom; }
-                else if (lbljoueur2equip4.Text == null)
-                { lbljoueur2equip4.Text = joueur[3].Nom; }
-                else if (lbljoueur3equip4.Text == null)
-                { lbljoueur3equip4.Text = joueur[3].Nom; }
-                else if (lbljoueur4equip4.Text == null)
-                { lbljoueur4equip4.Text = joueur[3].Nom; }
-                else if (lbljoueur5equip4.Text == null)
-                { lbljoueur5equip4.Text = joueur[3].Nom; }
-                else if (lbljoueur6equip4.Text == null)
-                { lbljoueur6equip4.Text = joueur[3].Nom; }
-            }
-            else if (joueur[3].NomEquipe == equipe[5].NomEquipe) // si le joueur appartient a l'équipe 5 //
-            {
-                if (lbljoueur1equip5.Text == null)
-                { lbljoueur1equip5.Text = joueur[3].Nom; }
-                else if (lbljoueur2equip5.Text == null)
-                { lbljoueur2equip5.Text = joueur[3].Nom; }
-                else if (lbljoueur3equip5.Text == null)
-                { lbljoueur3equip5.Text = joueur[3].Nom; }
-                else if (lbljoueur4equip5.Text == null)
-                { lbljoueur4equip5.Text = joueur[3].Nom; }
-                else if (lbljoueur5equip5.Text == null)
-                { lbljoueur5equip5.Text = joueur[3].Nom; }
-                else if (lbljoueur6equip5.Text == null)
-                { lbljoueur6equip5.Text = joueur[3].Nom; }
-            }
-            else if (joueur[3].NomEquipe == equipe[6].NomEquipe) // si le joueur appartient a l'équipe 6 //
-            {
-                if (lbljoueur1equip6.Text == null)
-                { lbljoueur1equip6.Text = joueur[3].Nom; }
-                else if (lbljoueur2equip6.Text == null)
-                { lbljoueur2equip6.Text = joueur[3].Nom; }
-                else if (lbljoueur3equip6.Text == null)
-                { lbljoueur3equip6.Text = joueur[3].Nom; }
-                else if (lbljoueur4equip6.Text == null)
-                { lbljoueur4equip6.Text = joueur[3].Nom; }
-                else if (lbljoueur5equip6.Text == null)
-                { lbljoueur5equip6.Text = joueur[3].Nom; }
-                else if (lbljoueur6equip6.Text == null)
-                { lbljoueur6equip6.Text = joueur[3].Nom; }
-            }
-            //joueur 4 //
-            if (joueur[4].NomEquipe == equipe[1].NomEquipe) // si le joueur appartient a l'équipe 1 //
-            {
-                if (lbljoueur1equip1.Text == null)
-                { lbljoueur1equip1.Text = joueur[4].Nom; }
-                else if (lbljoueur2equip1.Text == null)
-                { lbljoueur2equip1.Text = joueur[4].Nom; }
-                else if (lbljoueur3equip1.Text == null)
-                { lbljoueur3equip1.Text = joueur[4].Nom; }
-                else if (lbljoueur4equip1.Text == null)
-                { lbljoueur4equip1.Text = joueur[4].Nom; }
-                else if (lbljoueur5equip1.Text == null)
-                { lbljoueur5equip1.Text = joueur[4].Nom; }
-                else if (lbljoueur6equip1.Text == null)
-                { lbljoueur6equip1.Text = joueur[4].Nom; }
-            }
-            else if (joueur[4].NomEquipe == equipe[2].NomEquipe) // si le joueur appartient a l'équipe 2 //
-            {
-                if (lbljoueur1equip2.Text == null)
-                { lbljoueur1equip2.Text = joueur[4].Nom; }
-                else if (lbljoueur2equip2.Text == null)
-                { lbljoueur2equip2.Text = joueur[4].Nom; }
-                else if (lbljoueur3equip2.Text == null)
-                { lbljoueur3equip2.Text = joueur[4].Nom; }
-                else if (lbljoueur4equip2.Text == null)
-                { lbljoueur4equip2.Text = joueur[4].Nom; }
-                else if (lbljoueur5equip2.Text == null)
-                { lbljoueur5equip2.Text = joueur[4].Nom; }
-                else if (lbljoueur6equip2.Text == null)
-                { lbljoueur6equip2.Text = joueur[4].Nom; }
-            }
-            else if (joueur[4].NomEquipe == equipe[3].NomEquipe) // si le joueur appartient a l'équipe 3 //
-            {
-                if (lbljoueur1equip3.Text == null)
-                { lbljoueur1equip3.Text = joueur[4].Nom; }
-                else if (lbljoueur2equip3.Text == null)
-                { lbljoueur2equip3.Text = joueur[4].Nom; }
-                else if (lbljoueur3equip3.Text == null)
-                { lbljoueur3equip3.Text = joueur[4].Nom; }
-                else if (lbljoueur4equip3.Text == null)
-                { lbljoueur4equip3.Text = joueur[4].Nom; }
-                else if (lbljoueur5equip3.Text == null)
-                { lbljoueur5equip3.Text = joueur[4].Nom; }
-                else if (lbljoueur6equip3.Text == null)
-                { lbljoueur6equip3.Text = joueur[4].Nom; }
-            }
-            else if (joueur[4].NomEquipe == equipe[4].NomEquipe) // si le joueur appartient a l'équipe 4 //
-            {
-                if (lbljoueur1equip4.Text == null)
-                { lbljoueur1equip4.Text = joueur[4].Nom; }
-                else if (lbljoueur2equip4.Text == null)
-                { lbljoueur2equip4.Text = joueur[4].Nom; }
-                else if (lbljoueur3equip4.Text == null)
-                { lbljoueur3equip4.Text = joueur[4].Nom; }
-                else if (lbljoueur4equip4.Text == null)
-                { lbljoueur4equip4.Text = joueur[4].Nom; }
-                else if (lbljoueur5equip4.Text == null)
-                { lbljoueur5equip4.Text = joueur[4].Nom; }
-                else if (lbljoueur6equip4.Text == null)
-                { lbljoueur6equip4.Text = joueur[4].Nom; }
-            }
-            else if (joueur[4].NomEquipe == equipe[5].NomEquipe) // si le joueur appartient a l'équipe 5 //
-            {
-                if (lbljoueur1equip5.Text == null)
-                { lbljoueur1equip5.Text = joueur[4].Nom; }
-                else if (lbljoueur2equip5.Text == null)
-                { lbljoueur2equip5.Text = joueur[4].Nom; }
-                else if (lbljoueur3equip5.Text == null)
-                { lbljoueur3equip5.Text = joueur[4].Nom; }
-                else if (lbljoueur4equip5.Text == null)
-                { lbljoueur4equip5.Text = joueur[4].Nom; }
-                else if (lbljoueur5equip5.Text == null)
-                { lbljoueur5equip5.Text = joueur[4].Nom; }
-                else if (lbljoueur6equip5.Text == null)
-                { lbljoueur6equip5.Text = joueur[4].Nom; }
-            }
-            else if (joueur[4].NomEquipe == equipe[6].NomEquipe) // si le joueur appartient a l'équipe 6 //
-            {
-                if (lbljoueur1equip6.Text == null)
-                { lbljoueur1equip6.Text = joueur[4].Nom; }
-                else if (lbljoueur2equip6.Text == null)
-                { lbljoueur2equip6.Text = joueur[4].Nom; }
-                else if (lbljoueur3equip6.Text == null)
-                { lbljoueur3equip6.Text = joueur[4].Nom; }
-                else if (lbljoueur4equip6.Text == null)
-                { lbljoueur4equip6.Text = joueur[4].Nom; }
-                else if (lbljoueur5equip6.Text == null)
-                { lbljoueur5equip6.Text = joueur[4].Nom; }
-                else if (lbljoueur6equip6.Text == null)
-                { lbljoueur6equip6.Text = joueur[1].Nom; }
-            }
-            //joueur 5 //
-            if (joueur[5].NomEquipe == equipe[1].NomEquipe) // si le joueur appartient a l'équipe 1 //
-            {
-                if (lbljoueur1equip1.Text == null)
-                { lbljoueur1equip1.Text = joueur[5].Nom; }
-                else if (lbljoueur2equip1.Text == null)
-                { lbljoueur2equip1.Text = joueur[5].Nom; }
-                else if (lbljoueur3equip1.Text == null)
-                { lbljoueur3equip1.Text = joueur[5].Nom; }
-                else if (lbljoueur4equip1.Text == null)
-                { lbljoueur4equip1.Text = joueur[5].Nom; }
-                else if (lbljoueur5equip1.Text == null)
-                { lbljoueur5equip1.Text = joueur[5].Nom; }
-                else if (lbljoueur6equip1.Text == null)
-                { lbljoueur6equip1.Text = joueur[5].Nom; }
-            }
-            else if (joueur[5].NomEquipe == equipe[2].NomEquipe) // si le joueur appartient a l'équipe 2 //
-            {
-                if (lbljoueur1equip2.Text == null)
-                { lbljoueur1equip2.Text = joueur[5].Nom; }
-                else if (lbljoueur2equip2.Text == null)
-                { lbljoueur2equip2.Text = joueur[5].Nom; }
-                else if (lbljoueur3equip2.Text == null)
-                { lbljoueur3equip2.Text = joueur[5].Nom; }
-                else if (lbljoueur4equip2.Text == null)
-                { lbljoueur4equip2.Text = joueur[5].Nom; }
-                else if (lbljoueur5equip2.Text == null)
-                { lbljoueur5equip2.Text = joueur[5].Nom; }
-                else if (lbljoueur6equip2.Text == null)
-                { lbljoueur6equip2.Text = joueur[5].Nom; }
-            }
-            else if (joueur[5].NomEquipe == equipe[3].NomEquipe) // si le joueur appartient a l'équipe 3 //
-            {
-                if (lbljoueur1equip3.Text == null)
-                { lbljoueur1equip3.Text = joueur[5].Nom; }
-                else if (lbljoueur2equip3.Text == null)
-                { lbljoueur2equip3.Text = joueur[5].Nom; }
-                else if (lbljoueur3equip3.Text == null)
-                { lbljoueur3equip3.Text = joueur[5].Nom; }
-                else if (lbljoueur4equip3.Text == null)
-                { lbljoueur4equip3.Text = joueur[5].Nom; }
-                else if (lbljoueur5equip3.Text == null)
-                { lbljoueur5equip3.Text = joueur[5].Nom; }
-                else if (lbljoueur6equip3.Text == null)
-                { lbljoueur6equip3.Text = joueur[5].Nom; }
-            }
-            else if (joueur[5].NomEquipe == equipe[4].NomEquipe) // si le joueur appartient a l'équipe 4 //
-            {
-                if (lbljoueur1equip4.Text == null)
-                { lbljoueur1equip4.Text = joueur[5].Nom; }
-                else if (lbljoueur2equip4.Text == null)
-                { lbljoueur2equip4.Text = joueur[5].Nom; }
-                else if (lbljoueur3equip4.Text == null)
-                { lbljoueur3equip4.Text = joueur[5].Nom; }
-                else if (lbljoueur4equip4.Text == null)
-                { lbljoueur4equip4.Text = joueur[5].Nom; }
-                else if (lbljoueur5equip4.Text == null)
-                { lbljoueur5equip4.Text = joueur[5].Nom; }
-                else if (lbljoueur6equip4.Text == null)
-                { lbljoueur6equip4.Text = joueur[5].Nom; }
-            }
-            else if (joueur[5].NomEquipe == equipe[5].NomEquipe) // si le joueur appartient a l'équipe 5 //
-            {
-                if (lbljoueur1equip5.Text == null)
-                { lbljoueur1equip5.Text = joueur[5].Nom; }
-                else if (lbljoueur2equip5.Text == null)
-                { lbljoueur2equip5.Text = joueur[5].Nom; }
-                else if (lbljoueur3equip5.Text == null)
-                { lbljoueur3equip5.Text = joueur[5].Nom; }
-                else if (lbljoueur4equip5.Text == null)
-                { lbljoueur4equip5.Text = joueur[5].Nom; }
-                else if (lbljoueur5equip5.Text == null)
-                { lbljoueur5equip5.Text = joueur[5].Nom; }
-                else if (lbljoueur6equip5.Text == null)
-                { lbljoueur6equip5.Text = joueur[5].Nom; }
-            }
-            else if (joueur[5].NomEquipe == equipe[6].NomEquipe) // si le joueur appartient a l'équipe 6 //
-            {
-                if (lbljoueur1equip6.Text == null)
-                { lbljoueur1equip6.Text = joueur[5].Nom; }
-                else if (lbljoueur2equip6.Text == null)
-                { lbljoueur2equip6.Text = joueur[5].Nom; }
-                else if (lbljoueur3equip6.Text == null)
-                { lbljoueur3equip6.Text = joueur[5].Nom; }
-                else if (lbljoueur4equip6.Text == null)
-                { lbljoueur4equip6.Text = joueur[5].Nom; }
-                else if (lbljoueur5equip6.Text == null)
-                { lbljoueur5equip6.Text = joueur[5].Nom; }
-                else if (lbljoueur6equip6.Text == null)
-                { lbljoueur6equip6.Text = joueur[5].Nom; }
-            }
-            //joueur 6 //
-            if (joueur[6].NomEquipe == equipe[1].NomEquipe) // si le joueur appartient a l'équipe 1 //
-            {
-                if (lbljoueur1equip1.Text == null)
-                { lbljoueur1equip1.Text = joueur[6].Nom; }
-                else if (lbljoueur2equip1.Text == null)
-                { lbljoueur2equip1.Text = joueur[6].Nom; }
-                else if (lbljoueur3equip1.Text == null)
-                { lbljoueur3equip1.Text = joueur[6].Nom; }
-                else if (lbljoueur4equip1.Text == null)
-                { lbljoueur4equip1.Text = joueur[6].Nom; }
-                else if (lbljoueur5equip1.Text == null)
-                { lbljoueur5equip1.Text = joueur[6].Nom; }
-                else if (lbljoueur6equip1.Text == null)
-                { lbljoueur6equip1.Text = joueur[6].Nom; }
-            }
-            else if (joueur[6].NomEquipe == equipe[2].NomEquipe) // si le joueur appartient a l'équipe 2 //
-            {
-                if (lbljoueur1equip2.Text == null)
-                { lbljoueur1equip2.Text = joueur[6].Nom; }
-                else if (lbljoueur2equip2.Text == null)
-                { lbljoueur2equip2.Text = joueur[6].Nom; }
-                else if (lbljoueur3equip2.Text == null)
-                { lbljoueur3equip2.Text = joueur[6].Nom; }
-                else if (lbljoueur4equip2.Text == null)
-                { lbljoueur4equip2.Text = joueur[6].Nom; }
-                else if (lbljoueur5equip2.Text == null)
-                { lbljoueur5equip2.Text = joueur[6].Nom; }
-                else if (lbljoueur6equip2.Text == null)
-                { lbljoueur6equip2.Text = joueur[6].Nom; }
-            }
-            else if (joueur[6].NomEquipe == equipe[3].NomEquipe) // si le joueur appartient a l'équipe 3 //
-            {
-                if (lbljoueur1equip3.Text == null)
-                { lbljoueur1equip3.Text = joueur[6].Nom; }
-                else if (lbljoueur2equip3.Text == null)
-                { lbljoueur2equip3.Text = joueur[6].Nom; }
-                else if (lbljoueur3equip3.Text == null)
-                { lbljoueur3equip3.Text = joueur[6].Nom; }
-                else if (lbljoueur4equip3.Text == null)
-                { lbljoueur4equip3.Text = joueur[6].Nom; }
-                else if (lbljoueur5equip3.Text == null)
-                { lbljoueur5equip3.Text = joueur[6].Nom; }
-                else if (lbljoueur6equip3.Text == null)
-                { lbljoueur6equip3.Text = joueur[6].Nom; }
-            }
-            else if (joueur[6].NomEquipe == equipe[4].NomEquipe) // si le joueur appartient a l'équipe 4 //
-            {
-                if (lbljoueur1equip4.Text == null)
-                { lbljoueur1equip4.Text = joueur[6].Nom; }
-                else if (lbljoueur2equip4.Text == null)
-                { lbljoueur2equip4.Text = joueur[6].Nom; }
-                else if (lbljoueur3equip4.Text == null)
-                { lbljoueur3equip4.Text = joueur[6].Nom; }
-                else if (lbljoueur4equip4.Text == null)
-                { lbljoueur4equip4.Text = joueur[6].Nom; }
-                else if (lbljoueur5equip4.Text == null)
-                { lbljoueur5equip4.Text = joueur[6].Nom; }
-                else if (lbljoueur6equip4.Text == null)
-                { lbljoueur6equip4.Text = joueur[6].Nom; }
-            }
-            else if (joueur[6].NomEquipe == equipe[5].NomEquipe) // si le joueur appartient a l'équipe 5 //
-            {
-                if (lbljoueur1equip5.Text == null)
-                { lbljoueur1equip5.Text = joueur[6].Nom; }
-                else if (lbljoueur2equip5.Text == null)
-                { lbljoueur2equip5.Text = joueur[6].Nom; }
-                else if (lbljoueur3equip5.Text == null)
-                { lbljoueur3equip5.Text = joueur[6].Nom; }
-                else if (lbljoueur4equip5.Text == null)
-                { lbljoueur4equip5.Text = joueur[6].Nom; }
-                else if (lbljoueur5equip5.Text == null)
-                { lbljoueur5equip5.Text = joueur[6].Nom; }
-                else if (lbljoueur6equip5.Text == null)
-                { lbljoueur6equip5.Text = joueur[6].Nom; }
-            }
-            else if (joueur[6].NomEquipe == equipe[6].NomEquipe) // si le joueur appartient a l'équipe 6 //
-            {
-                if (lbljoueur1equip6.Text == null)
-                { lbljoueur1equip6.Text = joueur[6].Nom; }
-                else if (lbljoueur2equip6.Text == null)
-                { lbljoueur2equip6.Text = joueur[6].Nom; }
-                else if (lbljoueur3equip6.Text == null)
-                { lbljoueur3equip6.Text = joueur[6].Nom; }
-                else if (lbljoueur4equip6.Text == null)
-                { lbljoueur4equip6.Text = joueur[6].Nom; }
-                else if (lbljoueur5equip6.Text == null)
-                { lbljoueur5equip6.Text = joueur[6].Nom; }
-                else if (lbljoueur6equip6.Text == null)
-                { lbljoueur6equip6.Text = joueur[6].Nom; }
-            }ç*/
         }
-    
-    
-
-   
-       
-           
-
-
         private void btnModifier_Click(object sender, EventArgs e) //si on clique sur le bouton modifier//
         {
             FrmModifier Frmmodifier = new FrmModifier(equipe , joueur, nombrejoueur);// crée une nouvelle form //
