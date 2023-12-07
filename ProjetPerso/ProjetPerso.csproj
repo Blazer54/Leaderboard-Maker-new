@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Equipe.cs" />
     <Compile Include="FrmAjouterunepartieequipe.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +127,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Frminfojoueurs.resx">
       <DependentUpon>Frminfojoueurs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmModifier.resx">
+      <DependentUpon>FrmModifier.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmParaduclassement.resx">
       <DependentUpon>FrmParaduclassement.cs</DependentUpon>
