@@ -9,17 +9,21 @@ namespace ProjetPerso
     internal class Joueur
     {
         //creation des attributs de la classe
-        string nom, nomEquipe;
+        private string nomEquipe;
+        private string nom;
 
         public Joueur(string nom, string nomEquipe)
         {
-            this.nom = nom;
-            this.nomEquipe = nomEquipe;
+            this.Nom = nom;
+            this.NomEquipe = nomEquipe;
         }
+
+        public string Nom { get => nom; set => nom = value; }
+        public string NomEquipe { get => nomEquipe; set => nomEquipe = value; }
 
         public override string ToString() 
         {
-            return $"{nom} {nomEquipe}";
+            return $"{Nom} {NomEquipe}";
         }
     }
 }

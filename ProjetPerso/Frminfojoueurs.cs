@@ -13,12 +13,23 @@ namespace ProjetPerso
     public partial class FrmInfoJoueurs : Form
     {
         List<Joueur> joueurs = new List<Joueur>();
-        List<Equipe> equipe = new List<Equipe>();
+        public string nomEquipe1Transmis;
+        public string nomEquipe2Transmis;
+        public string nomEquipe3Transmis;
+        public string nomEquipe4Transmis;
+        public string nomEquipe5Transmis;
+        public string nomEquipe6Transmis;
         public bool equipeTransmis;
         public string nombreJoueurTransmis;
-        public FrmInfoJoueurs(string nombreDeJoueur, bool equipe )
+        public FrmInfoJoueurs(string nomEquipe1, string nomEquipe2, string nomEquipe3, string nomEquipe4, string nomEquipe5, string nomEquipe6, bool equipe, string nombreDeJoueur)
         {
             InitializeComponent();
+            nomEquipe1Transmis = nomEquipe1;
+            nomEquipe2Transmis = nomEquipe2;
+            nomEquipe3Transmis = nomEquipe3;
+            nomEquipe4Transmis = nomEquipe4;
+            nomEquipe5Transmis = nomEquipe5;
+            nomEquipe6Transmis = nomEquipe6;
             equipeTransmis = equipe;
             nombreJoueurTransmis = nombreDeJoueur;
         }
@@ -930,7 +941,7 @@ namespace ProjetPerso
             this.Hide();
             if (equipeTransmis == true)
             {
-                Frminfoequipe frminfoequipe = new Frminfoequipe(nomEquipe1Transmis, nomEquipe2Transmis,nomEquipe3Transmis, nomEquipe4Transmis, nomEquipe5Transmis, nomEquipe6Transmis, nombreJoueurTransmis);//création d'une nouvelle form//
+                Frminfoequipe frminfoequipe = new Frminfoequipe();//création d'une nouvelle form//
                 frminfoequipe.ShowDialog();
             }
             else

@@ -12,7 +12,8 @@ namespace ProjetPerso
 {
     public partial class Frminfoequipe : Form
     {
-        public Frminfoequipe(string nomEquipe1Transmis,string nomEquipe2Transmis,string nomEquipe3Transmis,string nomEquipe4Transmis,string nomEquipe5Transmis,string nomEquipe6Transmis  , string nombreJoueurTransmis)
+        List<Equipe> equipe = new List<Equipe>();
+        public Frminfoequipe()
         {
             InitializeComponent();
         }
@@ -63,7 +64,7 @@ namespace ProjetPerso
             lbljoueur6equip6.Hide();
             
             string nomequipe1 = "a";
-            lblequipe1.Text = nomequipe1;
+            lblequipe1.Text = equipe[1].NomEquipe;
             string nomequipe2 = "b";
             lblequipe2.Text = nomequipe2;
             string nomequipe3 = "c";
