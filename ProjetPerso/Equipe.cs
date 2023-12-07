@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace ProjetPerso
 {
 
-    internal class Equipe
+    public class Equipe
     {
         //attributs
         private string nomEquipe;

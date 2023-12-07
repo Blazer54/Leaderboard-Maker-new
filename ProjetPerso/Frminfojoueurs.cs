@@ -13,25 +13,15 @@ namespace ProjetPerso
     public partial class FrmInfoJoueurs : Form
     {
         List<Joueur> joueurs = new List<Joueur>();
-        public string nomEquipe1Transmis;
-        public string nomEquipe2Transmis;
-        public string nomEquipe3Transmis;
-        public string nomEquipe4Transmis;
-        public string nomEquipe5Transmis;
-        public string nomEquipe6Transmis;
+        List<Equipe> equipe = new List<Equipe>();
         public bool equipeTransmis;
         public string nombreJoueurTransmis;
-        public FrmInfoJoueurs(string nomEquipe1, string nomEquipe2, string nomEquipe3, string nomEquipe4, string nomEquipe5, string nomEquipe6, bool equipe, string nombreDeJoueur)
+        public FrmInfoJoueurs(string nombreDeJoueur, bool equipeVerif,List<Equipe> equipeClassTransmis )
         {
             InitializeComponent();
-            nomEquipe1Transmis = nomEquipe1;
-            nomEquipe2Transmis = nomEquipe2;
-            nomEquipe3Transmis = nomEquipe3;
-            nomEquipe4Transmis = nomEquipe4;
-            nomEquipe5Transmis = nomEquipe5;
-            nomEquipe6Transmis = nomEquipe6;
-            equipeTransmis = equipe;
+            equipeTransmis = equipeVerif;
             nombreJoueurTransmis = nombreDeJoueur;
+            equipe = equipeClassTransmis;
         }
 
 
@@ -281,45 +271,45 @@ namespace ProjetPerso
             {
                 cbxJoueur1.Show();
                 cbxJoueur2.Show();
-                cbxJoueur1.Items.Add(nomEquipe1Transmis);
-                cbxJoueur1.Items.Add(nomEquipe2Transmis);
-                cbxJoueur1.Items.Add(nomEquipe3Transmis);
-                cbxJoueur1.Items.Add(nomEquipe4Transmis);
-                cbxJoueur1.Items.Add(nomEquipe5Transmis);
-                cbxJoueur1.Items.Add(nomEquipe6Transmis);
+                cbxJoueur1.Items.Add(equipe[1].NomEquipe);
+                cbxJoueur1.Items.Add(equipe[2].NomEquipe);
+                cbxJoueur1.Items.Add(equipe[3].NomEquipe);
+                cbxJoueur1.Items.Add(equipe[4].NomEquipe);
+                cbxJoueur1.Items.Add(equipe[5].NomEquipe);
+                cbxJoueur1.Items.Add(equipe[6].NomEquipe);
 
-                cbxJoueur2.Items.Add(nomEquipe1Transmis);
-                cbxJoueur2.Items.Add(nomEquipe2Transmis);
-                cbxJoueur2.Items.Add(nomEquipe3Transmis);
-                cbxJoueur2.Items.Add(nomEquipe4Transmis);
-                cbxJoueur2.Items.Add(nomEquipe5Transmis);
-                cbxJoueur2.Items.Add(nomEquipe6Transmis);
+                cbxJoueur2.Items.Add(equipe[1].NomEquipe);
+                cbxJoueur2.Items.Add(equipe[2].NomEquipe);
+                cbxJoueur2.Items.Add(equipe[3].NomEquipe);
+                cbxJoueur2.Items.Add(equipe[4].NomEquipe);
+                cbxJoueur2.Items.Add(equipe[5].NomEquipe);
+                cbxJoueur2.Items.Add(equipe[6].NomEquipe);
             }
             else if (equipeTransmis == true & nombreJoueurTransmisInt == 3)
             {
                 cbxJoueur1.Show();
                 cbxJoueur2.Show();
                 cbxJoueur3.Show();
-                cbxJoueur1.Items.Add(nomEquipe1Transmis);
-                cbxJoueur1.Items.Add(nomEquipe2Transmis);
-                cbxJoueur1.Items.Add(nomEquipe3Transmis);
-                cbxJoueur1.Items.Add(nomEquipe4Transmis);
-                cbxJoueur1.Items.Add(nomEquipe5Transmis);
-                cbxJoueur1.Items.Add(nomEquipe6Transmis);
+                cbxJoueur1.Items.Add(equipe[1].NomEquipe);
+                cbxJoueur1.Items.Add(equipe[2].NomEquipe);
+                cbxJoueur1.Items.Add(equipe[3].NomEquipe);
+                cbxJoueur1.Items.Add(equipe[4].NomEquipe);
+                cbxJoueur1.Items.Add(equipe[5].NomEquipe);
+                cbxJoueur1.Items.Add(equipe[6].NomEquipe);
 
-                cbxJoueur2.Items.Add(nomEquipe1Transmis);
-                cbxJoueur2.Items.Add(nomEquipe2Transmis);
-                cbxJoueur2.Items.Add(nomEquipe3Transmis);
-                cbxJoueur2.Items.Add(nomEquipe4Transmis);
-                cbxJoueur2.Items.Add(nomEquipe5Transmis);
-                cbxJoueur2.Items.Add(nomEquipe6Transmis);
+                cbxJoueur2.Items.Add(equipe[1].NomEquipe);
+                cbxJoueur2.Items.Add(equipe[2].NomEquipe);
+                cbxJoueur2.Items.Add(equipe[3].NomEquipe);
+                cbxJoueur2.Items.Add(equipe[4].NomEquipe);
+                cbxJoueur2.Items.Add(equipe[5].NomEquipe);
+                cbxJoueur2.Items.Add(equipe[6].NomEquipe);
 
-                cbxJoueur3.Items.Add(nomEquipe1Transmis);
-                cbxJoueur3.Items.Add(nomEquipe2Transmis);
-                cbxJoueur3.Items.Add(nomEquipe3Transmis);
-                cbxJoueur3.Items.Add(nomEquipe4Transmis);
-                cbxJoueur3.Items.Add(nomEquipe5Transmis);
-                cbxJoueur3.Items.Add(nomEquipe6Transmis);
+                cbxJoueur3.Items.Add(equipe[1].NomEquipe);
+                cbxJoueur3.Items.Add(equipe[2].NomEquipe);
+                cbxJoueur3.Items.Add(equipe[3].NomEquipe);
+                cbxJoueur3.Items.Add(equipe[4].NomEquipe);
+                cbxJoueur3.Items.Add(equipe[5].NomEquipe);
+                cbxJoueur3.Items.Add(equipe[6].NomEquipe);
 
             }
 
@@ -329,33 +319,33 @@ namespace ProjetPerso
                 cbxJoueur2.Show();
                 cbxJoueur3.Show();
                 cbxJoueur4.Show();
-                cbxJoueur1.Items.Add(nomEquipe1Transmis);
-                cbxJoueur1.Items.Add(nomEquipe2Transmis);
-                cbxJoueur1.Items.Add(nomEquipe3Transmis);
-                cbxJoueur1.Items.Add(nomEquipe4Transmis);
-                cbxJoueur1.Items.Add(nomEquipe5Transmis);
-                cbxJoueur1.Items.Add(nomEquipe6Transmis);
+                cbxJoueur1.Items.Add(equipe[1].NomEquipe);
+                cbxJoueur1.Items.Add(equipe[2].NomEquipe);
+                cbxJoueur1.Items.Add(equipe[3].NomEquipe);
+                cbxJoueur1.Items.Add(equipe[4].NomEquipe);
+                cbxJoueur1.Items.Add(equipe[5].NomEquipe);
+                cbxJoueur1.Items.Add(equipe[6].NomEquipe);
 
-                cbxJoueur2.Items.Add(nomEquipe1Transmis);
-                cbxJoueur2.Items.Add(nomEquipe2Transmis);
-                cbxJoueur2.Items.Add(nomEquipe3Transmis);
-                cbxJoueur2.Items.Add(nomEquipe4Transmis);
-                cbxJoueur2.Items.Add(nomEquipe5Transmis);
-                cbxJoueur2.Items.Add(nomEquipe6Transmis);
+                cbxJoueur2.Items.Add(equipe[1].NomEquipe);
+                cbxJoueur2.Items.Add(equipe[2].NomEquipe);
+                cbxJoueur2.Items.Add(equipe[3].NomEquipe);
+                cbxJoueur2.Items.Add(equipe[4].NomEquipe);
+                cbxJoueur2.Items.Add(equipe[5].NomEquipe);
+                cbxJoueur2.Items.Add(equipe[6].NomEquipe);
 
-                cbxJoueur3.Items.Add(nomEquipe1Transmis);
-                cbxJoueur3.Items.Add(nomEquipe2Transmis);
-                cbxJoueur3.Items.Add(nomEquipe3Transmis);
-                cbxJoueur3.Items.Add(nomEquipe4Transmis);
-                cbxJoueur3.Items.Add(nomEquipe5Transmis);
-                cbxJoueur3.Items.Add(nomEquipe6Transmis);
+                cbxJoueur3.Items.Add(equipe[1].NomEquipe);
+                cbxJoueur3.Items.Add(equipe[2].NomEquipe);
+                cbxJoueur3.Items.Add(equipe[3].NomEquipe);
+                cbxJoueur3.Items.Add(equipe[4].NomEquipe);
+                cbxJoueur3.Items.Add(equipe[5].NomEquipe);
+                cbxJoueur3.Items.Add(equipe[6].NomEquipe);
 
-                cbxJoueur4.Items.Add(nomEquipe1Transmis);
-                cbxJoueur4.Items.Add(nomEquipe2Transmis);
-                cbxJoueur4.Items.Add(nomEquipe3Transmis);
-                cbxJoueur4.Items.Add(nomEquipe4Transmis);
-                cbxJoueur4.Items.Add(nomEquipe5Transmis);
-                cbxJoueur4.Items.Add(nomEquipe6Transmis);
+                cbxJoueur4.Items.Add(equipe[1].NomEquipe);
+                cbxJoueur4.Items.Add(equipe[2].NomEquipe);
+                cbxJoueur4.Items.Add(equipe[3].NomEquipe);
+                cbxJoueur4.Items.Add(equipe[4].NomEquipe);
+                cbxJoueur4.Items.Add(equipe[5].NomEquipe);
+                cbxJoueur4.Items.Add(equipe[6].NomEquipe);
 
             }
             else if (equipeTransmis == true & nombreJoueurTransmisInt == 5)
@@ -365,40 +355,40 @@ namespace ProjetPerso
                 cbxJoueur3.Show();
                 cbxJoueur4.Show();
                 cbxJoueur5.Show();
-                cbxJoueur1.Items.Add(nomEquipe1Transmis);
-                cbxJoueur1.Items.Add(nomEquipe2Transmis);
-                cbxJoueur1.Items.Add(nomEquipe3Transmis);
-                cbxJoueur1.Items.Add(nomEquipe4Transmis);
-                cbxJoueur1.Items.Add(nomEquipe5Transmis);
-                cbxJoueur1.Items.Add(nomEquipe6Transmis);
+                cbxJoueur1.Items.Add(equipe[1].NomEquipe);
+                cbxJoueur1.Items.Add(equipe[2].NomEquipe);
+                cbxJoueur1.Items.Add(equipe[3].NomEquipe);
+                cbxJoueur1.Items.Add(equipe[4].NomEquipe);
+                cbxJoueur1.Items.Add(equipe[5].NomEquipe);
+                cbxJoueur1.Items.Add(equipe[6].NomEquipe);
 
-                cbxJoueur2.Items.Add(nomEquipe1Transmis);
-                cbxJoueur2.Items.Add(nomEquipe2Transmis);
-                cbxJoueur2.Items.Add(nomEquipe3Transmis);
-                cbxJoueur2.Items.Add(nomEquipe4Transmis);
-                cbxJoueur2.Items.Add(nomEquipe5Transmis);
-                cbxJoueur2.Items.Add(nomEquipe6Transmis);
+                cbxJoueur2.Items.Add(equipe[1].NomEquipe);
+                cbxJoueur2.Items.Add(equipe[2].NomEquipe);
+                cbxJoueur2.Items.Add(equipe[3].NomEquipe);
+                cbxJoueur2.Items.Add(equipe[4].NomEquipe);
+                cbxJoueur2.Items.Add(equipe[5].NomEquipe);
+                cbxJoueur2.Items.Add(equipe[6].NomEquipe);
 
-                cbxJoueur3.Items.Add(nomEquipe1Transmis);
-                cbxJoueur3.Items.Add(nomEquipe2Transmis);
-                cbxJoueur3.Items.Add(nomEquipe3Transmis);
-                cbxJoueur3.Items.Add(nomEquipe4Transmis);
-                cbxJoueur3.Items.Add(nomEquipe5Transmis);
-                cbxJoueur3.Items.Add(nomEquipe6Transmis);
+                cbxJoueur3.Items.Add(equipe[1].NomEquipe);
+                cbxJoueur3.Items.Add(equipe[2].NomEquipe);
+                cbxJoueur3.Items.Add(equipe[3].NomEquipe);
+                cbxJoueur3.Items.Add(equipe[4].NomEquipe);
+                cbxJoueur3.Items.Add(equipe[5].NomEquipe);
+                cbxJoueur3.Items.Add(equipe[6].NomEquipe);
 
-                cbxJoueur4.Items.Add(nomEquipe1Transmis);
-                cbxJoueur4.Items.Add(nomEquipe2Transmis);
-                cbxJoueur4.Items.Add(nomEquipe3Transmis);
-                cbxJoueur4.Items.Add(nomEquipe4Transmis);
-                cbxJoueur4.Items.Add(nomEquipe5Transmis);
-                cbxJoueur4.Items.Add(nomEquipe6Transmis);
+                cbxJoueur4.Items.Add(equipe[1].NomEquipe);
+                cbxJoueur4.Items.Add(equipe[2].NomEquipe);
+                cbxJoueur4.Items.Add(equipe[3].NomEquipe);
+                cbxJoueur4.Items.Add(equipe[4].NomEquipe);
+                cbxJoueur4.Items.Add(equipe[5].NomEquipe);
+                cbxJoueur4.Items.Add(equipe[6].NomEquipe);
 
-                cbxJoueur5.Items.Add(nomEquipe1Transmis);
-                cbxJoueur5.Items.Add(nomEquipe2Transmis);
-                cbxJoueur5.Items.Add(nomEquipe3Transmis);
-                cbxJoueur5.Items.Add(nomEquipe4Transmis);
-                cbxJoueur5.Items.Add(nomEquipe5Transmis);
-                cbxJoueur5.Items.Add(nomEquipe6Transmis);
+                cbxJoueur5.Items.Add(equipe[1].NomEquipe);
+                cbxJoueur5.Items.Add(equipe[2].NomEquipe);
+                cbxJoueur5.Items.Add(equipe[3].NomEquipe);
+                cbxJoueur5.Items.Add(equipe[4].NomEquipe);
+                cbxJoueur5.Items.Add(equipe[5].NomEquipe);
+                cbxJoueur5.Items.Add(equipe[6].NomEquipe);
 
             }
             else if (equipeTransmis == true & nombreJoueurTransmisInt == 6)
@@ -409,47 +399,47 @@ namespace ProjetPerso
                 cbxJoueur4.Show();
                 cbxJoueur5.Show();
                 cbxJoueur6.Show();
-                cbxJoueur1.Items.Add(nomEquipe1Transmis);
-                cbxJoueur1.Items.Add(nomEquipe2Transmis);
-                cbxJoueur1.Items.Add(nomEquipe3Transmis);
-                cbxJoueur1.Items.Add(nomEquipe4Transmis);
-                cbxJoueur1.Items.Add(nomEquipe5Transmis);
-                cbxJoueur1.Items.Add(nomEquipe6Transmis);
+                cbxJoueur1.Items.Add(equipe[1].NomEquipe);
+                cbxJoueur1.Items.Add(equipe[2].NomEquipe);
+                cbxJoueur1.Items.Add(equipe[3].NomEquipe);
+                cbxJoueur1.Items.Add(equipe[4].NomEquipe);
+                cbxJoueur1.Items.Add(equipe[5].NomEquipe);
+                cbxJoueur1.Items.Add(equipe[6].NomEquipe);
 
-                cbxJoueur2.Items.Add(nomEquipe1Transmis);
-                cbxJoueur2.Items.Add(nomEquipe2Transmis);
-                cbxJoueur2.Items.Add(nomEquipe3Transmis);
-                cbxJoueur2.Items.Add(nomEquipe4Transmis);
-                cbxJoueur2.Items.Add(nomEquipe5Transmis);
-                cbxJoueur2.Items.Add(nomEquipe6Transmis);
+                cbxJoueur2.Items.Add(equipe[1].NomEquipe);
+                cbxJoueur2.Items.Add(equipe[2].NomEquipe);
+                cbxJoueur2.Items.Add(equipe[3].NomEquipe);
+                cbxJoueur2.Items.Add(equipe[4].NomEquipe);
+                cbxJoueur2.Items.Add(equipe[5].NomEquipe);
+                cbxJoueur2.Items.Add(equipe[6].NomEquipe);
 
-                cbxJoueur3.Items.Add(nomEquipe1Transmis);
-                cbxJoueur3.Items.Add(nomEquipe2Transmis);
-                cbxJoueur3.Items.Add(nomEquipe3Transmis);
-                cbxJoueur3.Items.Add(nomEquipe4Transmis);
-                cbxJoueur3.Items.Add(nomEquipe5Transmis);
-                cbxJoueur3.Items.Add(nomEquipe6Transmis);
+                cbxJoueur3.Items.Add(equipe[1].NomEquipe);
+                cbxJoueur3.Items.Add(equipe[2].NomEquipe);
+                cbxJoueur3.Items.Add(equipe[3].NomEquipe);
+                cbxJoueur3.Items.Add(equipe[4].NomEquipe);
+                cbxJoueur3.Items.Add(equipe[5].NomEquipe);
+                cbxJoueur3.Items.Add(equipe[6].NomEquipe);
 
-                cbxJoueur4.Items.Add(nomEquipe1Transmis);
-                cbxJoueur4.Items.Add(nomEquipe2Transmis);
-                cbxJoueur4.Items.Add(nomEquipe3Transmis);
-                cbxJoueur4.Items.Add(nomEquipe4Transmis);
-                cbxJoueur4.Items.Add(nomEquipe5Transmis);
-                cbxJoueur4.Items.Add(nomEquipe6Transmis);
+                cbxJoueur4.Items.Add(equipe[1].NomEquipe);
+                cbxJoueur4.Items.Add(equipe[2].NomEquipe);
+                cbxJoueur4.Items.Add(equipe[3].NomEquipe);
+                cbxJoueur4.Items.Add(equipe[4].NomEquipe);
+                cbxJoueur4.Items.Add(equipe[5].NomEquipe);
+                cbxJoueur4.Items.Add(equipe[6].NomEquipe);
 
-                cbxJoueur5.Items.Add(nomEquipe1Transmis);
-                cbxJoueur5.Items.Add(nomEquipe2Transmis);
-                cbxJoueur5.Items.Add(nomEquipe3Transmis);
-                cbxJoueur5.Items.Add(nomEquipe4Transmis);
-                cbxJoueur5.Items.Add(nomEquipe5Transmis);
-                cbxJoueur5.Items.Add(nomEquipe6Transmis);
+                cbxJoueur5.Items.Add(equipe[1].NomEquipe);
+                cbxJoueur5.Items.Add(equipe[2].NomEquipe);
+                cbxJoueur5.Items.Add(equipe[3].NomEquipe);
+                cbxJoueur5.Items.Add(equipe[4].NomEquipe);
+                cbxJoueur5.Items.Add(equipe[5].NomEquipe);
+                cbxJoueur5.Items.Add(equipe[6].NomEquipe);
 
-                cbxJoueur6.Items.Add(nomEquipe1Transmis);
-                cbxJoueur6.Items.Add(nomEquipe2Transmis);
-                cbxJoueur6.Items.Add(nomEquipe3Transmis);
-                cbxJoueur6.Items.Add(nomEquipe4Transmis);
-                cbxJoueur6.Items.Add(nomEquipe5Transmis);
-                cbxJoueur6.Items.Add(nomEquipe6Transmis);
+                cbxJoueur6.Items.Add(equipe[1].NomEquipe);
+                cbxJoueur6.Items.Add(equipe[2].NomEquipe);
+                cbxJoueur6.Items.Add(equipe[3].NomEquipe);
+                cbxJoueur6.Items.Add(equipe[4].NomEquipe);
+                cbxJoueur6.Items.Add(equipe[5].NomEquipe);
+                cbxJoueur6.Items.Add(equipe[6].NomEquipe);
 
             }
             else if (equipeTransmis == true & nombreJoueurTransmisInt == 7)
@@ -461,54 +451,54 @@ namespace ProjetPerso
                 cbxJoueur5.Show();
                 cbxJoueur6.Show();
                 cbxJoueur7.Show();
-                cbxJoueur1.Items.Add(nomEquipe1Transmis);
-                cbxJoueur1.Items.Add(nomEquipe2Transmis);
-                cbxJoueur1.Items.Add(nomEquipe3Transmis);
-                cbxJoueur1.Items.Add(nomEquipe4Transmis);
-                cbxJoueur1.Items.Add(nomEquipe5Transmis);
-                cbxJoueur1.Items.Add(nomEquipe6Transmis);
+                cbxJoueur1.Items.Add(equipe[1].NomEquipe);
+                cbxJoueur1.Items.Add(equipe[2].NomEquipe);
+                cbxJoueur1.Items.Add(equipe[3].NomEquipe);
+                cbxJoueur1.Items.Add(equipe[4].NomEquipe);
+                cbxJoueur1.Items.Add(equipe[5].NomEquipe);
+                cbxJoueur1.Items.Add(equipe[6].NomEquipe);
 
-                cbxJoueur2.Items.Add(nomEquipe1Transmis);
-                cbxJoueur2.Items.Add(nomEquipe2Transmis);
-                cbxJoueur2.Items.Add(nomEquipe3Transmis);
-                cbxJoueur2.Items.Add(nomEquipe4Transmis);
-                cbxJoueur2.Items.Add(nomEquipe5Transmis);
-                cbxJoueur2.Items.Add(nomEquipe6Transmis);
+                cbxJoueur2.Items.Add(equipe[1].NomEquipe);
+                cbxJoueur2.Items.Add(equipe[2].NomEquipe);
+                cbxJoueur2.Items.Add(equipe[3].NomEquipe);
+                cbxJoueur2.Items.Add(equipe[4].NomEquipe);
+                cbxJoueur2.Items.Add(equipe[5].NomEquipe);
+                cbxJoueur2.Items.Add(equipe[6].NomEquipe);
 
-                cbxJoueur3.Items.Add(nomEquipe1Transmis);
-                cbxJoueur3.Items.Add(nomEquipe2Transmis);
-                cbxJoueur3.Items.Add(nomEquipe3Transmis);
-                cbxJoueur3.Items.Add(nomEquipe4Transmis);
-                cbxJoueur3.Items.Add(nomEquipe5Transmis);
-                cbxJoueur3.Items.Add(nomEquipe6Transmis);
+                cbxJoueur3.Items.Add(equipe[1].NomEquipe);
+                cbxJoueur3.Items.Add(equipe[2].NomEquipe);
+                cbxJoueur3.Items.Add(equipe[3].NomEquipe);
+                cbxJoueur3.Items.Add(equipe[4].NomEquipe);
+                cbxJoueur3.Items.Add(equipe[5].NomEquipe);
+                cbxJoueur3.Items.Add(equipe[6].NomEquipe);
 
-                cbxJoueur4.Items.Add(nomEquipe1Transmis);
-                cbxJoueur4.Items.Add(nomEquipe2Transmis);
-                cbxJoueur4.Items.Add(nomEquipe3Transmis);
-                cbxJoueur4.Items.Add(nomEquipe4Transmis);
-                cbxJoueur4.Items.Add(nomEquipe5Transmis);
-                cbxJoueur4.Items.Add(nomEquipe6Transmis);
+                cbxJoueur4.Items.Add(equipe[1].NomEquipe);
+                cbxJoueur4.Items.Add(equipe[2].NomEquipe);
+                cbxJoueur4.Items.Add(equipe[3].NomEquipe);
+                cbxJoueur4.Items.Add(equipe[4].NomEquipe);
+                cbxJoueur4.Items.Add(equipe[5].NomEquipe);
+                cbxJoueur4.Items.Add(equipe[6].NomEquipe);
 
-                cbxJoueur5.Items.Add(nomEquipe1Transmis);
-                cbxJoueur5.Items.Add(nomEquipe2Transmis);
-                cbxJoueur5.Items.Add(nomEquipe3Transmis);
-                cbxJoueur5.Items.Add(nomEquipe4Transmis);
-                cbxJoueur5.Items.Add(nomEquipe5Transmis);
-                cbxJoueur5.Items.Add(nomEquipe6Transmis);
+                cbxJoueur5.Items.Add(equipe[1].NomEquipe);
+                cbxJoueur5.Items.Add(equipe[2].NomEquipe);
+                cbxJoueur5.Items.Add(equipe[3].NomEquipe);
+                cbxJoueur5.Items.Add(equipe[4].NomEquipe);
+                cbxJoueur5.Items.Add(equipe[5].NomEquipe);
+                cbxJoueur5.Items.Add(equipe[6].NomEquipe);
 
-                cbxJoueur6.Items.Add(nomEquipe1Transmis);
-                cbxJoueur6.Items.Add(nomEquipe2Transmis);
-                cbxJoueur6.Items.Add(nomEquipe3Transmis);
-                cbxJoueur6.Items.Add(nomEquipe4Transmis);
-                cbxJoueur6.Items.Add(nomEquipe5Transmis);
-                cbxJoueur6.Items.Add(nomEquipe6Transmis);
+                cbxJoueur6.Items.Add(equipe[1].NomEquipe);
+                cbxJoueur6.Items.Add(equipe[2].NomEquipe);
+                cbxJoueur6.Items.Add(equipe[3].NomEquipe);
+                cbxJoueur6.Items.Add(equipe[4].NomEquipe);
+                cbxJoueur6.Items.Add(equipe[5].NomEquipe);
+                cbxJoueur6.Items.Add(equipe[6].NomEquipe);
 
-                cbxJoueur7.Items.Add(nomEquipe1Transmis);
-                cbxJoueur7.Items.Add(nomEquipe2Transmis);
-                cbxJoueur7.Items.Add(nomEquipe3Transmis);
-                cbxJoueur7.Items.Add(nomEquipe4Transmis);
-                cbxJoueur7.Items.Add(nomEquipe5Transmis);
-                cbxJoueur7.Items.Add(nomEquipe6Transmis);
+                cbxJoueur7.Items.Add(equipe[1].NomEquipe);
+                cbxJoueur7.Items.Add(equipe[2].NomEquipe);
+                cbxJoueur7.Items.Add(equipe[3].NomEquipe);
+                cbxJoueur7.Items.Add(equipe[4].NomEquipe);
+                cbxJoueur7.Items.Add(equipe[5].NomEquipe);
+                cbxJoueur7.Items.Add(equipe[6].NomEquipe);
             }
             else if (equipeTransmis == true & nombreJoueurTransmisInt == 8)
             {
@@ -520,61 +510,61 @@ namespace ProjetPerso
                 cbxJoueur6.Show();
                 cbxJoueur7.Show();
                 cbxJoueur8.Show();
-                cbxJoueur1.Items.Add(nomEquipe1Transmis);
-                cbxJoueur1.Items.Add(nomEquipe2Transmis);
-                cbxJoueur1.Items.Add(nomEquipe3Transmis);
-                cbxJoueur1.Items.Add(nomEquipe4Transmis);
-                cbxJoueur1.Items.Add(nomEquipe5Transmis);
-                cbxJoueur1.Items.Add(nomEquipe6Transmis);
+                cbxJoueur1.Items.Add(equipe[1].NomEquipe);
+                cbxJoueur1.Items.Add(equipe[2].NomEquipe);
+                cbxJoueur1.Items.Add(equipe[3].NomEquipe);
+                cbxJoueur1.Items.Add(equipe[4].NomEquipe);
+                cbxJoueur1.Items.Add(equipe[5].NomEquipe);
+                cbxJoueur1.Items.Add(equipe[6].NomEquipe);
 
-                cbxJoueur2.Items.Add(nomEquipe1Transmis);
-                cbxJoueur2.Items.Add(nomEquipe2Transmis);
-                cbxJoueur2.Items.Add(nomEquipe3Transmis);
-                cbxJoueur2.Items.Add(nomEquipe4Transmis);
-                cbxJoueur2.Items.Add(nomEquipe5Transmis);
-                cbxJoueur2.Items.Add(nomEquipe6Transmis);
+                cbxJoueur2.Items.Add(equipe[1].NomEquipe);
+                cbxJoueur2.Items.Add(equipe[2].NomEquipe);
+                cbxJoueur2.Items.Add(equipe[3].NomEquipe);
+                cbxJoueur2.Items.Add(equipe[4].NomEquipe);
+                cbxJoueur2.Items.Add(equipe[5].NomEquipe);
+                cbxJoueur2.Items.Add(equipe[6].NomEquipe);
 
-                cbxJoueur3.Items.Add(nomEquipe1Transmis);
-                cbxJoueur3.Items.Add(nomEquipe2Transmis);
-                cbxJoueur3.Items.Add(nomEquipe3Transmis);
-                cbxJoueur3.Items.Add(nomEquipe4Transmis);
-                cbxJoueur3.Items.Add(nomEquipe5Transmis);
-                cbxJoueur3.Items.Add(nomEquipe6Transmis);
+                cbxJoueur3.Items.Add(equipe[1].NomEquipe);
+                cbxJoueur3.Items.Add(equipe[2].NomEquipe);
+                cbxJoueur3.Items.Add(equipe[3].NomEquipe);
+                cbxJoueur3.Items.Add(equipe[4].NomEquipe);
+                cbxJoueur3.Items.Add(equipe[5].NomEquipe);
+                cbxJoueur3.Items.Add(equipe[6].NomEquipe);
 
-                cbxJoueur4.Items.Add(nomEquipe1Transmis);
-                cbxJoueur4.Items.Add(nomEquipe2Transmis);
-                cbxJoueur4.Items.Add(nomEquipe3Transmis);
-                cbxJoueur4.Items.Add(nomEquipe4Transmis);
-                cbxJoueur4.Items.Add(nomEquipe5Transmis);
-                cbxJoueur4.Items.Add(nomEquipe6Transmis);
+                cbxJoueur4.Items.Add(equipe[1].NomEquipe);
+                cbxJoueur4.Items.Add(equipe[2].NomEquipe);
+                cbxJoueur4.Items.Add(equipe[3].NomEquipe);
+                cbxJoueur4.Items.Add(equipe[4].NomEquipe);
+                cbxJoueur4.Items.Add(equipe[5].NomEquipe);
+                cbxJoueur4.Items.Add(equipe[6].NomEquipe);
 
-                cbxJoueur5.Items.Add(nomEquipe1Transmis);
-                cbxJoueur5.Items.Add(nomEquipe2Transmis);
-                cbxJoueur5.Items.Add(nomEquipe3Transmis);
-                cbxJoueur5.Items.Add(nomEquipe4Transmis);
-                cbxJoueur5.Items.Add(nomEquipe5Transmis);
-                cbxJoueur5.Items.Add(nomEquipe6Transmis);
+                cbxJoueur5.Items.Add(equipe[1].NomEquipe);
+                cbxJoueur5.Items.Add(equipe[2].NomEquipe);
+                cbxJoueur5.Items.Add(equipe[3].NomEquipe);
+                cbxJoueur5.Items.Add(equipe[4].NomEquipe);
+                cbxJoueur5.Items.Add(equipe[5].NomEquipe);
+                cbxJoueur5.Items.Add(equipe[6].NomEquipe);
 
-                cbxJoueur6.Items.Add(nomEquipe1Transmis);
-                cbxJoueur6.Items.Add(nomEquipe2Transmis);
-                cbxJoueur6.Items.Add(nomEquipe3Transmis);
-                cbxJoueur6.Items.Add(nomEquipe4Transmis);
-                cbxJoueur6.Items.Add(nomEquipe5Transmis);
-                cbxJoueur6.Items.Add(nomEquipe6Transmis);
+                cbxJoueur6.Items.Add(equipe[1].NomEquipe);
+                cbxJoueur6.Items.Add(equipe[2].NomEquipe);
+                cbxJoueur6.Items.Add(equipe[3].NomEquipe);
+                cbxJoueur6.Items.Add(equipe[4].NomEquipe);
+                cbxJoueur6.Items.Add(equipe[5].NomEquipe);
+                cbxJoueur6.Items.Add(equipe[6].NomEquipe);
 
-                cbxJoueur7.Items.Add(nomEquipe1Transmis);
-                cbxJoueur7.Items.Add(nomEquipe2Transmis);
-                cbxJoueur7.Items.Add(nomEquipe3Transmis);
-                cbxJoueur7.Items.Add(nomEquipe4Transmis);
-                cbxJoueur7.Items.Add(nomEquipe5Transmis);
-                cbxJoueur7.Items.Add(nomEquipe6Transmis);
+                cbxJoueur7.Items.Add(equipe[1].NomEquipe);
+                cbxJoueur7.Items.Add(equipe[2].NomEquipe);
+                cbxJoueur7.Items.Add(equipe[3].NomEquipe);
+                cbxJoueur7.Items.Add(equipe[4].NomEquipe);
+                cbxJoueur7.Items.Add(equipe[5].NomEquipe);
+                cbxJoueur7.Items.Add(equipe[6].NomEquipe);
 
-                cbxJoueur8.Items.Add(nomEquipe1Transmis);
-                cbxJoueur8.Items.Add(nomEquipe2Transmis);
-                cbxJoueur8.Items.Add(nomEquipe3Transmis);
-                cbxJoueur8.Items.Add(nomEquipe4Transmis);
-                cbxJoueur8.Items.Add(nomEquipe5Transmis);
-                cbxJoueur8.Items.Add(nomEquipe6Transmis);
+                cbxJoueur8.Items.Add(equipe[1].NomEquipe);
+                cbxJoueur8.Items.Add(equipe[2].NomEquipe);
+                cbxJoueur8.Items.Add(equipe[3].NomEquipe);
+                cbxJoueur8.Items.Add(equipe[4].NomEquipe);
+                cbxJoueur8.Items.Add(equipe[5].NomEquipe);
+                cbxJoueur8.Items.Add(equipe[6].NomEquipe);
             }
             else if (equipeTransmis == true & nombreJoueurTransmisInt == 9)
             {
@@ -587,68 +577,68 @@ namespace ProjetPerso
                 cbxJoueur7.Show();
                 cbxJoueur8.Show();
                 cbxJoueur9.Show();
-                cbxJoueur1.Items.Add(nomEquipe1Transmis);
-                cbxJoueur1.Items.Add(nomEquipe2Transmis);
-                cbxJoueur1.Items.Add(nomEquipe3Transmis);
-                cbxJoueur1.Items.Add(nomEquipe4Transmis);
-                cbxJoueur1.Items.Add(nomEquipe5Transmis);
-                cbxJoueur1.Items.Add(nomEquipe6Transmis);
+                cbxJoueur1.Items.Add(equipe[1].NomEquipe);
+                cbxJoueur1.Items.Add(equipe[2].NomEquipe);
+                cbxJoueur1.Items.Add(equipe[3].NomEquipe);
+                cbxJoueur1.Items.Add(equipe[4].NomEquipe);
+                cbxJoueur1.Items.Add(equipe[5].NomEquipe);
+                cbxJoueur1.Items.Add(equipe[6].NomEquipe);
 
-                cbxJoueur2.Items.Add(nomEquipe1Transmis);
-                cbxJoueur2.Items.Add(nomEquipe2Transmis);
-                cbxJoueur2.Items.Add(nomEquipe3Transmis);
-                cbxJoueur2.Items.Add(nomEquipe4Transmis);
-                cbxJoueur2.Items.Add(nomEquipe5Transmis);
-                cbxJoueur2.Items.Add(nomEquipe6Transmis);
+                cbxJoueur2.Items.Add(equipe[1].NomEquipe);
+                cbxJoueur2.Items.Add(equipe[2].NomEquipe);
+                cbxJoueur2.Items.Add(equipe[3].NomEquipe);
+                cbxJoueur2.Items.Add(equipe[4].NomEquipe);
+                cbxJoueur2.Items.Add(equipe[5].NomEquipe);
+                cbxJoueur2.Items.Add(equipe[6].NomEquipe);
 
-                cbxJoueur3.Items.Add(nomEquipe1Transmis);
-                cbxJoueur3.Items.Add(nomEquipe2Transmis);
-                cbxJoueur3.Items.Add(nomEquipe3Transmis);
-                cbxJoueur3.Items.Add(nomEquipe4Transmis);
-                cbxJoueur3.Items.Add(nomEquipe5Transmis);
-                cbxJoueur3.Items.Add(nomEquipe6Transmis);
+                cbxJoueur3.Items.Add(equipe[1].NomEquipe);
+                cbxJoueur3.Items.Add(equipe[2].NomEquipe);
+                cbxJoueur3.Items.Add(equipe[3].NomEquipe);
+                cbxJoueur3.Items.Add(equipe[4].NomEquipe);
+                cbxJoueur3.Items.Add(equipe[5].NomEquipe);
+                cbxJoueur3.Items.Add(equipe[6].NomEquipe);
 
-                cbxJoueur4.Items.Add(nomEquipe1Transmis);
-                cbxJoueur4.Items.Add(nomEquipe2Transmis);
-                cbxJoueur4.Items.Add(nomEquipe3Transmis);
-                cbxJoueur4.Items.Add(nomEquipe4Transmis);
-                cbxJoueur4.Items.Add(nomEquipe5Transmis);
-                cbxJoueur4.Items.Add(nomEquipe6Transmis);
+                cbxJoueur4.Items.Add(equipe[1].NomEquipe);
+                cbxJoueur4.Items.Add(equipe[2].NomEquipe);
+                cbxJoueur4.Items.Add(equipe[3].NomEquipe);
+                cbxJoueur4.Items.Add(equipe[4].NomEquipe);
+                cbxJoueur4.Items.Add(equipe[5].NomEquipe);
+                cbxJoueur4.Items.Add(equipe[6].NomEquipe);
 
-                cbxJoueur5.Items.Add(nomEquipe1Transmis);
-                cbxJoueur5.Items.Add(nomEquipe2Transmis);
-                cbxJoueur5.Items.Add(nomEquipe3Transmis);
-                cbxJoueur5.Items.Add(nomEquipe4Transmis);
-                cbxJoueur5.Items.Add(nomEquipe5Transmis);
-                cbxJoueur5.Items.Add(nomEquipe6Transmis);
+                cbxJoueur5.Items.Add(equipe[1].NomEquipe);
+                cbxJoueur5.Items.Add(equipe[2].NomEquipe);
+                cbxJoueur5.Items.Add(equipe[3].NomEquipe);
+                cbxJoueur5.Items.Add(equipe[4].NomEquipe);
+                cbxJoueur5.Items.Add(equipe[5].NomEquipe);
+                cbxJoueur5.Items.Add(equipe[6].NomEquipe);
 
-                cbxJoueur6.Items.Add(nomEquipe1Transmis);
-                cbxJoueur6.Items.Add(nomEquipe2Transmis);
-                cbxJoueur6.Items.Add(nomEquipe3Transmis);
-                cbxJoueur6.Items.Add(nomEquipe4Transmis);
-                cbxJoueur6.Items.Add(nomEquipe5Transmis);
-                cbxJoueur6.Items.Add(nomEquipe6Transmis);
+                cbxJoueur6.Items.Add(equipe[1].NomEquipe);
+                cbxJoueur6.Items.Add(equipe[2].NomEquipe);
+                cbxJoueur6.Items.Add(equipe[3].NomEquipe);
+                cbxJoueur6.Items.Add(equipe[4].NomEquipe);
+                cbxJoueur6.Items.Add(equipe[5].NomEquipe);
+                cbxJoueur6.Items.Add(equipe[6].NomEquipe);
 
-                cbxJoueur7.Items.Add(nomEquipe1Transmis);
-                cbxJoueur7.Items.Add(nomEquipe2Transmis);
-                cbxJoueur7.Items.Add(nomEquipe3Transmis);
-                cbxJoueur7.Items.Add(nomEquipe4Transmis);
-                cbxJoueur7.Items.Add(nomEquipe5Transmis);
-                cbxJoueur7.Items.Add(nomEquipe6Transmis);
+                cbxJoueur7.Items.Add(equipe[1].NomEquipe);
+                cbxJoueur7.Items.Add(equipe[2].NomEquipe);
+                cbxJoueur7.Items.Add(equipe[3].NomEquipe);
+                cbxJoueur7.Items.Add(equipe[4].NomEquipe);
+                cbxJoueur7.Items.Add(equipe[5].NomEquipe);
+                cbxJoueur7.Items.Add(equipe[6].NomEquipe);
 
-                cbxJoueur8.Items.Add(nomEquipe1Transmis);
-                cbxJoueur8.Items.Add(nomEquipe2Transmis);
-                cbxJoueur8.Items.Add(nomEquipe3Transmis);
-                cbxJoueur8.Items.Add(nomEquipe4Transmis);
-                cbxJoueur8.Items.Add(nomEquipe5Transmis);
-                cbxJoueur8.Items.Add(nomEquipe6Transmis);
+                cbxJoueur8.Items.Add(equipe[1].NomEquipe);
+                cbxJoueur8.Items.Add(equipe[2].NomEquipe);
+                cbxJoueur8.Items.Add(equipe[3].NomEquipe);
+                cbxJoueur8.Items.Add(equipe[4].NomEquipe);
+                cbxJoueur8.Items.Add(equipe[5].NomEquipe);
+                cbxJoueur8.Items.Add(equipe[6].NomEquipe);
 
-                cbxJoueur9.Items.Add(nomEquipe1Transmis);
-                cbxJoueur9.Items.Add(nomEquipe2Transmis);
-                cbxJoueur9.Items.Add(nomEquipe3Transmis);
-                cbxJoueur9.Items.Add(nomEquipe4Transmis);
-                cbxJoueur9.Items.Add(nomEquipe5Transmis);
-                cbxJoueur9.Items.Add(nomEquipe6Transmis);
+                cbxJoueur9.Items.Add(equipe[1].NomEquipe);
+                cbxJoueur9.Items.Add(equipe[2].NomEquipe);
+                cbxJoueur9.Items.Add(equipe[3].NomEquipe);
+                cbxJoueur9.Items.Add(equipe[4].NomEquipe);
+                cbxJoueur9.Items.Add(equipe[5].NomEquipe);
+                cbxJoueur9.Items.Add(equipe[6].NomEquipe);
             }
             else if (equipeTransmis == true & nombreJoueurTransmisInt == 10)
             {
@@ -662,75 +652,75 @@ namespace ProjetPerso
                 cbxJoueur8.Show();
                 cbxJoueur9.Show();
                 cbxJoueur10.Show();
-                cbxJoueur1.Items.Add(nomEquipe1Transmis);
-                cbxJoueur1.Items.Add(nomEquipe2Transmis);
-                cbxJoueur1.Items.Add(nomEquipe3Transmis);
-                cbxJoueur1.Items.Add(nomEquipe4Transmis);
-                cbxJoueur1.Items.Add(nomEquipe5Transmis);
-                cbxJoueur1.Items.Add(nomEquipe6Transmis);
+                cbxJoueur1.Items.Add(equipe[1].NomEquipe);
+                cbxJoueur1.Items.Add(equipe[2].NomEquipe);
+                cbxJoueur1.Items.Add(equipe[3].NomEquipe);
+                cbxJoueur1.Items.Add(equipe[4].NomEquipe);
+                cbxJoueur1.Items.Add(equipe[5].NomEquipe);
+                cbxJoueur1.Items.Add(equipe[6].NomEquipe);
 
-                cbxJoueur2.Items.Add(nomEquipe1Transmis);
-                cbxJoueur2.Items.Add(nomEquipe2Transmis);
-                cbxJoueur2.Items.Add(nomEquipe3Transmis);
-                cbxJoueur2.Items.Add(nomEquipe4Transmis);
-                cbxJoueur2.Items.Add(nomEquipe5Transmis);
-                cbxJoueur2.Items.Add(nomEquipe6Transmis);
+                cbxJoueur2.Items.Add(equipe[1].NomEquipe);
+                cbxJoueur2.Items.Add(equipe[2].NomEquipe);
+                cbxJoueur2.Items.Add(equipe[3].NomEquipe);
+                cbxJoueur2.Items.Add(equipe[4].NomEquipe);
+                cbxJoueur2.Items.Add(equipe[5].NomEquipe);
+                cbxJoueur2.Items.Add(equipe[6].NomEquipe);
 
-                cbxJoueur3.Items.Add(nomEquipe1Transmis);
-                cbxJoueur3.Items.Add(nomEquipe2Transmis);
-                cbxJoueur3.Items.Add(nomEquipe3Transmis);
-                cbxJoueur3.Items.Add(nomEquipe4Transmis);
-                cbxJoueur3.Items.Add(nomEquipe5Transmis);
-                cbxJoueur3.Items.Add(nomEquipe6Transmis);
+                cbxJoueur3.Items.Add(equipe[1].NomEquipe);
+                cbxJoueur3.Items.Add(equipe[2].NomEquipe);
+                cbxJoueur3.Items.Add(equipe[3].NomEquipe);
+                cbxJoueur3.Items.Add(equipe[4].NomEquipe);
+                cbxJoueur3.Items.Add(equipe[5].NomEquipe);
+                cbxJoueur3.Items.Add(equipe[6].NomEquipe);
 
-                cbxJoueur4.Items.Add(nomEquipe1Transmis);
-                cbxJoueur4.Items.Add(nomEquipe2Transmis);
-                cbxJoueur4.Items.Add(nomEquipe3Transmis);
-                cbxJoueur4.Items.Add(nomEquipe4Transmis);
-                cbxJoueur4.Items.Add(nomEquipe5Transmis);
-                cbxJoueur4.Items.Add(nomEquipe6Transmis);
+                cbxJoueur4.Items.Add(equipe[1].NomEquipe);
+                cbxJoueur4.Items.Add(equipe[2].NomEquipe);
+                cbxJoueur4.Items.Add(equipe[3].NomEquipe);
+                cbxJoueur4.Items.Add(equipe[4].NomEquipe);
+                cbxJoueur4.Items.Add(equipe[5].NomEquipe);
+                cbxJoueur4.Items.Add(equipe[6].NomEquipe);
 
-                cbxJoueur5.Items.Add(nomEquipe1Transmis);
-                cbxJoueur5.Items.Add(nomEquipe2Transmis);
-                cbxJoueur5.Items.Add(nomEquipe3Transmis);
-                cbxJoueur5.Items.Add(nomEquipe4Transmis);
-                cbxJoueur5.Items.Add(nomEquipe5Transmis);
-                cbxJoueur5.Items.Add(nomEquipe6Transmis);
+                cbxJoueur5.Items.Add(equipe[1].NomEquipe);
+                cbxJoueur5.Items.Add(equipe[2].NomEquipe);
+                cbxJoueur5.Items.Add(equipe[3].NomEquipe);
+                cbxJoueur5.Items.Add(equipe[4].NomEquipe);
+                cbxJoueur5.Items.Add(equipe[5].NomEquipe);
+                cbxJoueur5.Items.Add(equipe[6].NomEquipe);
 
-                cbxJoueur6.Items.Add(nomEquipe1Transmis);
-                cbxJoueur6.Items.Add(nomEquipe2Transmis);
-                cbxJoueur6.Items.Add(nomEquipe3Transmis);
-                cbxJoueur6.Items.Add(nomEquipe4Transmis);
-                cbxJoueur6.Items.Add(nomEquipe5Transmis);
-                cbxJoueur6.Items.Add(nomEquipe6Transmis);
+                cbxJoueur6.Items.Add(equipe[1].NomEquipe);
+                cbxJoueur6.Items.Add(equipe[2].NomEquipe);
+                cbxJoueur6.Items.Add(equipe[3].NomEquipe);
+                cbxJoueur6.Items.Add(equipe[4].NomEquipe);
+                cbxJoueur6.Items.Add(equipe[5].NomEquipe);
+                cbxJoueur6.Items.Add(equipe[6].NomEquipe);
 
-                cbxJoueur7.Items.Add(nomEquipe1Transmis);
-                cbxJoueur7.Items.Add(nomEquipe2Transmis);
-                cbxJoueur7.Items.Add(nomEquipe3Transmis);
-                cbxJoueur7.Items.Add(nomEquipe4Transmis);
-                cbxJoueur7.Items.Add(nomEquipe5Transmis);
-                cbxJoueur7.Items.Add(nomEquipe6Transmis);
+                cbxJoueur7.Items.Add(equipe[1].NomEquipe);
+                cbxJoueur7.Items.Add(equipe[2].NomEquipe);
+                cbxJoueur7.Items.Add(equipe[3].NomEquipe);
+                cbxJoueur7.Items.Add(equipe[4].NomEquipe);
+                cbxJoueur7.Items.Add(equipe[5].NomEquipe);
+                cbxJoueur7.Items.Add(equipe[6].NomEquipe);
 
-                cbxJoueur8.Items.Add(nomEquipe1Transmis);
-                cbxJoueur8.Items.Add(nomEquipe2Transmis);
-                cbxJoueur8.Items.Add(nomEquipe3Transmis);
-                cbxJoueur8.Items.Add(nomEquipe4Transmis);
-                cbxJoueur8.Items.Add(nomEquipe5Transmis);
-                cbxJoueur8.Items.Add(nomEquipe6Transmis);
+                cbxJoueur8.Items.Add(equipe[1].NomEquipe);
+                cbxJoueur8.Items.Add(equipe[2].NomEquipe);
+                cbxJoueur8.Items.Add(equipe[3].NomEquipe);
+                cbxJoueur8.Items.Add(equipe[4].NomEquipe);
+                cbxJoueur8.Items.Add(equipe[5].NomEquipe);
+                cbxJoueur8.Items.Add(equipe[6].NomEquipe);
 
-                cbxJoueur9.Items.Add(nomEquipe1Transmis);
-                cbxJoueur9.Items.Add(nomEquipe2Transmis);
-                cbxJoueur9.Items.Add(nomEquipe3Transmis);
-                cbxJoueur9.Items.Add(nomEquipe4Transmis);
-                cbxJoueur9.Items.Add(nomEquipe5Transmis);
-                cbxJoueur9.Items.Add(nomEquipe6Transmis);
+                cbxJoueur9.Items.Add(equipe[1].NomEquipe);
+                cbxJoueur9.Items.Add(equipe[2].NomEquipe);
+                cbxJoueur9.Items.Add(equipe[3].NomEquipe);
+                cbxJoueur9.Items.Add(equipe[4].NomEquipe);
+                cbxJoueur9.Items.Add(equipe[5].NomEquipe);
+                cbxJoueur9.Items.Add(equipe[6].NomEquipe);
 
-                cbxJoueur10.Items.Add(nomEquipe1Transmis);
-                cbxJoueur10.Items.Add(nomEquipe2Transmis);
-                cbxJoueur10.Items.Add(nomEquipe3Transmis);
-                cbxJoueur10.Items.Add(nomEquipe4Transmis);
-                cbxJoueur10.Items.Add(nomEquipe5Transmis);
-                cbxJoueur10.Items.Add(nomEquipe6Transmis);
+                cbxJoueur10.Items.Add(equipe[1].NomEquipe);
+                cbxJoueur10.Items.Add(equipe[2].NomEquipe);
+                cbxJoueur10.Items.Add(equipe[3].NomEquipe);
+                cbxJoueur10.Items.Add(equipe[4].NomEquipe);
+                cbxJoueur10.Items.Add(equipe[5].NomEquipe);
+                cbxJoueur10.Items.Add(equipe[6].NomEquipe);
             }
             else if (equipeTransmis == true & nombreJoueurTransmisInt == 11)
             {
@@ -745,82 +735,82 @@ namespace ProjetPerso
                 cbxJoueur9.Show();
                 cbxJoueur10.Show();
                 cbxJoueur11.Show();
-                cbxJoueur1.Items.Add(nomEquipe1Transmis);
-                cbxJoueur1.Items.Add(nomEquipe2Transmis);
-                cbxJoueur1.Items.Add(nomEquipe3Transmis);
-                cbxJoueur1.Items.Add(nomEquipe4Transmis);
-                cbxJoueur1.Items.Add(nomEquipe5Transmis);
-                cbxJoueur1.Items.Add(nomEquipe6Transmis);
+                cbxJoueur1.Items.Add(equipe[1].NomEquipe);
+                cbxJoueur1.Items.Add(equipe[1].NomEquipe);
+                cbxJoueur1.Items.Add(equipe[1].NomEquipe);
+                cbxJoueur1.Items.Add(equipe[1].NomEquipe);
+                cbxJoueur1.Items.Add(equipe[1].NomEquipe);
+                cbxJoueur1.Items.Add(equipe[1].NomEquipe);
 
-                cbxJoueur2.Items.Add(nomEquipe1Transmis);
-                cbxJoueur2.Items.Add(nomEquipe2Transmis);
-                cbxJoueur2.Items.Add(nomEquipe3Transmis);
-                cbxJoueur2.Items.Add(nomEquipe4Transmis);
-                cbxJoueur2.Items.Add(nomEquipe5Transmis);
-                cbxJoueur2.Items.Add(nomEquipe6Transmis);
+                cbxJoueur2.Items.Add(equipe[1].NomEquipe);
+                cbxJoueur2.Items.Add(equipe[2].NomEquipe);
+                cbxJoueur2.Items.Add(equipe[3].NomEquipe);
+                cbxJoueur2.Items.Add(equipe[4].NomEquipe);
+                cbxJoueur2.Items.Add(equipe[5].NomEquipe);
+                cbxJoueur2.Items.Add(equipe[6].NomEquipe);
 
-                cbxJoueur3.Items.Add(nomEquipe1Transmis);
-                cbxJoueur3.Items.Add(nomEquipe2Transmis);
-                cbxJoueur3.Items.Add(nomEquipe3Transmis);
-                cbxJoueur3.Items.Add(nomEquipe4Transmis);
-                cbxJoueur3.Items.Add(nomEquipe5Transmis);
-                cbxJoueur3.Items.Add(nomEquipe6Transmis);
+                cbxJoueur3.Items.Add(equipe[1].NomEquipe);
+                cbxJoueur3.Items.Add(equipe[2].NomEquipe);
+                cbxJoueur3.Items.Add(equipe[3].NomEquipe);
+                cbxJoueur3.Items.Add(equipe[4].NomEquipe);
+                cbxJoueur3.Items.Add(equipe[5].NomEquipe);
+                cbxJoueur3.Items.Add(equipe[6].NomEquipe);
 
-                cbxJoueur4.Items.Add(nomEquipe1Transmis);
-                cbxJoueur4.Items.Add(nomEquipe2Transmis);
-                cbxJoueur4.Items.Add(nomEquipe3Transmis);
-                cbxJoueur4.Items.Add(nomEquipe4Transmis);
-                cbxJoueur4.Items.Add(nomEquipe5Transmis);
-                cbxJoueur4.Items.Add(nomEquipe6Transmis);
+                cbxJoueur4.Items.Add(equipe[1].NomEquipe);
+                cbxJoueur4.Items.Add(equipe[2].NomEquipe);
+                cbxJoueur4.Items.Add(equipe[3].NomEquipe);
+                cbxJoueur4.Items.Add(equipe[4].NomEquipe);
+                cbxJoueur4.Items.Add(equipe[5].NomEquipe);
+                cbxJoueur4.Items.Add(equipe[6].NomEquipe);
 
-                cbxJoueur5.Items.Add(nomEquipe1Transmis);
-                cbxJoueur5.Items.Add(nomEquipe2Transmis);
-                cbxJoueur5.Items.Add(nomEquipe3Transmis);
-                cbxJoueur5.Items.Add(nomEquipe4Transmis);
-                cbxJoueur5.Items.Add(nomEquipe5Transmis);
-                cbxJoueur5.Items.Add(nomEquipe6Transmis);
+                cbxJoueur5.Items.Add(equipe[1].NomEquipe);
+                cbxJoueur5.Items.Add(equipe[2].NomEquipe);
+                cbxJoueur5.Items.Add(equipe[3].NomEquipe);
+                cbxJoueur5.Items.Add(equipe[4].NomEquipe);
+                cbxJoueur5.Items.Add(equipe[5].NomEquipe);
+                cbxJoueur5.Items.Add(equipe[6].NomEquipe);
 
-                cbxJoueur6.Items.Add(nomEquipe1Transmis);
-                cbxJoueur6.Items.Add(nomEquipe2Transmis);
-                cbxJoueur6.Items.Add(nomEquipe3Transmis);
-                cbxJoueur6.Items.Add(nomEquipe4Transmis);
-                cbxJoueur6.Items.Add(nomEquipe5Transmis);
-                cbxJoueur6.Items.Add(nomEquipe6Transmis);
+                cbxJoueur6.Items.Add(equipe[1].NomEquipe);
+                cbxJoueur6.Items.Add(equipe[2].NomEquipe);
+                cbxJoueur6.Items.Add(equipe[3].NomEquipe);
+                cbxJoueur6.Items.Add(equipe[4].NomEquipe);
+                cbxJoueur6.Items.Add(equipe[5].NomEquipe);
+                cbxJoueur6.Items.Add(equipe[6].NomEquipe);
 
-                cbxJoueur7.Items.Add(nomEquipe1Transmis);
-                cbxJoueur7.Items.Add(nomEquipe2Transmis);
-                cbxJoueur7.Items.Add(nomEquipe3Transmis);
-                cbxJoueur7.Items.Add(nomEquipe4Transmis);
-                cbxJoueur7.Items.Add(nomEquipe5Transmis);
-                cbxJoueur7.Items.Add(nomEquipe6Transmis);
+                cbxJoueur7.Items.Add(equipe[1].NomEquipe);
+                cbxJoueur7.Items.Add(equipe[2].NomEquipe);
+                cbxJoueur7.Items.Add(equipe[3].NomEquipe);
+                cbxJoueur7.Items.Add(equipe[4].NomEquipe);
+                cbxJoueur7.Items.Add(equipe[5].NomEquipe);
+                cbxJoueur7.Items.Add(equipe[6].NomEquipe);
 
-                cbxJoueur8.Items.Add(nomEquipe1Transmis);
-                cbxJoueur8.Items.Add(nomEquipe2Transmis);
-                cbxJoueur8.Items.Add(nomEquipe3Transmis);
-                cbxJoueur8.Items.Add(nomEquipe4Transmis);
-                cbxJoueur8.Items.Add(nomEquipe5Transmis);
-                cbxJoueur8.Items.Add(nomEquipe6Transmis);
+                cbxJoueur8.Items.Add(equipe[1].NomEquipe);
+                cbxJoueur8.Items.Add(equipe[2].NomEquipe);
+                cbxJoueur8.Items.Add(equipe[3].NomEquipe);
+                cbxJoueur8.Items.Add(equipe[4].NomEquipe);
+                cbxJoueur8.Items.Add(equipe[5].NomEquipe);
+                cbxJoueur8.Items.Add(equipe[6].NomEquipe);
 
-                cbxJoueur9.Items.Add(nomEquipe1Transmis);
-                cbxJoueur9.Items.Add(nomEquipe2Transmis);
-                cbxJoueur9.Items.Add(nomEquipe3Transmis);
-                cbxJoueur9.Items.Add(nomEquipe4Transmis);
-                cbxJoueur9.Items.Add(nomEquipe5Transmis);
-                cbxJoueur9.Items.Add(nomEquipe6Transmis);
+                cbxJoueur9.Items.Add(equipe[1].NomEquipe);
+                cbxJoueur9.Items.Add(equipe[2].NomEquipe);
+                cbxJoueur9.Items.Add(equipe[3].NomEquipe);
+                cbxJoueur9.Items.Add(equipe[4].NomEquipe);
+                cbxJoueur9.Items.Add(equipe[5].NomEquipe);
+                cbxJoueur9.Items.Add(equipe[6].NomEquipe);
 
-                cbxJoueur10.Items.Add(nomEquipe1Transmis);
-                cbxJoueur10.Items.Add(nomEquipe2Transmis);
-                cbxJoueur10.Items.Add(nomEquipe3Transmis);
-                cbxJoueur10.Items.Add(nomEquipe4Transmis);
-                cbxJoueur10.Items.Add(nomEquipe5Transmis);
-                cbxJoueur10.Items.Add(nomEquipe6Transmis);
+                cbxJoueur10.Items.Add(equipe[1].NomEquipe);
+                cbxJoueur10.Items.Add(equipe[2].NomEquipe);
+                cbxJoueur10.Items.Add(equipe[3].NomEquipe);
+                cbxJoueur10.Items.Add(equipe[4].NomEquipe);
+                cbxJoueur10.Items.Add(equipe[5].NomEquipe);
+                cbxJoueur10.Items.Add(equipe[6].NomEquipe);
 
-                cbxJoueur11.Items.Add(nomEquipe1Transmis);
-                cbxJoueur11.Items.Add(nomEquipe2Transmis);
-                cbxJoueur11.Items.Add(nomEquipe3Transmis);
-                cbxJoueur11.Items.Add(nomEquipe4Transmis);
-                cbxJoueur11.Items.Add(nomEquipe5Transmis);
-                cbxJoueur11.Items.Add(nomEquipe6Transmis);
+                cbxJoueur11.Items.Add(equipe[1].NomEquipe);
+                cbxJoueur11.Items.Add(equipe[2].NomEquipe);
+                cbxJoueur11.Items.Add(equipe[3].NomEquipe);
+                cbxJoueur11.Items.Add(equipe[4].NomEquipe);
+                cbxJoueur11.Items.Add(equipe[5].NomEquipe);
+                cbxJoueur11.Items.Add(equipe[6].NomEquipe);
             }
 
             else if (equipeTransmis == true & nombreJoueurTransmisInt == 12)
@@ -838,89 +828,89 @@ namespace ProjetPerso
                 cbxJoueur11.Show();
                 cbxJoueur12.Show();
 
-                cbxJoueur1.Items.Add(nomEquipe1Transmis);
-                cbxJoueur1.Items.Add(nomEquipe2Transmis);
-                cbxJoueur1.Items.Add(nomEquipe3Transmis);
-                cbxJoueur1.Items.Add(nomEquipe4Transmis);
-                cbxJoueur1.Items.Add(nomEquipe5Transmis);
-                cbxJoueur1.Items.Add(nomEquipe6Transmis);
+                cbxJoueur1.Items.Add(equipe[1].NomEquipe);
+                cbxJoueur1.Items.Add(equipe[2].NomEquipe);
+                cbxJoueur1.Items.Add(equipe[3].NomEquipe);
+                cbxJoueur1.Items.Add(equipe[4].NomEquipe);
+                cbxJoueur1.Items.Add(equipe[5].NomEquipe);
+                cbxJoueur1.Items.Add(equipe[6].NomEquipe);
 
-                cbxJoueur2.Items.Add(nomEquipe1Transmis);
-                cbxJoueur2.Items.Add(nomEquipe2Transmis);
-                cbxJoueur2.Items.Add(nomEquipe3Transmis);
-                cbxJoueur2.Items.Add(nomEquipe4Transmis);
-                cbxJoueur2.Items.Add(nomEquipe5Transmis);
-                cbxJoueur2.Items.Add(nomEquipe6Transmis);
+                cbxJoueur2.Items.Add(equipe[1].NomEquipe);
+                cbxJoueur2.Items.Add(equipe[2].NomEquipe);
+                cbxJoueur2.Items.Add(equipe[3].NomEquipe);
+                cbxJoueur2.Items.Add(equipe[4].NomEquipe);
+                cbxJoueur2.Items.Add(equipe[5].NomEquipe);
+                cbxJoueur2.Items.Add(equipe[6].NomEquipe);
 
-                cbxJoueur3.Items.Add(nomEquipe1Transmis);
-                cbxJoueur3.Items.Add(nomEquipe2Transmis);
-                cbxJoueur3.Items.Add(nomEquipe3Transmis);
-                cbxJoueur3.Items.Add(nomEquipe4Transmis);
-                cbxJoueur3.Items.Add(nomEquipe5Transmis);
-                cbxJoueur3.Items.Add(nomEquipe6Transmis);
+                cbxJoueur3.Items.Add(equipe[1].NomEquipe);
+                cbxJoueur3.Items.Add(equipe[2].NomEquipe);
+                cbxJoueur3.Items.Add(equipe[3].NomEquipe);
+                cbxJoueur3.Items.Add(equipe[4].NomEquipe);
+                cbxJoueur3.Items.Add(equipe[5].NomEquipe);
+                cbxJoueur3.Items.Add(equipe[6].NomEquipe);
 
-                cbxJoueur4.Items.Add(nomEquipe1Transmis);
-                cbxJoueur4.Items.Add(nomEquipe2Transmis);
-                cbxJoueur4.Items.Add(nomEquipe3Transmis);
-                cbxJoueur4.Items.Add(nomEquipe4Transmis);
-                cbxJoueur4.Items.Add(nomEquipe5Transmis);
-                cbxJoueur4.Items.Add(nomEquipe6Transmis);
+                cbxJoueur4.Items.Add(equipe[1].NomEquipe);
+                cbxJoueur4.Items.Add(equipe[2].NomEquipe);
+                cbxJoueur4.Items.Add(equipe[3].NomEquipe);
+                cbxJoueur4.Items.Add(equipe[4].NomEquipe);
+                cbxJoueur4.Items.Add(equipe[5].NomEquipe);
+                cbxJoueur4.Items.Add(equipe[6].NomEquipe);
 
-                cbxJoueur5.Items.Add(nomEquipe1Transmis);
-                cbxJoueur5.Items.Add(nomEquipe2Transmis);
-                cbxJoueur5.Items.Add(nomEquipe3Transmis);
-                cbxJoueur5.Items.Add(nomEquipe4Transmis);
-                cbxJoueur5.Items.Add(nomEquipe5Transmis);
-                cbxJoueur5.Items.Add(nomEquipe6Transmis);
+                cbxJoueur5.Items.Add(equipe[1].NomEquipe);
+                cbxJoueur5.Items.Add(equipe[2].NomEquipe);
+                cbxJoueur5.Items.Add(equipe[3].NomEquipe);
+                cbxJoueur5.Items.Add(equipe[4].NomEquipe);
+                cbxJoueur5.Items.Add(equipe[5].NomEquipe);
+                cbxJoueur5.Items.Add(equipe[6].NomEquipe);
 
-                cbxJoueur6.Items.Add(nomEquipe1Transmis);
-                cbxJoueur6.Items.Add(nomEquipe2Transmis);
-                cbxJoueur6.Items.Add(nomEquipe3Transmis);
-                cbxJoueur6.Items.Add(nomEquipe4Transmis);
-                cbxJoueur6.Items.Add(nomEquipe5Transmis);
-                cbxJoueur6.Items.Add(nomEquipe6Transmis);
+                cbxJoueur6.Items.Add(equipe[1].NomEquipe);
+                cbxJoueur6.Items.Add(equipe[2].NomEquipe);
+                cbxJoueur6.Items.Add(equipe[3].NomEquipe);
+                cbxJoueur6.Items.Add(equipe[4].NomEquipe);
+                cbxJoueur6.Items.Add(equipe[5].NomEquipe);
+                cbxJoueur6.Items.Add(equipe[6].NomEquipe);
 
-                cbxJoueur7.Items.Add(nomEquipe1Transmis);
-                cbxJoueur7.Items.Add(nomEquipe2Transmis);
-                cbxJoueur7.Items.Add(nomEquipe3Transmis);
-                cbxJoueur7.Items.Add(nomEquipe4Transmis);
-                cbxJoueur7.Items.Add(nomEquipe5Transmis);
-                cbxJoueur7.Items.Add(nomEquipe6Transmis);
+                cbxJoueur7.Items.Add(equipe[1].NomEquipe);
+                cbxJoueur7.Items.Add(equipe[2].NomEquipe);
+                cbxJoueur7.Items.Add(equipe[3].NomEquipe);
+                cbxJoueur7.Items.Add(equipe[4].NomEquipe);
+                cbxJoueur7.Items.Add(equipe[5].NomEquipe);
+                cbxJoueur7.Items.Add(equipe[6].NomEquipe);
 
-                cbxJoueur8.Items.Add(nomEquipe1Transmis);
-                cbxJoueur8.Items.Add(nomEquipe2Transmis);
-                cbxJoueur8.Items.Add(nomEquipe3Transmis);
-                cbxJoueur8.Items.Add(nomEquipe4Transmis);
-                cbxJoueur8.Items.Add(nomEquipe5Transmis);
-                cbxJoueur8.Items.Add(nomEquipe6Transmis);
+                cbxJoueur8.Items.Add(equipe[1].NomEquipe);
+                cbxJoueur8.Items.Add(equipe[2].NomEquipe);
+                cbxJoueur8.Items.Add(equipe[3].NomEquipe);
+                cbxJoueur8.Items.Add(equipe[4].NomEquipe);
+                cbxJoueur8.Items.Add(equipe[5].NomEquipe);
+                cbxJoueur8.Items.Add(equipe[6].NomEquipe);
 
-                cbxJoueur9.Items.Add(nomEquipe1Transmis);
-                cbxJoueur9.Items.Add(nomEquipe2Transmis);
-                cbxJoueur9.Items.Add(nomEquipe3Transmis);
-                cbxJoueur9.Items.Add(nomEquipe4Transmis);
-                cbxJoueur9.Items.Add(nomEquipe5Transmis);
-                cbxJoueur9.Items.Add(nomEquipe6Transmis);
+                cbxJoueur9.Items.Add(equipe[1].NomEquipe);
+                cbxJoueur9.Items.Add(equipe[2].NomEquipe);
+                cbxJoueur9.Items.Add(equipe[3].NomEquipe);
+                cbxJoueur9.Items.Add(equipe[4].NomEquipe);
+                cbxJoueur9.Items.Add(equipe[5].NomEquipe);
+                cbxJoueur9.Items.Add(equipe[6].NomEquipe);
 
-                cbxJoueur10.Items.Add(nomEquipe1Transmis);
-                cbxJoueur10.Items.Add(nomEquipe2Transmis);
-                cbxJoueur10.Items.Add(nomEquipe3Transmis);
-                cbxJoueur10.Items.Add(nomEquipe4Transmis);
-                cbxJoueur10.Items.Add(nomEquipe5Transmis);
-                cbxJoueur10.Items.Add(nomEquipe6Transmis);
+                cbxJoueur10.Items.Add(equipe[1].NomEquipe);
+                cbxJoueur10.Items.Add(equipe[2].NomEquipe);
+                cbxJoueur10.Items.Add(equipe[3].NomEquipe);
+                cbxJoueur10.Items.Add(equipe[4].NomEquipe);
+                cbxJoueur10.Items.Add(equipe[5].NomEquipe);
+                cbxJoueur10.Items.Add(equipe[6].NomEquipe);
 
-                cbxJoueur11.Items.Add(nomEquipe1Transmis);
-                cbxJoueur11.Items.Add(nomEquipe2Transmis);
-                cbxJoueur11.Items.Add(nomEquipe3Transmis);
-                cbxJoueur11.Items.Add(nomEquipe4Transmis);
-                cbxJoueur11.Items.Add(nomEquipe5Transmis);
-                cbxJoueur11.Items.Add(nomEquipe6Transmis);
+                cbxJoueur11.Items.Add(equipe[1].NomEquipe);
+                cbxJoueur11.Items.Add(equipe[2].NomEquipe);
+                cbxJoueur11.Items.Add(equipe[3].NomEquipe);
+                cbxJoueur11.Items.Add(equipe[4].NomEquipe);
+                cbxJoueur11.Items.Add(equipe[5].NomEquipe);
+                cbxJoueur11.Items.Add(equipe[6].NomEquipe);
 
-                cbxJoueur12.Items.Add(nomEquipe1Transmis);
-                cbxJoueur12.Items.Add(nomEquipe2Transmis);
-                cbxJoueur12.Items.Add(nomEquipe3Transmis);
-                cbxJoueur12.Items.Add(nomEquipe4Transmis);
-                cbxJoueur12.Items.Add(nomEquipe5Transmis);
-                cbxJoueur12.Items.Add(nomEquipe6Transmis);
+                cbxJoueur12.Items.Add(equipe[1].NomEquipe);
+                cbxJoueur12.Items.Add(equipe[2].NomEquipe);
+                cbxJoueur12.Items.Add(equipe[3].NomEquipe);
+                cbxJoueur12.Items.Add(equipe[4].NomEquipe);
+                cbxJoueur12.Items.Add(equipe[5].NomEquipe);
+                cbxJoueur12.Items.Add(equipe[6].NomEquipe);
             }
         }
 

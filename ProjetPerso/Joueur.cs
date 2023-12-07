@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProjetPerso
 {
-    internal class Joueur
+    public class Joueur
     {
         //creation des attributs de la classe
         private string nomEquipe;
