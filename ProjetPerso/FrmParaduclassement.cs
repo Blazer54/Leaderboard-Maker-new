@@ -101,7 +101,7 @@ namespace ProjetPerso
                 equipeVerif = false;//le bool est sur false//
             }
             //création d'une nouvelle form qui a toutes les info sur les nom d'équipe le nombre de joueur//
-           FrmInfoJoueurs Frminfojoueurs = new FrmInfoJoueurs(nombreDeJoueur,equipeVerif);
+           FrmInfoJoueurs Frminfojoueurs = new FrmInfoJoueurs(nombreDeJoueur,equipeVerif, equipe);
             Frminfojoueurs.ShowDialog();
             
 
