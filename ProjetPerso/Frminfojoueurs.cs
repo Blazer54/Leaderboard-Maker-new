@@ -931,7 +931,7 @@ namespace ProjetPerso
             this.Hide();
             if (equipeTransmis == true)
             {
-                Frminfoequipe frminfoequipe = new Frminfoequipe();//création d'une nouvelle form//
+                Frminfoequipe frminfoequipe = new Frminfoequipe(equipe, joueurs);//création d'une nouvelle form//
                 frminfoequipe.ShowDialog();
             }
             else
