@@ -46,12 +46,13 @@ namespace ProjetPerso
                 lblnbrequipe.Hide();
                 cbxnbrequipe.Hide();
                 chbSeul.Show(); //montre la check box//
-                bool equipe = false;//si la check box équipe n'est pas cochée //
+                bool equipeVerif = false;//si la check box équipe n'est pas cochée //
             }
         }
 
         private void FrmParaduclassement_Load(object sender, EventArgs e)//quand la forme ce charge //
         {
+            equipe.Add(new Equipe("Blank"));
             lblnomequipe1.Hide();//cache les lbl//
             lblnomequipe2.Hide();
             lblnomequipe3.Hide();   
@@ -83,25 +84,24 @@ namespace ProjetPerso
         private void btnvalider_Click(object sender, EventArgs e)//quand on clique sur le btn valider //
         {
             this.Hide();//cache la form acctuelle //
-            string nomEquipe1 = tbxnomequipe1.Text;//des string qui contient les contenus des nom d'équipe//
-            string nomEquipe2 = tbxnomequipe2.Text;
-            string nomEquipe3 = tbxnomequipe3.Text;
-            string nomEquipe4 = tbxnomequipe4.Text;
-            string nomEquipe5 = tbxnomequipe5.Text;
-            string nomEquipe6 = tbxnomequipe6.Text;
             string nombreDeJoueur = cbxjoueur.Text;
-            equipe.Add(new Equipe(tbxnomequipe1.Text));
-            bool equipe = false;//le bool équipe est sur false de base//
+            equipe.Add(new Equipe(tbxnomequipe1.Text));//ajout des nom d'équipe a la classe "equipe"//
+            equipe.Add(new Equipe(tbxnomequipe2.Text));
+            equipe.Add(new Equipe(tbxnomequipe3.Text));
+            equipe.Add(new Equipe(tbxnomequipe4.Text));
+            equipe.Add(new Equipe(tbxnomequipe5.Text));
+            equipe.Add(new Equipe(tbxnomequipe6.Text));
+            bool equipeVerif = false;//le bool équipe est sur false de base//
             if (chbequipe.Checked == true)//si le checkbox équipe est cochée//
             {
-               equipe = true;//le bool équipe est sur true//
+                equipeVerif = true;//le bool équipe est sur true//
             }
             else//sinon//
             {
-            equipe = false;//le bool est sur false//
+                equipeVerif = false;//le bool est sur false//
             }
             //création d'une nouvelle form qui a toutes les info sur les nom d'équipe le nombre de joueur//
-           FrmInfoJoueurs Frminfojoueurs = new FrmInfoJoueurs(nomEquipe1, nomEquipe2, nomEquipe3, nomEquipe4, nomEquipe5, nomEquipe6,equipe,nombreDeJoueur);
+           FrmInfoJoueurs Frminfojoueurs = new FrmInfoJoueurs(nombreDeJoueur,equipeVerif);
             Frminfojoueurs.ShowDialog();
             
 
