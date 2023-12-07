@@ -37,10 +37,8 @@ namespace ProjetPerso
             lblequipe6.Text = equipe[6].NomEquipe;
             int nombreDeJoueur = Convert.ToInt32(nombrejoueur);
 
-            if (nombrejoueur == "2")
-            { }
 
-            for (int i = 1; i <= nombreDeJoueur; i++)
+            for (int i = 1; i < nombreDeJoueur; i++)
             {
                 if (joueur[i].NomEquipe == equipe[1].NomEquipe) // si le joueur appartient a l'équipe 1 //
                 {
@@ -144,7 +142,7 @@ namespace ProjetPerso
 
         private void btnValider_Click(object sender, EventArgs e) //si on clique sur le bouton valider //
         {
-            FrmSystPoint Frmsystpoint = new FrmSystPoint();// crée une nouvelle form //
+            FrmSystPoint Frmsystpoint = new FrmSystPoint(equipe, joueur, nombrejoueur);// crée une nouvelle form //
             Frmsystpoint.ShowDialog();
             this.Hide();//cache la form acctuelle //
         }
