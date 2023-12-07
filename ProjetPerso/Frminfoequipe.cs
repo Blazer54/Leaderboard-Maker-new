@@ -594,7 +594,7 @@ namespace ProjetPerso
 
         private void btnModifier_Click(object sender, EventArgs e) //si on clique sur le bouton modifier//
         {
-            FrmModifier Frmmodifier = new FrmModifier(List<Equipe>equipe , List<Joueur>joueur, nombrejoueur);// crée une nouvelle form //
+            FrmModifier Frmmodifier = new FrmModifier(equipe , joueur, nombrejoueur);// crée une nouvelle form //
             Frmmodifier.ShowDialog();
             this.Hide();//cache la form acctuelle //
         }
