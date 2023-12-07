@@ -9,16 +9,16 @@ namespace ProjetPerso
 
     internal class Equipe
     {
-        string nomJoueur;
+        string nomEquipe;
 
-        public Equipe(string nomJoueur)
+        public Equipe(string nomEquipe)
         {
-            this.nomJoueur = nomJoueur;
+            this.nomEquipe = nomEquipe;
         }
 
         public override string ToString()
         {
-            return $"{nomJoueur}";
+            return $"{nomEquipe}";
         }
     }
 }
