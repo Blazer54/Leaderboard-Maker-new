@@ -74,6 +74,8 @@
             this.label25 = new System.Windows.Forms.Label();
             this.lblequipe4 = new System.Windows.Forms.Label();
             this.lblequipe2 = new System.Windows.Forms.Label();
+            this.btnValider = new System.Windows.Forms.Button();
+            this.btnModifier = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblequipe1
@@ -503,12 +505,40 @@
             this.lblequipe2.TabIndex = 67;
             this.lblequipe2.Text = "équipe2";
             // 
+            // btnValider
+            // 
+            this.btnValider.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnValider.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnValider.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnValider.Location = new System.Drawing.Point(557, 448);
+            this.btnValider.Name = "btnValider";
+            this.btnValider.Size = new System.Drawing.Size(229, 104);
+            this.btnValider.TabIndex = 135;
+            this.btnValider.Text = "Valider";
+            this.btnValider.UseVisualStyleBackColor = false;
+            this.btnValider.Click += new System.EventHandler(this.btnValider_Click);
+            // 
+            // btnModifier
+            // 
+            this.btnModifier.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnModifier.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModifier.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModifier.Location = new System.Drawing.Point(183, 448);
+            this.btnModifier.Name = "btnModifier";
+            this.btnModifier.Size = new System.Drawing.Size(229, 104);
+            this.btnModifier.TabIndex = 136;
+            this.btnModifier.Text = "Modifier";
+            this.btnModifier.UseVisualStyleBackColor = false;
+            this.btnModifier.Click += new System.EventHandler(this.btnModifier_Click);
+            // 
             // Frminfoequipe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(1077, 564);
+            this.Controls.Add(this.btnModifier);
+            this.Controls.Add(this.btnValider);
             this.Controls.Add(this.lbljoueur6equip6);
             this.Controls.Add(this.lbljoueur5equip6);
             this.Controls.Add(this.lbljoueur4equip6);
@@ -611,5 +641,7 @@
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label lblequipe4;
         private System.Windows.Forms.Label lblequipe2;
+        private System.Windows.Forms.Button btnValider;
+        private System.Windows.Forms.Button btnModifier;
     }
 }

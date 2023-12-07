@@ -13,6 +13,7 @@ namespace ProjetPerso
     public partial class Frminfoequipe : Form
     {
         List<Equipe> equipe = new List<Equipe>();
+        List<Joueur> joueur = new List<Joueur>();
         public Frminfoequipe()
         {
             InitializeComponent();
@@ -62,39 +63,88 @@ namespace ProjetPerso
             lbljoueur4equip6.Hide();
             lbljoueur5equip6.Hide();
             lbljoueur6equip6.Hide();
-            
-            string nomequipe1 = "a";
-            lblequipe1.Text = equipe[1].NomEquipe;
-            string nomequipe2 = "b";
-            lblequipe2.Text = nomequipe2;
-            string nomequipe3 = "c";
-            lblequipe3.Text = nomequipe3;
-            string nomequipe4 = "d";
-            lblequipe4.Text = nomequipe4;
-            string nomequipe5 = "e";
-            lblequipe5.Text = nomequipe5;
-            string nomequipe6 = "f";
-            lblequipe6.Text = nomequipe6;
-            string nomJouer = "a";
-            lbljoueur1equip1.Text = nomJouer;
-            lbljoueur2equip1.Text = nomJouer;
-            lbljoueur3equip1.Text = nomJouer;
-            lbljoueur4equip1.Text = nomJouer;
-            lbljoueur5equip1.Text = nomJouer;
-            lbljoueur6equip1.Text = nomJouer;
-            lbljoueur1equip2.Text = nomJouer;
-            lbljoueur2equip2.Text = nomJouer;
-            lbljoueur3equip2.Text = nomJouer;
-            lbljoueur4equip2.Text = nomJouer;
-            lbljoueur5equip2.Text = nomJouer;
-            lbljoueur6equip2.Text = nomJouer;
-            lbljoueur1equip3.Text = nomJouer;
-            lbljoueur2equip3.Text = nomJouer;
-            lbljoueur3equip3.Text = nomJouer;
-            lbljoueur4equip3.Text = nomJouer;
-            lbljoueur5equip3.Text = nomJouer;
-            lbljoueur6equip3.Text = nomJouer;
 
+            lblequipe1.Text = equipe[1].NomEquipe;
+            lblequipe2.Text = equipe[2].NomEquipe;
+            lblequipe3.Text = equipe[3].NomEquipe;
+            lblequipe4.Text = equipe[4].NomEquipe;
+            lblequipe5.Text = equipe[5].NomEquipe;
+            lblequipe6.Text = equipe[6].NomEquipe;
+            for (int i = 1; i < 10; i++)
+            {
+                if (joueur[i].NomEquipe == equipe[1].NomEquipe)
+                {
+                    if (lbljoueur1equip1.Text == null)
+                    {lbljoueur1equip1.Text = joueur[i].Nom;}
+                    else if (lbljoueur2equip1.Text == null)
+                    { lbljoueur2equip1.Text = joueur[i].Nom; }
+                    else if (lbljoueur3equip1.Text == null)
+                    { lbljoueur3equip1.Text = joueur[i].Nom; }
+                    else if (lbljoueur4equip1.Text == null)
+                    { lbljoueur4equip1.Text = joueur[i].Nom; }
+                    else if (lbljoueur5equip1.Text == null)
+                    { lbljoueur5equip1.Text = joueur[i].Nom; }
+                    else if (lbljoueur6equip1.Text == null)
+                    { lbljoueur6equip1.Text = joueur[i].Nom;}
+                }
+                else if (joueur[i].NomEquipe == equipe[2].NomEquipe)
+                {
+                    if (lbljoueur1equip2.Text == null)
+                    { lbljoueur1equip2.Text = joueur[i].Nom; }
+                    else if (lbljoueur2equip2.Text == null)
+                    { lbljoueur2equip2.Text = joueur[i].Nom; }
+                    else if (lbljoueur3equip2.Text == null)
+                    { lbljoueur3equip2.Text = joueur[i].Nom; }
+                    else if (lbljoueur4equip2.Text == null)
+                    { lbljoueur4equip2.Text = joueur[i].Nom; }
+                    else if (lbljoueur5equip2.Text == null)
+                    { lbljoueur5equip2.Text = joueur[i].Nom; }
+                    else if (lbljoueur6equip2.Text == null)
+                    { lbljoueur6equip2.Text = joueur[i].Nom; }
+                    
+                    lbljoueur2equip2.Text = joueur[i].Nom;      
+                    lbljoueur3equip2.Text = joueur[i].Nom;
+                    lbljoueur4equip2.Text = joueur[i].Nom;
+                    lbljoueur5equip2.Text = joueur[i].Nom;
+                    lbljoueur6equip2.Text = joueur[i].Nom;
+                }
+                else if (joueur[i].NomEquipe == equipe[3].NomEquipe)
+                {
+                    lbljoueur1equip3.Text = joueur[i].Nom;
+                    lbljoueur2equip3.Text = joueur[i].Nom;
+                    lbljoueur3equip3.Text = joueur[i].Nom;
+                    lbljoueur4equip3.Text = joueur[i].Nom;
+                    lbljoueur5equip3.Text = joueur[i].Nom;
+                    lbljoueur6equip3.Text = joueur[i].Nom;
+                }
+                else if (joueur[i].NomEquipe == equipe[3].NomEquipe)
+                {
+                    lbljoueur1equip4.Text = joueur[i].Nom;
+                    lbljoueur2equip4.Text = joueur[i].Nom;
+                    lbljoueur3equip4.Text = joueur[i].Nom;
+                    lbljoueur4equip4.Text = joueur[i].Nom;
+                    lbljoueur5equip4.Text = joueur[i].Nom;
+                    lbljoueur6equip4.Text = joueur[i].Nom;
+                }
+                else if (joueur[i].NomEquipe == equipe[3].NomEquipe)
+                {
+                    lbljoueur1equip5.Text = joueur[i].Nom;
+                    lbljoueur2equip5.Text = joueur[i].Nom;
+                    lbljoueur3equip5.Text = joueur[i].Nom;
+                    lbljoueur4equip5.Text = joueur[i].Nom;
+                    lbljoueur5equip5.Text = joueur[i].Nom;
+                    lbljoueur6equip5.Text = joueur[i].Nom;
+                }
+                else if (joueur[i].NomEquipe == equipe[3].NomEquipe)
+                {
+                    lbljoueur1equip6.Text = joueur[i].Nom;
+                    lbljoueur2equip6.Text = joueur[i].Nom;
+                    lbljoueur3equip6.Text = joueur[i].Nom;
+                    lbljoueur4equip6.Text = joueur[i].Nom;
+                    lbljoueur5equip6.Text = joueur[i].Nom;
+                    lbljoueur6equip6.Text = joueur[i].Nom;
+                }
+            }
             int nombreEquipe = 1;
                 if(nombreEquipe == 2) 
             {
@@ -263,6 +313,20 @@ namespace ProjetPerso
                 lbljoueur5equip6.Show();
                 lbljoueur6equip6.Show();
             }
+        }
+
+        private void btnModifier_Click(object sender, EventArgs e)
+        {
+            FrmModifier Frmmodifier = new FrmModifier();
+            Frmmodifier.ShowDialog();
+            this.Hide();//cache la form acctuelle //
+        }
+
+        private void btnValider_Click(object sender, EventArgs e)
+        {
+            FrmParaduclassement Frmparaduclassement = new FrmParaduclassement();
+            Frmparaduclassement.ShowDialog();
+            this.Hide();//cache la form acctuelle //
         }
     }
 }
