@@ -13,6 +13,7 @@ namespace ProjetPerso
 {
     public partial class FrmParaduclassement : Form
     {
+        List<Equipe> equipe = new List<Equipe>();
         public FrmParaduclassement()
         {
             InitializeComponent();
@@ -25,7 +26,7 @@ namespace ProjetPerso
                 lblnbrequipe.Show();//montrer le label pour le nombre d'équipe//
                 cbxnbrequipe.Show();//montrer la combo box pour le nombre d'équipe//
                 chbSeul.Hide();//cacher la check box//
-                bool equipe = true;//envoie l'information true //
+                bool equipeVerif = true;//envoie l'information true //
             }
             else //si la check box équipe n'est pas couchée//
             {
@@ -89,6 +90,7 @@ namespace ProjetPerso
             string nomEquipe5 = tbxnomequipe5.Text;
             string nomEquipe6 = tbxnomequipe6.Text;
             string nombreDeJoueur = cbxjoueur.Text;
+            equipe.Add(new Equipe(tbxnomequipe1.Text));
             bool equipe = false;//le bool équipe est sur false de base//
             if (chbequipe.Checked == true)//si le checkbox équipe est cochée//
             {
