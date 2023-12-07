@@ -68,6 +68,7 @@ namespace ProjetPerso
         private void btnValider_Click(object sender, EventArgs e)
         {
 
+            
             /*
             
             tbx2eme.Text;

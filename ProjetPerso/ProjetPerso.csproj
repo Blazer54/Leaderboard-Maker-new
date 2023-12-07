@@ -116,6 +116,7 @@
     <Compile Include="Joueur.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Systpoint.cs" />
     <EmbeddedResource Include="FrmAjouterunepartieequipe.resx">
       <DependentUpon>FrmAjouterunepartieequipe.cs</DependentUpon>
     </EmbeddedResource>

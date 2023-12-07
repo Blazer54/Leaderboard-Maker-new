@@ -38,7 +38,7 @@ namespace ProjetPerso
             int nombreDeJoueur = Convert.ToInt32(nombrejoueur);
 
 
-            for (int i = 1; i < nombreDeJoueur; i++)
+            for (int i = 1; i <= nombreDeJoueur; i++)
             {
                 if (joueur[i].NomEquipe == equipe[1].NomEquipe) // si le joueur appartient a l'équipe 1 //
                 {
