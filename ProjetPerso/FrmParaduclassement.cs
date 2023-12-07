@@ -13,7 +13,7 @@ namespace ProjetPerso
 {
     public partial class FrmParaduclassement : Form
     {
-        static List<Equipe>equipe = new List<Equipe>();
+        List<Equipe>equipe = new List<Equipe>();
         public FrmParaduclassement()
         {
             InitializeComponent();
