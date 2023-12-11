@@ -24,49 +24,29 @@ namespace ProjetPerso
             {
 
                 lblnbrequipe.Show();//montrer le label pour le nombre d'équipe//
-                cbxnbrequipe.Show();//montrer la combo box pour le nombre d'équipe//
+                tbxnbrequipe.Show();//montrer la combo box pour le nombre d'équipe//
                 chbSeul.Hide();//cacher la check box//
                 bool equipeVerif = true;//envoie l'information true //
+                btnValidernbrequipe.Show();
             }
             else //si la check box équipe n'est pas couchée//
             {
 
-                lblnomequipe1.Hide();//cache le lbl//
-                lblnomequipe2.Hide();
-                lblnomequipe3.Hide();
-                lblnomequipe4.Hide();
-                lblnomequipe5.Hide();
-                lblnomequipe6.Hide();
-                tbxnomequipe1.Hide();//cache le tbx//
-                tbxnomequipe2.Hide();
-                tbxnomequipe3.Hide();
-                tbxnomequipe4.Hide();
-                tbxnomequipe5.Hide();
-                tbxnomequipe6.Hide();
                 lblnbrequipe.Hide();
-                cbxnbrequipe.Hide();
+                tbxnbrequipe.Hide();
                 chbSeul.Show(); //montre la check box//
                 bool equipeVerif = false;//si la check box équipe n'est pas cochée //
+                btnValidernbrequipe.Hide();
             }
         }
 
         private void FrmParaduclassement_Load(object sender, EventArgs e)//quand la forme ce charge //
         {
+            
             equipe.Add(new Equipe("Blank"));
-            lblnomequipe1.Hide();//cache les lbl//
-            lblnomequipe2.Hide();
-            lblnomequipe3.Hide();   
-            lblnomequipe4.Hide();
-            lblnomequipe5.Hide();
-            lblnomequipe6.Hide();
-            tbxnomequipe1.Hide();//cache les tbx//
-            tbxnomequipe2.Hide();
-            tbxnomequipe3.Hide();
-            tbxnomequipe4.Hide();
-            tbxnomequipe5.Hide();
-            tbxnomequipe6.Hide();
+            tbxnbrequipe.Hide();
             lblnbrequipe.Hide();
-            cbxnbrequipe.Hide();
+            btnValidernbrequipe.Hide();
         }
 
         private void chbSeul_CheckedChanged(object sender, EventArgs e)//quand la checkbox change d'état//
@@ -84,13 +64,8 @@ namespace ProjetPerso
         private void btnvalider_Click(object sender, EventArgs e)//quand on clique sur le btn valider //
         {
             this.Hide();//cache la form acctuelle //
-            string nombreDeJoueur = cbxjoueur.Text;
-            equipe.Add(new Equipe(tbxnomequipe1.Text));//ajout des nom d'équipe a la classe "equipe"//
-            equipe.Add(new Equipe(tbxnomequipe2.Text));
-            equipe.Add(new Equipe(tbxnomequipe3.Text));
-            equipe.Add(new Equipe(tbxnomequipe4.Text));
-            equipe.Add(new Equipe(tbxnomequipe5.Text));
-            equipe.Add(new Equipe(tbxnomequipe6.Text));
+            string nombreDeJoueur = tbxnbrequipe.Text;
+            
             bool equipeVerif = false;//le bool équipe est sur false de base//
             if (chbequipe.Checked == true)//si le checkbox équipe est cochée//
             {
@@ -103,102 +78,69 @@ namespace ProjetPerso
             //création d'une nouvelle form qui a toutes les info sur les nom d'équipe le nombre de joueur//
            FrmInfoJoueurs Frminfojoueurs = new FrmInfoJoueurs(nombreDeJoueur,equipeVerif, equipe);
             Frminfojoueurs.ShowDialog();
-            
 
+ 
         }
 
         private void cbxnbrequipe_SelectedIndexChanged(object sender, EventArgs e)//quand check box est changer//
         {
-            if (cbxnbrequipe.Text == "2") //si deux est choisi//
-            {
-                lblnomequipe1.Show();//montre les lbl et tbx des equipe 1 et 2 et les autres sont cacher//
-                tbxnomequipe1.Show();
-                lblnomequipe2.Show();
-                tbxnomequipe2.Show();
-                lblnomequipe3.Hide();
-                tbxnomequipe3.Hide();
-                lblnomequipe4.Hide();
-                tbxnomequipe4.Hide();
-                lblnomequipe5.Hide();
-                tbxnomequipe5.Hide();
-                lblnomequipe6.Hide();
-                tbxnomequipe6.Hide();
+           
+            /*
+            equipe.Add(new Equipe(tbxnomequipe1.Text));//ajout des nom d'équipe a la classe "equipe"//
+            equipe.Add(new Equipe(tbxnomequipe2.Text));
+            equipe.Add(new Equipe(tbxnomequipe3.Text));
+            equipe.Add(new Equipe(tbxnomequipe4.Text));
+            equipe.Add(new Equipe(tbxnomequipe5.Text));
+            equipe.Add(new Equipe(tbxnomequipe6.Text));
+            */
+        }
+       
+        private void tbxnbrequipe_TextChanged(object sender, EventArgs e)
+        {
+            
+            
+        }
 
-            }
-            else if (cbxnbrequipe.Text == "3")
+        private void btnValidernbrequipe_Click(object sender, EventArgs e)
+        {
+            
+            int nbrcbxnbrequipe = Convert.ToInt32(tbxnbrequipe.Text);
+            for (int i = 1; i <= nbrcbxnbrequipe / 2; i++)
             {
-                lblnomequipe1.Show();//montre les lbl et tbx des equipe 1, 2 et 3 et les autres sont cacher//
-                tbxnomequipe1.Show();
-                lblnomequipe2.Show();
-                tbxnomequipe2.Show();
-                lblnomequipe3.Show();
-                tbxnomequipe3.Show();
-                lblnomequipe4.Hide();
-                tbxnomequipe4.Hide();
-                lblnomequipe5.Hide();
-                tbxnomequipe5.Hide();
-                lblnomequipe6.Hide();
-                tbxnomequipe6.Hide();
+                int posX = 180;
+                // Créer un Label
+                Label label = new Label();
+                label.Text = "Nom equipe : " + i.ToString();
+                label.Name = "lblEquipe" + i.ToString();
+                label.Location = new System.Drawing.Point(posX + 25, 50 * i + 50);
+                this.Controls.Add(label);
+
+                TextBox textBox = new TextBox();
+                textBox.Location = new System.Drawing.Point(posX + 125, 50 * i + 50);
+                textBox.Size = new System.Drawing.Size(100, 20);
+                textBox.Name = "tbxnomequipe" + i.ToString(); // Nommer la TextBox de manière unique
+                this.Controls.Add(textBox);
+
+                this.equipe.Add(new Equipe(textBox.Text));
             }
-            else if (cbxnbrequipe.Text == "4")
+            for (int i = nbrcbxnbrequipe / 2 + 1; i <= nbrcbxnbrequipe; i++)
             {
-                lblnomequipe1.Show();//montre les lbl et tbx des equipe 1,2,3 et 4 les autres sont cacher//
-                tbxnomequipe1.Show();
-                lblnomequipe2.Show();
-                tbxnomequipe2.Show();
-                lblnomequipe3.Show();
-                tbxnomequipe3.Show();
-                lblnomequipe4.Show();
-                tbxnomequipe4.Show();
-                lblnomequipe5.Hide();
-                tbxnomequipe5.Hide();
-                lblnomequipe6.Hide();
-                tbxnomequipe6.Hide();
-            }
-            else if (cbxnbrequipe.Text == "5")
-            {
-                lblnomequipe1.Show();//montre les lbl et tbx des equipe 1,2,3,4 et 5 les autres sont cacher//
-                tbxnomequipe1.Show();
-                lblnomequipe2.Show();
-                tbxnomequipe2.Show();
-                lblnomequipe3.Show();
-                tbxnomequipe3.Show();
-                lblnomequipe4.Show();
-                tbxnomequipe4.Show();
-                lblnomequipe5.Show();
-                tbxnomequipe5.Show(); 
-                lblnomequipe6.Hide();
-                tbxnomequipe6.Hide();
-            }
-            else if (cbxnbrequipe.Text == "6")
-            {
-                lblnomequipe1.Show();//montre les lbl et tbx des equipe 1,2,3,4,5 et 6 les autres sont cacher//
-                tbxnomequipe1.Show();
-                lblnomequipe2.Show();
-                tbxnomequipe2.Show();
-                lblnomequipe3.Show();
-                tbxnomequipe3.Show();
-                lblnomequipe4.Show();
-                tbxnomequipe4.Show();
-                lblnomequipe5.Show();
-                tbxnomequipe5.Show();
-                lblnomequipe6.Show();
-                tbxnomequipe6.Show();
-            }
-            else 
-            {
-                lblnomequipe1.Hide();//sinon tout les lbl et tbx sont cacher//
-                tbxnomequipe1.Hide();
-                lblnomequipe2.Hide();
-                tbxnomequipe2.Hide();
-                lblnomequipe3.Hide();
-                tbxnomequipe3.Hide();
-                lblnomequipe4.Hide();
-                tbxnomequipe4.Hide();
-                lblnomequipe5.Hide();
-                tbxnomequipe5.Hide();
-                lblnomequipe6.Hide();
-                tbxnomequipe6.Hide();
+
+                int posX = 480;
+                // Créer un Label
+                Label label = new Label();
+                label.Text = "Nom equipe : " + i.ToString();
+                label.Name = "lblEquipe" + i.ToString();
+                label.Location = new System.Drawing.Point(posX + 25, 50 * (i - nbrcbxnbrequipe / 2) + 50);
+                this.Controls.Add(label);
+
+                TextBox textBox = new TextBox();
+                textBox.Location = new System.Drawing.Point(posX + 125, 50 * (i - nbrcbxnbrequipe / 2) + 50);
+                textBox.Size = new System.Drawing.Size(100, 20);
+                textBox.Name = "tbxnomequipe" + i.ToString(); // Nommer la TextBox de manière unique
+                this.Controls.Add(textBox);
+                this.equipe.Add(new Equipe(textBox.Text));
+
             }
         }
     }

@@ -21,24 +21,36 @@ namespace ProjetPerso
             equipe = equipe1;
             joueur = joueur1;
             nombrejoueur = nombreJoueurTransmis;
-
-
         }
 
         private void Frminfoequipe_Load(object sender, EventArgs e) //quand la form apparait a l'écrant //
         {
 
-
-            lblequipe1.Text = equipe[1].NomEquipe; //le text du lbl de l'équipe est remplis par l'objet de la liste //
-            lblequipe2.Text = equipe[2].NomEquipe;
-            lblequipe3.Text = equipe[3].NomEquipe;
-            lblequipe4.Text = equipe[4].NomEquipe;
-            lblequipe5.Text = equipe[5].NomEquipe;
-            lblequipe6.Text = equipe[6].NomEquipe;
             int nombreDeJoueur = Convert.ToInt32(nombrejoueur);
+            int nombreEquipe = equipe.Count -1;
 
+            for (int i = 1; i <= nombreEquipe / 2; i++)
+            {
+                int posX = 250;
+                Label label = new Label();
+                label.Text = equipe[i].NomEquipe;
+                label.Name = "lblEquipeHaut" + i.ToString();
+                label.Location = new System.Drawing.Point(posX * i, 50);
+                this.Controls.Add(label);
+            }
+            for (int i = nombreEquipe / 2 +1; i <= nombreEquipe; i++)
+            {
+                int posX = 250;
+                Label label = new Label();
+                label.Text = equipe[i].NomEquipe;
+                label.Name = "lblEquipeBas" + i.ToString();
+                label.Location = new System.Drawing.Point(posX * (i -3), 250);
+                this.Controls.Add(label);
+             }
+            
 
-            for (int i = 1; i <= nombreDeJoueur; i++)
+            /*
+            for (int i = 1; i < nombreDeJoueur; i++)
             {
                 if (joueur[i].NomEquipe == equipe[1].NomEquipe) // si le joueur appartient a l'équipe 1 //
                 {
@@ -130,8 +142,10 @@ namespace ProjetPerso
                     else if (lbljoueur6equip6.Text == "")
                     { lbljoueur6equip6.Text = joueur[i].Nom; }
                 }
-
             }
+            */
+
+
         }
         private void btnModifier_Click(object sender, EventArgs e) //si on clique sur le bouton modifier//
         {
