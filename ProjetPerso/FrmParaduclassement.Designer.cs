@@ -40,7 +40,6 @@
             this.tbxnbrequipe = new System.Windows.Forms.TextBox();
             this.btnValidernbrequipe = new System.Windows.Forms.Button();
             this.tbxnbrjoueur = new System.Windows.Forms.TextBox();
-            this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
             this.SuspendLayout();
             // 
             // LblNbrjoueur
@@ -162,21 +161,12 @@
             this.tbxnbrjoueur.Size = new System.Drawing.Size(141, 21);
             this.tbxnbrjoueur.TabIndex = 26;
             // 
-            // vScrollBar1
-            // 
-            this.vScrollBar1.Location = new System.Drawing.Point(614, 119);
-            this.vScrollBar1.Name = "vScrollBar1";
-            this.vScrollBar1.Size = new System.Drawing.Size(27, 161);
-            this.vScrollBar1.TabIndex = 27;
-            this.vScrollBar1.Scroll += new System.Windows.Forms.ScrollEventHandler(this.vScrollBar1_Scroll);
-            // 
             // FrmParaduclassement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.vScrollBar1);
             this.Controls.Add(this.tbxnbrjoueur);
             this.Controls.Add(this.btnValidernbrequipe);
             this.Controls.Add(this.tbxnbrequipe);
@@ -211,6 +201,5 @@
         private System.Windows.Forms.TextBox tbxnbrequipe;
         private System.Windows.Forms.Button btnValidernbrequipe;
         private System.Windows.Forms.TextBox tbxnbrjoueur;
-        private System.Windows.Forms.VScrollBar vScrollBar1;
     }
 }
