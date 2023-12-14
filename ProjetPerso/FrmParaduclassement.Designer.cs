@@ -39,7 +39,7 @@
             this.btnvalider = new System.Windows.Forms.Button();
             this.tbxnbrequipe = new System.Windows.Forms.TextBox();
             this.btnValidernbrequipe = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbxnbrjoueur = new System.Windows.Forms.TextBox();
             this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
             this.SuspendLayout();
             // 
@@ -154,13 +154,13 @@
             this.btnValidernbrequipe.UseVisualStyleBackColor = true;
             this.btnValidernbrequipe.Click += new System.EventHandler(this.btnValidernbrequipe_Click);
             // 
-            // textBox1
+            // tbxnbrjoueur
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(162, 20);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(141, 21);
-            this.textBox1.TabIndex = 26;
+            this.tbxnbrjoueur.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxnbrjoueur.Location = new System.Drawing.Point(162, 20);
+            this.tbxnbrjoueur.Name = "tbxnbrjoueur";
+            this.tbxnbrjoueur.Size = new System.Drawing.Size(141, 21);
+            this.tbxnbrjoueur.TabIndex = 26;
             // 
             // vScrollBar1
             // 
@@ -177,7 +177,7 @@
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.vScrollBar1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbxnbrjoueur);
             this.Controls.Add(this.btnValidernbrequipe);
             this.Controls.Add(this.tbxnbrequipe);
             this.Controls.Add(this.btnvalider);
@@ -210,7 +210,7 @@
         private System.Windows.Forms.Button btnvalider;
         private System.Windows.Forms.TextBox tbxnbrequipe;
         private System.Windows.Forms.Button btnValidernbrequipe;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbxnbrjoueur;
         private System.Windows.Forms.VScrollBar vScrollBar1;
     }
 }

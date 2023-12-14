@@ -64,8 +64,9 @@ namespace ProjetPerso
         }
         private void btnvalider_Click(object sender, EventArgs e)//quand on clique sur le btn valider //
         {
+            AjouterEquipe();
             this.Hide();//cache la form acctuelle //
-            string nombreDeJoueur = tbxnbrequipe.Text;
+            string nombreDeJoueur = tbxnbrjoueur.Text;
             
             bool equipeVerif = false;//le bool équipe est sur false de base//
             if (chbequipe.Checked == true)//si le checkbox équipe est cochée//
@@ -77,23 +78,14 @@ namespace ProjetPerso
                 equipeVerif = false;//le bool est sur false//
             }
             //création d'une nouvelle form qui a toutes les info sur les nom d'équipe le nombre de joueur//
-           FrmInfoJoueurs Frminfojoueurs = new FrmInfoJoueurs(nombreDeJoueur,equipeVerif, equipe);
+            FrmInfoJoueurs Frminfojoueurs = new FrmInfoJoueurs(nombreDeJoueur,equipeVerif, equipe);
             Frminfojoueurs.ShowDialog();
-
-            AjouterEquipe();
+            
         }
 
         private void cbxnbrequipe_SelectedIndexChanged(object sender, EventArgs e)//quand check box est changer//
         {
            
-            /*
-            equipe.Add(new Equipe(tbxnomequipe1.Text));//ajout des nom d'équipe a la classe "equipe"//
-            equipe.Add(new Equipe(tbxnomequipe2.Text));
-            equipe.Add(new Equipe(tbxnomequipe3.Text));
-            equipe.Add(new Equipe(tbxnomequipe4.Text));      
-            equipe.Add(new Equipe(tbxnomequipe5.Text));
-            equipe.Add(new Equipe(tbxnomequipe6.Text));
-            */
         }
        
         private void tbxnbrequipe_TextChanged(object sender, EventArgs e)
@@ -123,7 +115,6 @@ namespace ProjetPerso
                 tbxequipe.Add(textBox);
                 this.Controls.Add(textBox);
 
-                this.equipe.Add(new Equipe(textBox.Text));
             }
             for (int i = nbrcbxnbrequipe / 2 + 1; i <= nbrcbxnbrequipe; i++)
             {
@@ -142,13 +133,12 @@ namespace ProjetPerso
                 textBox.Name = "tbxnomequipe" + i.ToString(); // Nommer la TextBox de manière unique
                 tbxequipe.Add(textBox);
                 this.Controls.Add(textBox);
-                this.equipe.Add(new Equipe(textBox.Text));
 
             }
         }
         public void AjouterEquipe()
         {
-            for (int i = 0; i < equipe.Count; i++) 
+            for (int i = 0; i < tbxequipe.Count; i++) 
             {
                 string nomEquipe = tbxequipe[i].Text;
                 if (!string.IsNullOrEmpty(nomEquipe))

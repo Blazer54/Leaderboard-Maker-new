@@ -30,6 +30,8 @@
         {
             this.lblInfoJoueur = new System.Windows.Forms.Label();
             this.btnValider = new System.Windows.Forms.Button();
+            this.tbxNone = new System.Windows.Forms.TextBox();
+            this.cbxNone = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // lblInfoJoueur
@@ -52,12 +54,31 @@
             this.btnValider.UseVisualStyleBackColor = true;
             this.btnValider.Click += new System.EventHandler(this.btnValider_Click);
             // 
+            // tbxNone
+            // 
+            this.tbxNone.Location = new System.Drawing.Point(999, 54);
+            this.tbxNone.Multiline = true;
+            this.tbxNone.Name = "tbxNone";
+            this.tbxNone.Size = new System.Drawing.Size(23, 10);
+            this.tbxNone.TabIndex = 32;
+            // 
+            // cbxNone
+            // 
+            this.cbxNone.FormattingEnabled = true;
+            this.cbxNone.Location = new System.Drawing.Point(1003, 81);
+            this.cbxNone.Name = "cbxNone";
+            this.cbxNone.Size = new System.Drawing.Size(19, 21);
+            this.cbxNone.TabIndex = 33;
+            // 
             // FrmInfoJoueurs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(1077, 564);
+            this.Controls.Add(this.cbxNone);
+            this.Controls.Add(this.tbxNone);
             this.Controls.Add(this.btnValider);
             this.Controls.Add(this.lblInfoJoueur);
             this.Name = "FrmInfoJoueurs";
@@ -73,5 +94,7 @@
 
         private System.Windows.Forms.Label lblInfoJoueur;
         private System.Windows.Forms.Button btnValider;
+        private System.Windows.Forms.TextBox tbxNone;
+        private System.Windows.Forms.ComboBox cbxNone;
     }
 }
