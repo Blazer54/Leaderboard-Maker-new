@@ -14,6 +14,7 @@ namespace ProjetPerso
     public partial class FrmParaduclassement : Form
     {
         List<Equipe>equipe = new List<Equipe>();
+        List<TextBox> tbxequipe = new List<TextBox>();
         public FrmParaduclassement()
         {
             InitializeComponent();
@@ -79,7 +80,7 @@ namespace ProjetPerso
            FrmInfoJoueurs Frminfojoueurs = new FrmInfoJoueurs(nombreDeJoueur,equipeVerif, equipe);
             Frminfojoueurs.ShowDialog();
 
- 
+            AjouterEquipe();
         }
 
         private void cbxnbrequipe_SelectedIndexChanged(object sender, EventArgs e)//quand check box est changer//
@@ -89,7 +90,7 @@ namespace ProjetPerso
             equipe.Add(new Equipe(tbxnomequipe1.Text));//ajout des nom d'équipe a la classe "equipe"//
             equipe.Add(new Equipe(tbxnomequipe2.Text));
             equipe.Add(new Equipe(tbxnomequipe3.Text));
-            equipe.Add(new Equipe(tbxnomequipe4.Text));
+            equipe.Add(new Equipe(tbxnomequipe4.Text));      
             equipe.Add(new Equipe(tbxnomequipe5.Text));
             equipe.Add(new Equipe(tbxnomequipe6.Text));
             */
@@ -103,7 +104,7 @@ namespace ProjetPerso
 
         private void btnValidernbrequipe_Click(object sender, EventArgs e)
         {
-            
+
             int nbrcbxnbrequipe = Convert.ToInt32(tbxnbrequipe.Text);
             for (int i = 1; i <= nbrcbxnbrequipe / 2; i++)
             {
@@ -114,11 +115,12 @@ namespace ProjetPerso
                 label.Name = "lblEquipe" + i.ToString();
                 label.Location = new System.Drawing.Point(posX + 25, 50 * i + 50);
                 this.Controls.Add(label);
-
+                
                 TextBox textBox = new TextBox();
                 textBox.Location = new System.Drawing.Point(posX + 125, 50 * i + 50);
                 textBox.Size = new System.Drawing.Size(100, 20);
                 textBox.Name = "tbxnomequipe" + i.ToString(); // Nommer la TextBox de manière unique
+                tbxequipe.Add(textBox);
                 this.Controls.Add(textBox);
 
                 this.equipe.Add(new Equipe(textBox.Text));
@@ -138,10 +140,28 @@ namespace ProjetPerso
                 textBox.Location = new System.Drawing.Point(posX + 125, 50 * (i - nbrcbxnbrequipe / 2) + 50);
                 textBox.Size = new System.Drawing.Size(100, 20);
                 textBox.Name = "tbxnomequipe" + i.ToString(); // Nommer la TextBox de manière unique
+                tbxequipe.Add(textBox);
                 this.Controls.Add(textBox);
                 this.equipe.Add(new Equipe(textBox.Text));
 
             }
+        }
+        public void AjouterEquipe()
+        {
+            for (int i = 0; i < equipe.Count; i++) 
+            {
+                string nomEquipe = tbxequipe[i].Text;
+                if (!string.IsNullOrEmpty(nomEquipe))
+                {
+                    equipe.Add(new Equipe(nomEquipe));
+                }
+                else { return; }
+            }
+        }
+
+        private void vScrollBar1_Scroll(object sender, ScrollEventArgs e)
+        {
+
         }
     }
 }

@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.LblNbrjoueur = new System.Windows.Forms.Label();
-            this.cbxjoueur = new System.Windows.Forms.ComboBox();
             this.LblJeux = new System.Windows.Forms.Label();
             this.cbxjeux = new System.Windows.Forms.ComboBox();
             this.lblequipe = new System.Windows.Forms.Label();
@@ -40,6 +39,8 @@
             this.btnvalider = new System.Windows.Forms.Button();
             this.tbxnbrequipe = new System.Windows.Forms.TextBox();
             this.btnValidernbrequipe = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
             this.SuspendLayout();
             // 
             // LblNbrjoueur
@@ -51,22 +52,6 @@
             this.LblNbrjoueur.Size = new System.Drawing.Size(135, 20);
             this.LblNbrjoueur.TabIndex = 0;
             this.LblNbrjoueur.Text = "Nombre de joueur";
-            // 
-            // cbxjoueur
-            // 
-            this.cbxjoueur.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbxjoueur.FormattingEnabled = true;
-            this.cbxjoueur.Items.AddRange(new object[] {
-            "2",
-            "4",
-            "6",
-            "8",
-            "10",
-            "12"});
-            this.cbxjoueur.Location = new System.Drawing.Point(162, 19);
-            this.cbxjoueur.Name = "cbxjoueur";
-            this.cbxjoueur.Size = new System.Drawing.Size(109, 23);
-            this.cbxjoueur.TabIndex = 1;
             // 
             // LblJeux
             // 
@@ -169,12 +154,30 @@
             this.btnValidernbrequipe.UseVisualStyleBackColor = true;
             this.btnValidernbrequipe.Click += new System.EventHandler(this.btnValidernbrequipe_Click);
             // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(162, 20);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(141, 21);
+            this.textBox1.TabIndex = 26;
+            // 
+            // vScrollBar1
+            // 
+            this.vScrollBar1.Location = new System.Drawing.Point(614, 119);
+            this.vScrollBar1.Name = "vScrollBar1";
+            this.vScrollBar1.Size = new System.Drawing.Size(27, 161);
+            this.vScrollBar1.TabIndex = 27;
+            this.vScrollBar1.Scroll += new System.Windows.Forms.ScrollEventHandler(this.vScrollBar1_Scroll);
+            // 
             // FrmParaduclassement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.vScrollBar1);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btnValidernbrequipe);
             this.Controls.Add(this.tbxnbrequipe);
             this.Controls.Add(this.btnvalider);
@@ -185,7 +188,6 @@
             this.Controls.Add(this.lblequipe);
             this.Controls.Add(this.cbxjeux);
             this.Controls.Add(this.LblJeux);
-            this.Controls.Add(this.cbxjoueur);
             this.Controls.Add(this.LblNbrjoueur);
             this.Name = "FrmParaduclassement";
             this.Text = "Paramètre du classement";
@@ -198,7 +200,6 @@
         #endregion
 
         private System.Windows.Forms.Label LblNbrjoueur;
-        private System.Windows.Forms.ComboBox cbxjoueur;
         private System.Windows.Forms.Label LblJeux;
         private System.Windows.Forms.ComboBox cbxjeux;
         private System.Windows.Forms.Label lblequipe;
@@ -209,5 +210,7 @@
         private System.Windows.Forms.Button btnvalider;
         private System.Windows.Forms.TextBox tbxnbrequipe;
         private System.Windows.Forms.Button btnValidernbrequipe;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.VScrollBar vScrollBar1;
     }
 }
