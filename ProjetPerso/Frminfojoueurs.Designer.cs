@@ -46,7 +46,7 @@
             // 
             // btnValider
             // 
-            this.btnValider.Location = new System.Drawing.Point(472, 443);
+            this.btnValider.Location = new System.Drawing.Point(36, 15);
             this.btnValider.Name = "btnValider";
             this.btnValider.Size = new System.Drawing.Size(142, 75);
             this.btnValider.TabIndex = 31;

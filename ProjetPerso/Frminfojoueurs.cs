@@ -65,16 +65,20 @@ namespace ProjetPerso
                 this.Controls.Add(textBoxJoueur);
 
                 // Créer une ComboBox
-                ComboBox comboBoxJoueur = new ComboBox();
-                for (int f = 1; f <= equipe.Count - 1; f++)
+                if (equipeTransmis == true)
                 {
-                    comboBoxJoueur.Items.Add(equipe[f].NomEquipe);
+                    ComboBox comboBoxJoueur = new ComboBox();
+                    for (int f = 1; f <= equipe.Count - 1; f++)
+                    {
+                        comboBoxJoueur.Items.Add(equipe[f].NomEquipe);
+                    }
+                    comboBoxJoueur.Location = new System.Drawing.Point(posX + 245, 50 * i + 30);
+                    comboBoxJoueur.Size = new System.Drawing.Size(100, 20);
+                    comboBoxJoueur.Name = "cbxJoueur" + i.ToString(); // Nommer la ComboBox de manière unique
+                    listCombobox.Add(comboBoxJoueur);
+                    this.Controls.Add(comboBoxJoueur);
                 }
-                comboBoxJoueur.Location = new System.Drawing.Point(posX + 245, 50 * i + 30);
-                comboBoxJoueur.Size = new System.Drawing.Size(100, 20);
-                comboBoxJoueur.Name = "cbxJoueur" + i.ToString(); // Nommer la ComboBox de manière unique
-                listCombobox.Add(comboBoxJoueur);
-                this.Controls.Add(comboBoxJoueur);
+
 
 
             }
@@ -97,17 +101,21 @@ namespace ProjetPerso
                 this.Controls.Add(textBoxJoueur);
 
                 // Créer une ComboBox
-                ComboBox comboBoxJoueur = new ComboBox();
-                for (int f = 1; f <= equipe.Count - 1; f++)
+                if (equipeTransmis == true)
                 {
-                    comboBoxJoueur.Items.Add(equipe[f].NomEquipe);
+                    ComboBox comboBoxJoueur = new ComboBox();
+                    for (int f = 1; f <= equipe.Count - 1; f++)
+                    {
+                        comboBoxJoueur.Items.Add(equipe[f].NomEquipe);
+                    }
+                    comboBoxJoueur.Location = new System.Drawing.Point(posX + 245, posY);
+                    comboBoxJoueur.Size = new System.Drawing.Size(100, 20);
+                    comboBoxJoueur.Name = "cbxJoueur" + i.ToString(); // Nommer la ComboBox de manière unique
+                    listCombobox.Add(comboBoxJoueur);
+                    this.Controls.Add(comboBoxJoueur);
+                    posY = posY + 50;
                 }
-                comboBoxJoueur.Location = new System.Drawing.Point(posX + 245, posY);
-                comboBoxJoueur.Size = new System.Drawing.Size(100, 20);
-                comboBoxJoueur.Name = "cbxJoueur" + i.ToString(); // Nommer la ComboBox de manière unique
-                listCombobox.Add(comboBoxJoueur);
-                this.Controls.Add(comboBoxJoueur);
-                posY = posY + 50;
+
             }
 
         }
@@ -115,7 +123,7 @@ namespace ProjetPerso
         private void btnValider_Click(object sender, EventArgs e) //evènement quand on clique sur le bouton
         {
             //on ajoute les nom de joueurs à la classe joueurs
-            AjouterJoueur();
+            AjouterJoueur(nombreJoueurTransmis);
             this.Hide(); //on cache
             if (equipeTransmis == true)//si la compétition est en équipe
             {
@@ -132,17 +140,19 @@ namespace ProjetPerso
             }
         }
 
-        public void AjouterJoueur()
+        public void AjouterJoueur(string nbJoueur)
         {
-            for(int i = 0; i < joueurs.Count; i++) 
+            int nbJoueurInt = Convert.ToInt32(nbJoueur);
+            for(int i = 1; i <= nbJoueurInt; i++) 
             {
                 string nomJoueur = listTextbox[i].Text;
                 string nomEquipe = listCombobox[i].SelectedItem?.ToString();
-                if (!string.IsNullOrEmpty(nomJoueur) && !string.IsNullOrEmpty(nomEquipe))
+                if (!string.IsNullOrEmpty(nomJoueur) || !string.IsNullOrEmpty(nomEquipe))
                 {
                     // Créer un nouvel objet Joueur et l'ajouter à la liste
                     joueurs.Add(new Joueur(nomJoueur, nomEquipe));
                 }
+
                 else
                 {
                     return; // Arrêter le processus si une valeur est manquante
