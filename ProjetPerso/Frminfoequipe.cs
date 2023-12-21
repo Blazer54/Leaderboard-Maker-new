@@ -25,7 +25,6 @@ namespace ProjetPerso
 
         private void Frminfoequipe_Load(object sender, EventArgs e) //quand la form apparait a l'écrant //
         {
-
             int nombreDeJoueur = Convert.ToInt32(nombrejoueur);
             int nombreEquipe = equipe.Count -1;
 
@@ -49,7 +48,6 @@ namespace ProjetPerso
                         labeljoueur.Location = new System.Drawing.Point(posX * i, 50 + (20 * joueurNumEquipe));
                         this.Controls.Add(labeljoueur);
                     }
-
                 }
             }
             for (int i = nombreEquipe / 2 +1; i <= nombreEquipe; i++)
@@ -65,9 +63,10 @@ namespace ProjetPerso
                 {
                     if (joueur[f].NomEquipe == equipe[i].NomEquipe)
                     {
+                        joueurNumEquipe = joueurNumEquipe + 1;
                         Label labeljoueur = new Label();
                         labeljoueur.Text = $"{joueur[f].Nom}";
-                        labeljoueur.Name = "lblJoueurs" + f.ToString();
+                        labeljoueur.Name = "lblJoueursbas" + f.ToString();
                         labeljoueur.Location = new System.Drawing.Point(posX * (i - nombreEquipe / 2), 250 +(20 * joueurNumEquipe));
                         this.Controls.Add(labeljoueur);
                     }

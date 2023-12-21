@@ -83,7 +83,7 @@
             this.Controls.Add(this.lblInfoJoueur);
             this.Name = "FrmInfoJoueurs";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Information sur les joueurs";
+            this.Text = "y";
             this.Load += new System.EventHandler(this.FrmInfoJoueurs_Load_1);
             this.ResumeLayout(false);
             this.PerformLayout();
