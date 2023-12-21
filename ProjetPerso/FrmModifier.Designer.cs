@@ -34,12 +34,13 @@
             // 
             // btnValider
             // 
-            this.btnValider.Location = new System.Drawing.Point(784, 29);
+            this.btnValider.Location = new System.Drawing.Point(40, 12);
             this.btnValider.Name = "btnValider";
             this.btnValider.Size = new System.Drawing.Size(142, 75);
             this.btnValider.TabIndex = 69;
             this.btnValider.Text = "Valider";
             this.btnValider.UseVisualStyleBackColor = true;
+            this.btnValider.Click += new System.EventHandler(this.btnValider_Click);
             // 
             // lblInfoJoueur
             // 
