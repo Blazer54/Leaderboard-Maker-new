@@ -63,9 +63,9 @@ namespace ProjetPerso
             {
                 string nbrPoint = tbx[i].Text;
                 if (!string.IsNullOrEmpty(nbrPoint))
-                {
+                {/*
                     systpoint.Add(new Pointclass(nbrPoint));
-                }
+                */}
                 else { return; }
             }
         }
