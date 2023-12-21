@@ -14,10 +14,10 @@ namespace ProjetPerso
     {
         List<Equipe> equipes = new List<Equipe>();
         List<Joueur> joueurs = new List<Joueur>();
-        List<Systpoint>systpoint = new List<Systpoint>();
+        List<Systpoint> systpoint = new List<Systpoint>();
         string nombrejoueurs;
         int nbrequipe;
-    public FrmSystPoint(List<Equipe> equipe, List<Joueur> joueur, string nombrejoueur)
+        public FrmSystPoint(List<Equipe> equipe, List<Joueur> joueur, string nombrejoueur)
         {
             InitializeComponent();
             equipes = equipe;
@@ -28,55 +28,32 @@ namespace ProjetPerso
 
         private void FrmSystPoint_Load(object sender, EventArgs e)
         {
-            lbl3eme.Hide();
-            lbl4eme.Hide();
-            lbl4eme.Hide();
-            lbl5eme.Hide();
-            lbl6eme.Hide();
-            tbx3eme.Hide();
-            tbx4eme.Hide();
-            tbx5eme.Hide();
-            tbx6eme.Hide();
-            if (nbrequipe == 3)
-            {
-                lbl3eme.Show();
-                tbx3eme.Show();
-            }
-            else if (nbrequipe == 4)
-            {
-                lbl3eme.Show();
-                tbx3eme.Show();
-                lbl4eme.Show();
-                tbx4eme.Show();
-            }
-            else if (nbrequipe == 5)
-            {
-                lbl3eme.Show();
-                tbx3eme.Show();
-                lbl5eme.Show();
-                tbx5eme.Show();
-            }
-            else if (nbrequipe == 6)
-            {
-                lbl3eme.Show();
-                tbx3eme.Show();
-                lbl6eme.Show();
-                tbx6eme.Show();
-            }
-        }
+            int nombreDeJoueur = Convert.ToInt32(nombrejoueurs);
+            int nombreEquipe = equipes.Count - 1;
 
+            for (int i = 1; i <= nombreEquipe; i++)
+            {
+                int posY = 50;
+                Label label = new Label();
+                label.Text = "Point pour l'équipe qui fini n°" + i.ToString();
+                label.Name = "Lblpoint" + i.ToString();
+                label.Location = new System.Drawing.Point(150, posY * i);
+                label.Size = new System.Drawing.Size(170, 20);
+                this.Controls.Add(label);
+
+                TextBox textBoxJoueur = new TextBox();
+                textBoxJoueur.Location = new System.Drawing.Point(150 + 170, posY * i);
+                textBoxJoueur.Size = new System.Drawing.Size(100, 20);
+                textBoxJoueur.Name = "tbxJoueur" + i.ToString(); // Nommer la TextBox de manière unique
+                this.Controls.Add(textBoxJoueur);
+            }
+
+        }
         private void btnValider_Click(object sender, EventArgs e)
         {
-
-            
-            /*
-            
-            tbx2eme.Text;
-            tbx3eme.Text;
-            tbx4eme.Text;
-            tbx5eme.Text;
-            tbx6eme.Text;
-            */
+            this.Hide();
+            FrmMenuPrincipale frmMenuPrincipale = new FrmMenuPrincipale();
+            frmMenuPrincipale.ShowDialog();
         }
     }
 }
