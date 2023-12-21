@@ -15,6 +15,7 @@ namespace ProjetPerso
         List<Equipe> equipes = new List<Equipe>();
         List<Joueur> joueurs = new List<Joueur>();
         List<Systpoint> systpoint = new List<Systpoint>();
+        List<TextBox> tbx = new List<TextBox>();
         string nombrejoueurs;
         int nbrequipe;
         public FrmSystPoint(List<Equipe> equipe, List<Joueur> joueur, string nombrejoueur)
@@ -45,6 +46,7 @@ namespace ProjetPerso
                 textBoxJoueur.Location = new System.Drawing.Point(150 + 170, posY * i);
                 textBoxJoueur.Size = new System.Drawing.Size(100, 20);
                 textBoxJoueur.Name = "tbxJoueur" + i.ToString(); // Nommer la TextBox de manière unique
+                tbx.Add(textBoxJoueur);
                 this.Controls.Add(textBoxJoueur);
             }
 
@@ -54,6 +56,18 @@ namespace ProjetPerso
             this.Hide();
             FrmMenuPrincipale frmMenuPrincipale = new FrmMenuPrincipale();
             frmMenuPrincipale.ShowDialog();
+        }
+        public void AjouterEquipe()
+        {
+            for (int i = 0; i < tbx.Count; i++)
+            {
+                string nbrPoint = tbx[i].Text;
+                if (!string.IsNullOrEmpty(nbrPoint))
+                {
+                    systpoint.Add(new Pointclass(nbrPoint));
+                }
+                else { return; }
+            }
         }
     }
 }
