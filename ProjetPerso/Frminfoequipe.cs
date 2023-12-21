@@ -37,7 +37,7 @@ namespace ProjetPerso
                 label.Location = new System.Drawing.Point(posX * i, 50);
                 this.Controls.Add(label);
                 int joueurNumEquipe = 0;
-                for (int f = 0; f <= nombreDeJoueur; f++)
+                for (int f = 0; f < nombreDeJoueur; f++)
                 {
                     if (joueur[f].NomEquipe == equipe[i].NomEquipe)
                     {
@@ -59,7 +59,7 @@ namespace ProjetPerso
                 label.Location = new System.Drawing.Point(posX * (i - nombreEquipe / 2), 250);
                 this.Controls.Add(label);
                 int joueurNumEquipe = 0;
-                for (int f = 0; f <= nombreDeJoueur; f++)
+                for (int f = 0; f < nombreDeJoueur; f++)
                 {
                     if (joueur[f].NomEquipe == equipe[i].NomEquipe)
                     {
