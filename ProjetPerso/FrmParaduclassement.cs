@@ -44,7 +44,6 @@ namespace ProjetPerso
         private void FrmParaduclassement_Load(object sender, EventArgs e)//quand la forme ce charge //
         {
             
-            equipe.Add(new Equipe("Blank"));
             tbxnbrequipe.Hide();
             lblnbrequipe.Hide();
             btnValidernbrequipe.Hide();

@@ -42,7 +42,6 @@ namespace ProjetPerso
             cbxNone.Hide();
             tbxNone.Hide();
             //on ajoute un joueur vide pour la liste pour que quand on ajoute des joueurs leur index commence à 1
-            joueurs.Add(new Joueur("", ""));
             listCombobox.Add(cbxNone);
             listTextbox.Add(tbxNone);
             //on convertit le nombre de joueur transmis en int pour les calculs et les conditions
