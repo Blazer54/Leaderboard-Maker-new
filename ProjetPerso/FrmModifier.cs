@@ -59,31 +59,39 @@ namespace ProjetPerso
                     comboBoxJoueur.Items.Add(equipe[f].NomEquipe);
 
                 }
-                
+                //on parcoure la liste des equipe
                 for(int f = 0;f <= equipe.Count - 1 ; f++)
-                {                
+                {
+                    //si le nom de l'équipe actuelle est égale au nom d'équipe du joueur actuel alors
                     if (equipe[f].NomEquipe == joueurs[i].NomEquipe)
                     {
+                        //on dit que l'index séléctionné est f
                         comboBoxJoueur.SelectedIndex = f;
                     }
                 }
-
+                //on définit les propriétés de la combobox
                 comboBoxJoueur.Location = new System.Drawing.Point(posX + 200,40 * i + 85);
                 comboBoxJoueur.Size = new System.Drawing.Size(100, 20);
                 comboBoxJoueur.Name = "cbxJoueur" + i.ToString(); // Nommer la ComboBox de manière unique
+                //on l'ajoute à la liste des combobox
                 listCombobox.Add(comboBoxJoueur);
                 this.Controls.Add(comboBoxJoueur);
 
             }
+            //on définit une variable pour la cordonée Y
             int posY = 80;
+            //on parcoure l'autre moitié de la liste des joueurs
             for (int i = joueurs.Count / 2; i <= joueurs.Count - 1; i++)
             {
+                //déclaration de la variable pour la cordonée X
                 int posX = 180;
                 // Créer un Label
                 Label label = new Label();
+                //on définit ses propriétées
                 label.Text = $"{joueurs[i].Nom}";
                 label.Name = "lblJoueur" + i.ToString();
                 label.Location = new System.Drawing.Point(posX + 500, 35 * i + 10);
+                //on l'ajoute à la liste des labels
                 listeLabels.Add(label);
                 this.Controls.Add(label);
                 ComboBox comboBoxJoueur = new ComboBox();
@@ -94,19 +102,23 @@ namespace ProjetPerso
                     comboBoxJoueur.Items.Add(equipe[f].NomEquipe);
 
                 }
-
+                //on parcoure la liste des équipes
                 for (int f = 0; f <= equipe.Count - 1; f++)
                 {
+                    //si le nom d'équipe actuelle est égale aux nom d'équipe du joueurs actuel alors
                     if (equipe[f].NomEquipe == joueurs[i].NomEquipe)
                     {
+                        //l'index séléctionées sera f
                         comboBoxJoueur.SelectedIndex = f;
                     }
                 }
                 comboBoxJoueur.Location = new System.Drawing.Point(posX + 630, 35 * i + 10);
                 comboBoxJoueur.Size = new System.Drawing.Size(100, 20);
                 comboBoxJoueur.Name = "cbxJoueur" + i.ToString(); // Nommer la ComboBox de manière unique
+                //on ajoute la combobox à la liste des combobox
                 listCombobox.Add(comboBoxJoueur);
                 this.Controls.Add(comboBoxJoueur);
+                //on ajoute 50 à la position Ys
                 posY = posY + 50;
             }
         }
@@ -114,11 +126,11 @@ namespace ProjetPerso
         private void btnValider_Click(object sender, EventArgs e)
         {
             this.Hide(); //on cache
-            joueurs.Clear();
-            AjouterJoueur(nombreJoueur);
+            joueurs.Clear();//on enleve tout ce qu'il y a dans la liste des joueurs
+            AjouterJoueur(nombreJoueur);//on utilise la fonction pour ajouter les joueurs
             //alors on affiche la form pour les information sur les équipes
-            Frminfoequipe frminfoequipe = new Frminfoequipe(equipe, joueurs, nombreJoueur);//création d'une nouvelle form//
-            frminfoequipe.ShowDialog();
+            FrmSystPoint frmSystPoint = new FrmSystPoint(equipe, joueurs, nombreJoueur);//création d'une nouvelle form//
+            frmSystPoint.ShowDialog();
         }
 
         public void AjouterJoueur(string nbJoueur)//fonction pour ajouter les joueurs à la liste des joueurs

@@ -28,13 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmParaduclassement));
             this.LblNbrjoueur = new System.Windows.Forms.Label();
             this.LblJeux = new System.Windows.Forms.Label();
             this.cbxjeux = new System.Windows.Forms.ComboBox();
             this.lblequipe = new System.Windows.Forms.Label();
-            this.lblSeul = new System.Windows.Forms.Label();
             this.chbequipe = new System.Windows.Forms.CheckBox();
-            this.chbSeul = new System.Windows.Forms.CheckBox();
             this.lblnbrequipe = new System.Windows.Forms.Label();
             this.btnvalider = new System.Windows.Forms.Button();
             this.tbxnbrequipe = new System.Windows.Forms.TextBox();
@@ -84,16 +83,6 @@
             this.lblequipe.TabIndex = 5;
             this.lblequipe.Text = "Equipe :";
             // 
-            // lblSeul
-            // 
-            this.lblSeul.AutoSize = true;
-            this.lblSeul.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSeul.Location = new System.Drawing.Point(21, 92);
-            this.lblSeul.Name = "lblSeul";
-            this.lblSeul.Size = new System.Drawing.Size(49, 20);
-            this.lblSeul.TabIndex = 6;
-            this.lblSeul.Text = "Seul :";
-            // 
             // chbequipe
             // 
             this.chbequipe.AutoSize = true;
@@ -103,16 +92,6 @@
             this.chbequipe.TabIndex = 7;
             this.chbequipe.UseVisualStyleBackColor = true;
             this.chbequipe.CheckedChanged += new System.EventHandler(this.chbequipe_CheckedChanged);
-            // 
-            // chbSeul
-            // 
-            this.chbSeul.AutoSize = true;
-            this.chbSeul.Location = new System.Drawing.Point(94, 92);
-            this.chbSeul.Name = "chbSeul";
-            this.chbSeul.Size = new System.Drawing.Size(15, 14);
-            this.chbSeul.TabIndex = 8;
-            this.chbSeul.UseVisualStyleBackColor = true;
-            this.chbSeul.CheckedChanged += new System.EventHandler(this.chbSeul_CheckedChanged);
             // 
             // lblnbrequipe
             // 
@@ -173,13 +152,12 @@
             this.Controls.Add(this.tbxnbrequipe);
             this.Controls.Add(this.btnvalider);
             this.Controls.Add(this.lblnbrequipe);
-            this.Controls.Add(this.chbSeul);
             this.Controls.Add(this.chbequipe);
-            this.Controls.Add(this.lblSeul);
             this.Controls.Add(this.lblequipe);
             this.Controls.Add(this.cbxjeux);
             this.Controls.Add(this.LblJeux);
             this.Controls.Add(this.LblNbrjoueur);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmParaduclassement";
             this.Text = "Paramètre du classement";
             this.Load += new System.EventHandler(this.FrmParaduclassement_Load);
@@ -194,9 +172,7 @@
         private System.Windows.Forms.Label LblJeux;
         private System.Windows.Forms.ComboBox cbxjeux;
         private System.Windows.Forms.Label lblequipe;
-        private System.Windows.Forms.Label lblSeul;
         private System.Windows.Forms.CheckBox chbequipe;
-        private System.Windows.Forms.CheckBox chbSeul;
         private System.Windows.Forms.Label lblnbrequipe;
         private System.Windows.Forms.Button btnvalider;
         private System.Windows.Forms.TextBox tbxnbrequipe;
