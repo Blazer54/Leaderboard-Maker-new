@@ -10,17 +10,20 @@ namespace ProjetPerso
     {
         //attributs
         private string pointclass;
-        public Systpoint(string pointclass)
+        private string pointelim;
+        public Systpoint(string pointclass, string pointelim)
         {
-            this.Pointclass = pointclass;  
+            this.Pointclass = pointclass;
+            this.Pointelim = pointelim;
         }
 
         //propriétés
         public string Pointclass { get => pointclass; set => pointclass = value; }
-   
+        public string Pointelim { get => pointelim; set => pointelim = value; }
+
         public override string ToString()
         {
-            return $"{Pointclass} ";
+            return $"{Pointclass} {Pointelim} ";
         }
  
     }

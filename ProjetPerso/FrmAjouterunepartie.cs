@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace ProjetPerso
 {
-    public partial class Form4 : Form
+    public partial class FormAjouterPartie : Form
     {
-        public Form4()
+        public FormAjouterPartie()
         {
             InitializeComponent();
+        }
+
+        private void FormAjouterPartie_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

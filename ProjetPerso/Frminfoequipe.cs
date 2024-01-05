@@ -34,7 +34,7 @@ namespace ProjetPerso
                 Label label = new Label();
                 label.Text = equipe[i].NomEquipe;
                 label.Name = "lblEquipeHaut" + i.ToString();
-                label.Location = new System.Drawing.Point(posX * i, 50);
+                label.Location = new System.Drawing.Point(posX * (i+1), 50);
                 this.Controls.Add(label);
                 int joueurNumEquipe = 0;
                 for (int f = 0; f < nombreDeJoueur; f++)
@@ -45,7 +45,7 @@ namespace ProjetPerso
                         Label labeljoueur = new Label();
                         labeljoueur.Text = $"{joueur[f].Nom}";
                         labeljoueur.Name = "lblJoueur" + f.ToString();
-                        labeljoueur.Location = new System.Drawing.Point(posX * i, 50 + (20 * joueurNumEquipe));
+                        labeljoueur.Location = new System.Drawing.Point(posX * (i+1), 50 + (20 * joueurNumEquipe));
                         this.Controls.Add(labeljoueur);
                     }
                 }

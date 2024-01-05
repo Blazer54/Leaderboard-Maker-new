@@ -24,7 +24,7 @@ namespace ProjetPerso
         private void FrmSystPoint_Load(object sender, EventArgs e)
         {
             int nombreDeJoueur = Convert.ToInt32(nombrejoueurs);
-            int nombreEquipe = equipes.Count - 1;
+            int nombreEquipe = equipes.Count;
 
             for (int i = 1; i <= nombreEquipe; i++)
             {
@@ -36,30 +36,31 @@ namespace ProjetPerso
                 label.Size = new System.Drawing.Size(170, 20);
                 this.Controls.Add(label);
 
-                TextBox textBoxJoueur = new TextBox();
-                textBoxJoueur.Location = new System.Drawing.Point(150 + 170, posY * i);
-                textBoxJoueur.Size = new System.Drawing.Size(100, 20);
-                textBoxJoueur.Name = "tbxJoueur" + i.ToString(); // Nommer la TextBox de manière unique
-                tbx.Add(textBoxJoueur);
-                this.Controls.Add(textBoxJoueur);
+                TextBox textBoxPoint = new TextBox();
+                textBoxPoint.Location = new System.Drawing.Point(150 + 170, posY * i);
+                textBoxPoint.Size = new System.Drawing.Size(100, 20);
+                textBoxPoint.Name = "tbxPoint" + i.ToString(); // Nommer la TextBox de manière unique
+                tbx.Add(textBoxPoint);
+                this.Controls.Add(textBoxPoint);
             }
 
         }
         private void btnValider_Click(object sender, EventArgs e)
         {
             this.Hide();
+            AjouterPoint();
             FrmMenuPrincipale frmMenuPrincipale = new FrmMenuPrincipale();
             frmMenuPrincipale.ShowDialog();
         }
-        public void AjouterEquipe()
+        public void AjouterPoint()
         {
             for (int i = 0; i < tbx.Count; i++)
             {
-                string nbrPoint = tbx[i].Text;
-                if (!string.IsNullOrEmpty(nbrPoint))
-                {/*
-                    systpoint.Add(new Pointclass(nbrPoint));
-                */
+                string point = tbx[i].Text;
+                string pointelim = tbxptselim.Text; 
+                if (!string.IsNullOrEmpty(point))
+                {
+                    systpoint.Add(new Systpoint(point,pointelim));
                 }
                 else { return; }
             }

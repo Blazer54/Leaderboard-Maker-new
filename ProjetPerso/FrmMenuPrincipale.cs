@@ -16,5 +16,19 @@ namespace ProjetPerso
         {
             InitializeComponent();
         }
+
+        private void btnAfficherClass_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmLeaderboard frmleaderboardequipe = new FrmLeaderboard();//création d'une nouvelle form//
+            frmleaderboardequipe.ShowDialog();
+        }
+
+        private void btnAddPartie_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormAjouterPartie frmajouterpartie = new FormAjouterPartie();//création d'une nouvelle form//
+            frmajouterpartie.ShowDialog();
+        }
     }
 }

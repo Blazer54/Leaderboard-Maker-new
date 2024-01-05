@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace ProjetPerso
 {
-    public partial class Form2 : Form
+    public partial class FrmLeaderboard : Form
     {
-        public Form2()
+        public FrmLeaderboard()
         {
             InitializeComponent();
+        }
+
+        private void FrmLeaderboard_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FrmLeaderboard_Load_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
