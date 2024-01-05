@@ -1,6 +1,6 @@
 ﻿namespace ProjetPerso
 {
-    partial class FormAjouterPartie
+    partial class Form3
     {
         /// <summary>
         /// Required designer variable.
@@ -28,23 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form4));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
             this.SuspendLayout();
             // 
-            // FormAjouterEquipe
+            // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
-<<<<<<< HEAD:ProjetPerso/FrmAjouterunepartie.Designer.cs
-            this.Name = "FormAjouterEquipe";
-=======
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Form4";
->>>>>>> c8179cf655194b585c30a1b6ea9fb9b6f10e6dbd:ProjetPerso/FrmAjouterunepartieequipe.Designer.cs
-            this.Text = "Form4";
-            this.Load += new System.EventHandler(this.FormAjouterEquipe_Load);
+            this.Name = "Form3";
+            this.Text = "Form3";
             this.ResumeLayout(false);
 
         }

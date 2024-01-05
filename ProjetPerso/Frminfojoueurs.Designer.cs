@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmInfoJoueurs));
             this.lblInfoJoueur = new System.Windows.Forms.Label();
             this.btnValider = new System.Windows.Forms.Button();
             this.tbxNone = new System.Windows.Forms.TextBox();
@@ -81,9 +82,10 @@
             this.Controls.Add(this.tbxNone);
             this.Controls.Add(this.btnValider);
             this.Controls.Add(this.lblInfoJoueur);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmInfoJoueurs";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "y";
+            this.Text = "Information sur les joueurs";
             this.Load += new System.EventHandler(this.FrmInfoJoueurs_Load_1);
             this.ResumeLayout(false);
             this.PerformLayout();
