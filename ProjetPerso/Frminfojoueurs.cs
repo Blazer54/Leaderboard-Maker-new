@@ -51,29 +51,38 @@ namespace ProjetPerso
                 int posX = 180;
                 // Créer un Label
                 Label label = new Label();
+                //le texte que va contenir le label serait une indication sur quel joueur
                 label.Text = "Joueur" + i.ToString();
                 label.Name = "lblJoueur" + i.ToString();
+                //o définit la position
                 label.Location = new System.Drawing.Point(posX + 25, 50 * i + 30);
                 this.Controls.Add(label);
 
+                //on ajoute une nouvelle textbox
                 TextBox textBoxJoueur = new TextBox();
+                //on définit la position
                 textBoxJoueur.Location = new System.Drawing.Point(posX + 125, 50 * i + 30);
                 textBoxJoueur.Size = new System.Drawing.Size(100, 20);
                 textBoxJoueur.Name = "tbxJoueur" + i.ToString(); // Nommer la TextBox de manière unique
+                //on l'ajoute à la liste des textbox
                 listTextbox.Add(textBoxJoueur);
                 this.Controls.Add(textBoxJoueur);
 
                 // Créer une ComboBox
                 if (equipeTransmis == true)
                 {
+                    //on créer la combobox
                     ComboBox comboBoxJoueur = new ComboBox();
-                    for (int f = 1; f <= equipe.Count - 1; f++)
+                    //on ajoute les équipes à l'intérieur
+                    for (int f = 0; f <= equipe.Count - 1; f++)
                     {
                         comboBoxJoueur.Items.Add(equipe[f].NomEquipe);
                     }
+                    //on définit sa position
                     comboBoxJoueur.Location = new System.Drawing.Point(posX + 245, 50 * i + 30);
                     comboBoxJoueur.Size = new System.Drawing.Size(100, 20);
                     comboBoxJoueur.Name = "cbxJoueur" + i.ToString(); // Nommer la ComboBox de manière unique
+                    //on ajoute la combobox à la liste des combobox
                     listCombobox.Add(comboBoxJoueur);
                     this.Controls.Add(comboBoxJoueur);
                 }
@@ -81,37 +90,47 @@ namespace ProjetPerso
 
 
             }
+            //on créer une variable pour la cordonnée Y de la position
             int posY = 80;
+            //boucle pour que cela place l'autre moitié des éléments
             for (int i = nombreJoueurTransmisInt / 2 + 1; i <= nombreJoueurTransmisInt; i++)
             {
                 int posX = 600;
                 // Créer un Label
                 Label label = new Label();
+                //le texte du label va indiquer quel joueur nous sommes entrain d'ajouter
                 label.Text = "Joueur" + i.ToString();
                 label.Name = "lblJoueur" + i.ToString();
                 label.Location = new System.Drawing.Point(posX + 25, posY);
                 this.Controls.Add(label);
-
+                //on créer une nouvelle textebox
                 TextBox textBoxJoueur = new TextBox();
+                //on indique la position de l'élément
                 textBoxJoueur.Location = new System.Drawing.Point(posX + 125, posY);
                 textBoxJoueur.Size = new System.Drawing.Size(100, 20);
                 textBoxJoueur.Name = "tbxJoueur" + i.ToString(); // Nommer la TextBox de manière unique
+                //on ajoute la textbox à la liste de textbox
                 listTextbox.Add(textBoxJoueur);
                 this.Controls.Add(textBoxJoueur);
 
                 // Créer une ComboBox
                 if (equipeTransmis == true)
                 {
+                    //une nouvelle combobox
                     ComboBox comboBoxJoueur = new ComboBox();
-                    for (int f = 1; f <= equipe.Count - 1; f++)
+                    //on va ajoute les équipes à la combobox
+                    for (int f = 0; f <= equipe.Count - 1; f++)
                     {
                         comboBoxJoueur.Items.Add(equipe[f].NomEquipe);
                     }
+                    //on indique sa position
                     comboBoxJoueur.Location = new System.Drawing.Point(posX + 245, posY);
                     comboBoxJoueur.Size = new System.Drawing.Size(100, 20);
                     comboBoxJoueur.Name = "cbxJoueur" + i.ToString(); // Nommer la ComboBox de manière unique
+                    //on l'ajoute à la liste des combobox
                     listCombobox.Add(comboBoxJoueur);
                     this.Controls.Add(comboBoxJoueur);
+                    //et on ajoute + 50 à la variable posY
                     posY = posY + 50;
                 }
 
@@ -139,13 +158,16 @@ namespace ProjetPerso
             }
         }
 
-        public void AjouterJoueur(string nbJoueur)
+        public void AjouterJoueur(string nbJoueur)//fonction pour ajouter les joueurs à la liste des joueurs
         {
-            int nbJoueurInt = Convert.ToInt32(nbJoueur);
+            int nbJoueurInt = Convert.ToInt32(nbJoueur);//on convertit le nombre de joueur en int
+            //la boucle se repète tant que ce n'est pas égale au nombre de joueur
             for(int i = 1; i <= nbJoueurInt; i++) 
             {
+                //on transforme le texte de la combobox à l'index i en string
                 string nomJoueur = listTextbox[i].Text;
                 string nomEquipe = listCombobox[i].SelectedItem?.ToString();
+                //si ce n'est pas vide
                 if (!string.IsNullOrEmpty(nomJoueur) || !string.IsNullOrEmpty(nomEquipe))
                 {
                     // Créer un nouvel objet Joueur et l'ajouter à la liste
