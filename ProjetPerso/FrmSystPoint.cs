@@ -49,7 +49,7 @@ namespace ProjetPerso
         {
             this.Hide();
             AjouterPoint();
-            FrmMenuPrincipale frmMenuPrincipale = new FrmMenuPrincipale();
+            FrmMenuPrincipale frmMenuPrincipale = new FrmMenuPrincipale(systpoint,equipes,joueurs);
             frmMenuPrincipale.ShowDialog();
         }
         public void AjouterPoint()

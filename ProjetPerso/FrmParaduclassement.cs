@@ -26,7 +26,6 @@ namespace ProjetPerso
 
                 lblnbrequipe.Show();//montrer le label pour le nombre d'équipe//
                 tbxnbrequipe.Show();//montrer la combo box pour le nombre d'équipe//
-                chbSeul.Hide();//cacher la check box//
                 bool equipeVerif = true;//envoie l'information true //
                 btnValidernbrequipe.Show();
             }
@@ -35,7 +34,6 @@ namespace ProjetPerso
 
                 lblnbrequipe.Hide();
                 tbxnbrequipe.Hide();
-                chbSeul.Show(); //montre la check box//
                 bool equipeVerif = false;//si la check box équipe n'est pas cochée //
                 btnValidernbrequipe.Hide();
             }
@@ -49,18 +47,6 @@ namespace ProjetPerso
             btnValidernbrequipe.Hide();
         }
 
-        private void chbSeul_CheckedChanged(object sender, EventArgs e)//quand la checkbox change d'état//
-        {
-            if (chbSeul.Checked == true) //si la checkbox seul est cochée //
-            {
-                chbequipe.Hide();//cache l'opption équipe//
-            }
-            else //so la checkbox n'est pas chochée
-            { 
-                chbequipe.Show(); //montre l'opption équipe//
-            }
-
-        }
         private void btnvalider_Click(object sender, EventArgs e)//quand on clique sur le btn valider //
         {
             AjouterEquipe();

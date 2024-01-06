@@ -82,6 +82,7 @@
             this.Controls.Add(this.btnAfficherClass);
             this.Name = "FrmMenuPrincipale";
             this.Text = "Form2";
+            this.Load += new System.EventHandler(this.FrmMenuPrincipale_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

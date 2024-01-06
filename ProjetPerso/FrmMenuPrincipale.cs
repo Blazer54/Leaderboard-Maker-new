@@ -12,23 +12,34 @@ namespace ProjetPerso
 {
     public partial class FrmMenuPrincipale : Form
     {
-        public FrmMenuPrincipale()
+        List<Equipe> equipe = new List<Equipe>();
+        List<Joueur> joueur = new List<Joueur>();
+        List<Systpoint> systpoints = new List<Systpoint>();
+        public FrmMenuPrincipale(List<Systpoint> systpoint, List<Equipe> equipes, List<Joueur> joueurs)
         {
             InitializeComponent();
+            equipe = equipes;
+            joueur = joueurs;
+            systpoints = systpoint;
         }
 
         private void btnAfficherClass_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FrmLeaderboard frmleaderboardequipe = new FrmLeaderboard();//création d'une nouvelle form//
+            FrmLeaderboard frmleaderboardequipe = new FrmLeaderboard(equipe, joueur, systpoints);//création d'une nouvelle form//
             frmleaderboardequipe.ShowDialog();
         }
 
         private void btnAddPartie_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FormAjouterPartie frmajouterpartie = new FormAjouterPartie();//création d'une nouvelle form//
+            FormAjouterPartie frmajouterpartie = new FormAjouterPartie(equipe, joueur, systpoints);//création d'une nouvelle form//
             frmajouterpartie.ShowDialog();
+        }
+
+        private void FrmMenuPrincipale_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
