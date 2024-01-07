@@ -29,10 +29,5 @@ namespace ProjetPerso
             FrmParaduclassement frmParaduclassement = new FrmParaduclassement();//création d'une nouvelle form//
             frmParaduclassement.ShowDialog();
         }
-
-        private void FrmBienvenue_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

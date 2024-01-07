@@ -68,7 +68,6 @@
             this.Name = "FrmBienvenue";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Leaderboard Maker";
-            this.Load += new System.EventHandler(this.FrmBienvenue_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
