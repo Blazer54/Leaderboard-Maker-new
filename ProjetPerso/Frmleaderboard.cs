@@ -15,7 +15,7 @@ namespace ProjetPerso
         List<Equipe> equipes = new List<Equipe>();
         List<Joueur> joueurs = new List<Joueur>();
         List<Systpoint> systpoint = new List<Systpoint>();
-        public FrmLeaderboard(List<Equipe> equipe, List<Joueur> joueur, List<Systpoint> systpoints)
+        public FrmLeaderboard(List<Equipe> equipe, List<Joueur> joueur, List<Systpoint> systpoints, List<Partie> parties)
         {
             InitializeComponent();
             equipes = equipe;
@@ -72,6 +72,11 @@ namespace ProjetPerso
                     }
                 }
             }
+        }
+
+        private void FrmLeaderboard_Load_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

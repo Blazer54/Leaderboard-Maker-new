@@ -37,6 +37,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Name = "FrmLeaderboard";
             this.Text = "Form2";
+            this.Load += new System.EventHandler(this.FrmLeaderboard_Load_1);
             this.ResumeLayout(false);
 
         }

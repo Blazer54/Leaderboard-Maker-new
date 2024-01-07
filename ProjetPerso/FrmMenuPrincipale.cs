@@ -22,14 +22,6 @@ namespace ProjetPerso
             joueur = joueurs;
             systpoints = systpoint;
         }
-
-        private void btnAfficherClass_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            FrmLeaderboard frmleaderboardequipe = new FrmLeaderboard(equipe, joueur, systpoints);//création d'une nouvelle form//
-            frmleaderboardequipe.ShowDialog();
-        }
-
         private void btnAddPartie_Click(object sender, EventArgs e)
         {
             this.Hide();

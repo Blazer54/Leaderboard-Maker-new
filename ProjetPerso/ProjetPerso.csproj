@@ -47,6 +47,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Equipe.cs" />
+    <Compile Include="FrmMenuPrincipale2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMenuPrincipale2.Designer.cs">
+      <DependentUpon>FrmMenuPrincipale2.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmAjouterunepartie.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +129,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMenuPrincipale.resx">
       <DependentUpon>FrmMenuPrincipale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMenuPrincipale2.resx">
+      <DependentUpon>FrmMenuPrincipale2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmModifier.resx">
       <DependentUpon>FrmModifier.cs</DependentUpon>
