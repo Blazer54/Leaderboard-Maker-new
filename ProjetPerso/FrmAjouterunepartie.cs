@@ -13,6 +13,7 @@ namespace ProjetPerso
 {
     public partial class FormAjouterPartie : Form
     {
+        //on créer les différentes listes
         List<Equipe> equipes = new List<Equipe>();
         List<Joueur> joueurs = new List<Joueur>();
         List<Systpoint> systpoint = new List<Systpoint>();
@@ -21,6 +22,7 @@ namespace ProjetPerso
         List<TextBox> listTextboxKill = new List<TextBox>();
         public FormAjouterPartie(List<Equipe> equipe, List<Joueur> joueur, List<Systpoint> systpoints)
         {
+            //on récupère les différentes informations
             InitializeComponent();
             equipes = equipe;
             joueurs = joueur;
@@ -57,9 +59,10 @@ namespace ProjetPerso
                 textBoxPlacement.Size = new System.Drawing.Size(100, 20);
                 textBoxPlacement.Name = "tbxJoueur" + i.ToString(); // Nommer la TextBox de manière unique
                 this.Controls.Add(textBoxPlacement);
-
+                //on ajoute à la liste des textbox
                 listTextboxPlacement.Add(textBoxPlacement);
 
+                //on créer un label pour indiquer que c'est la textbox des kills
                 Label labelKill = new Label();
                 labelKill.Text = $"Kill globaux";
                 labelKill.Location= new System.Drawing.Point(posX + 275, posY + 30);
@@ -99,9 +102,10 @@ namespace ProjetPerso
                 textBoxPlacement.Size = new System.Drawing.Size(100, 20);
                 textBoxPlacement.Name = "tbxJoueur" + i.ToString(); // Nommer la TextBox de manière unique
                 this.Controls.Add(textBoxPlacement);
-
+                //on l'ajoute à la liste des textbox
                 listTextboxPlacement.Add(textBoxPlacement);
 
+                //o céer un label pour^indiquer que c'est la textbox des kills
                 Label labelKill = new Label();
                 labelKill.Text = $"Kill globaux";
                 labelKill.Location = new System.Drawing.Point(posX + 450, posY + 30);
@@ -114,45 +118,59 @@ namespace ProjetPerso
                 textBoxKill.Size = new System.Drawing.Size(100, 20);
                 textBoxKill.Name = "tbxJoueur" + i.ToString(); // Nommer la TextBox de manière unique
                 this.Controls.Add(textBoxKill);
-
+                //on ajoute la textbox à la liste des textbox
                 listTextboxKill.Add(textBoxKill);
 
+                //on ajoute 50 a posY
                 posY = posY + 50;
             }
         }
 
         private void btnValider_Click(object sender, EventArgs e)
         {
+            //la form se cache
             this.Hide();
+            //appelle fonction pour ajouter des parties
             AjouterPartie(listTextboxPlacement, listTextboxKill, parties, equipes);
+            //fonction pour faire le calcul des points
             Calcul(parties, equipes, systpoint);
+            //on passe à la form Menu principal 2
             FrmMenuPrincipale2 frmMenuPrincipale2 = new FrmMenuPrincipale2(systpoint, equipes, joueurs,  parties);
             frmMenuPrincipale2.ShowDialog();
         }
 
         static void AjouterPartie(List<TextBox> listTextboxPlacement, List<TextBox> listTextboxKill, List<Partie> parties, List<Equipe> equipes)
         {
+            //on fait la boucle tant que i ne fait la taille de la liste des textboxplacement
             for (int i = 0; i < listTextboxPlacement.Count; i++) 
             {
+                //on récupère les informations des listes et on les stock selon l'index actuel
                 int placement = Convert.ToInt32(listTextboxPlacement[i].Text);
                 int kill = Convert.ToInt32(listTextboxKill[i].Text);
+                //on ajoute une partie à la liste des parties
                 parties.Add(new Partie(equipes[i].NomEquipe,placement, kill));
             }
         }
 
         static void Calcul(List<Partie> parties, List<Equipe> equipes, List<Systpoint> systpoint)
         {
+            //on fait une boucle de la taille de la liste des équipes
             for (int i = 0;i < equipes.Count;i++)
             {
+                //on stock et on convertit les nombres de points par top 1 et kills
                 int multiplicateurClassement = Convert.ToInt32(systpoint[0].Pointclass);
                 int multiplicateurKills = Convert.ToInt32(systpoint[0].Pointelim);
 
+                //les points de placement
                 int pointDePlacement = 0;
 
+                //si l'équipes fait top 1
                 if (parties[i].Placement == 1)
                 {
+                    //on ajoute le nombre de points
                     pointDePlacement = pointDePlacement + multiplicateurClassement;
                 }
+                //et on ajoute les points selon les kills
                 int pointKillGlobalEquipe = parties[i].Kill * multiplicateurKills;
             }
         }
