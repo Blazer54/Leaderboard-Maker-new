@@ -125,7 +125,8 @@ namespace ProjetPerso
         {
             this.Hide();
             AjouterPartie(listTextboxPlacement, listTextboxKill, parties, equipes);
-            FrmMenuPrincipale2 frmMenuPrincipale2 = new FrmMenuPrincipale2(systpoint, equipes, joueurs, parties);
+            Calcul(parties, equipes, systpoint);
+            FrmMenuPrincipale2 frmMenuPrincipale2 = new FrmMenuPrincipale2(systpoint, equipes, joueurs,  parties);
             frmMenuPrincipale2.ShowDialog();
         }
 
@@ -136,6 +137,23 @@ namespace ProjetPerso
                 int placement = Convert.ToInt32(listTextboxPlacement[i].Text);
                 int kill = Convert.ToInt32(listTextboxKill[i].Text);
                 parties.Add(new Partie(equipes[i].NomEquipe,placement, kill));
+            }
+        }
+
+        static void Calcul(List<Partie> parties, List<Equipe> equipes, List<Systpoint> systpoint)
+        {
+            for (int i = 0;i < equipes.Count;i++)
+            {
+                int multiplicateurClassement = Convert.ToInt32(systpoint[0].Pointclass);
+                int multiplicateurKills = Convert.ToInt32(systpoint[0].Pointelim);
+
+                int pointDePlacement = 0;
+
+                if (parties[i].Placement == 1)
+                {
+                    pointDePlacement = pointDePlacement + multiplicateurClassement;
+                }
+                int pointKillGlobalEquipe = parties[i].Kill * multiplicateurKills;
             }
         }
 
