@@ -32,10 +32,6 @@ namespace ProjetPerso
             frmleaderboardequipe.ShowDialog();
         }
 
-        private void FrmMenuPrincipale2_Load(object sender, EventArgs e)
-        {
-
-        }
         private void btnAddPartie_Click(object sender, EventArgs e)
         {
             this.Hide();

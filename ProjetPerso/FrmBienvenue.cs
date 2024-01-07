@@ -7,7 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+/*
+ Nom : Bieri / Escalera
+ prenom : Nicolas / Miguel
+ Classe : i.fa-p1a
+ But : Crée un programe pour faire des classement
+ Date : 23.11.2023 au 07.01.2024
+*/
 namespace ProjetPerso
 {
     public partial class FrmBienvenue : Form
