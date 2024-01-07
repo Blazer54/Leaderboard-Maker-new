@@ -124,8 +124,8 @@ namespace ProjetPerso
         private void btnValider_Click(object sender, EventArgs e)
         {
             this.Hide();
-            AjouterPartie(listTextboxPlacement, listTextboxKill,parties, equipes)
-            FrmMenuPrincipale2 frmMenuPrincipale2 = new FrmMenuPrincipale2(systpoint, equipes, joueurs, Partie);
+            AjouterPartie(listTextboxPlacement, listTextboxKill, parties, equipes);
+            FrmMenuPrincipale2 frmMenuPrincipale2 = new FrmMenuPrincipale2(systpoint, equipes, joueurs, parties);
             frmMenuPrincipale2.ShowDialog();
         }
 
