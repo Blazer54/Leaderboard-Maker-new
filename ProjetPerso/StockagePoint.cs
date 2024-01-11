@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProjetPerso
 {
-    internal class StockagePoint
+    public class StockagePoint
     {
         //attributs
         private int pointclass;

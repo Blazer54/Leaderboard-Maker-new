@@ -137,7 +137,7 @@ namespace ProjetPerso
             //fonction pour faire le calcul des points
             Calcul(parties, equipes, systpoint,stockagesPoints);
             //on passe à la form Menu principal 2
-            FrmMenuPrincipale2 frmMenuPrincipale2 = new FrmMenuPrincipale2(systpoint, equipes, joueurs,  parties);
+            FrmMenuPrincipale2 frmMenuPrincipale2 = new FrmMenuPrincipale2(systpoint, equipes, joueurs,  parties, stockagesPoints);
             frmMenuPrincipale2.ShowDialog();
         }
 

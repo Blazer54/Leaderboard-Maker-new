@@ -16,19 +16,21 @@ namespace ProjetPerso
         List<Joueur> joueur = new List<Joueur>();
         List<Systpoint> systpoints = new List<Systpoint>();
         List<Partie> partie = new List<Partie>();
-        public FrmMenuPrincipale2(List<Systpoint> systpoint, List<Equipe> equipes, List<Joueur> joueurs, List<Partie> parties)
+        List<StockagePoint> stockagePoint = new List<StockagePoint>();
+        public FrmMenuPrincipale2(List<Systpoint> systpoint, List<Equipe> equipes, List<Joueur> joueurs, List<Partie> parties, List<StockagePoint> stockagePoints)
         {
             InitializeComponent();
             equipe = equipes;
             joueur = joueurs;
             systpoints = systpoint;
-            partie = parties; 
+            partie = parties;
+            stockagePoint = stockagePoints;
         }
 
         private void btnAfficherClass_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FrmLeaderboard frmleaderboardequipe = new FrmLeaderboard(equipe, joueur, systpoints, partie);//création d'une nouvelle form//
+            FrmLeaderboard frmleaderboardequipe = new FrmLeaderboard(equipe, joueur, systpoints, partie, stockagePoints);//création d'une nouvelle form//
             frmleaderboardequipe.ShowDialog();
         }
 

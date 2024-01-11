@@ -17,7 +17,8 @@ namespace ProjetPerso
         List<Joueur> joueurs = new List<Joueur>();
         List<Systpoint> systpoint = new List<Systpoint>();
         List<Partie> partie = new List<Partie>();
-        public FrmLeaderboard(List<Equipe> equipe, List<Joueur> joueur, List<Systpoint> systpoints, List<Partie> parties)
+        List<StockagePoint> stockagePoint = new List<StockagePoint>();
+        public FrmLeaderboard(List<Equipe> equipe, List<Joueur> joueur, List<Systpoint> systpoints, List<Partie> parties, List<StockagePoint> stockagePoints)
         {
             InitializeComponent();
             //liste contienent les info tansmise//
@@ -25,6 +26,7 @@ namespace ProjetPerso
             joueurs = joueur;
             systpoint = systpoints;
             partie = parties;
+            stockagePoint = stockagePoints;
         }
 
         private void FrmLeaderboard_Load(object sender, EventArgs e)
@@ -80,7 +82,7 @@ namespace ProjetPerso
 
         private void btnok_Click(object sender, EventArgs e)
         {
-            FrmMenuPrincipale2 frmMenuPrincipale2 = new FrmMenuPrincipale2(systpoint, equipes, joueurs, partie);
+            FrmMenuPrincipale2 frmMenuPrincipale2 = new FrmMenuPrincipale2(systpoint, equipes, joueurs, partie,stockagePoint);
             frmMenuPrincipale2.ShowDialog();
         }
     }
