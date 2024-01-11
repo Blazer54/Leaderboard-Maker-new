@@ -38,7 +38,7 @@ namespace ProjetPerso
         {
             int posY = 80;
 
-            for (int i = 0; i <= equipes.Count / 2 -1  ; i++)
+            for (int i = 0; i < equipes.Count / 2   ; i++)
             {
                 //on définit une variable qui va être la position de x des éléments
                 int posX = 90;
@@ -78,10 +78,10 @@ namespace ProjetPerso
 
                 listTextboxKill.Add(textBoxKill);
 
-                posY = posY + 50;
+                posY = posY + 60;
             }
 
-
+            int posY2 = 80;
 
             for (int i = equipes.Count / 2; i <= equipes.Count - 1; i++)
             {
@@ -92,14 +92,14 @@ namespace ProjetPerso
                 //on définit ses propriétées
                 label.Text = $"placement {equipes[i].NomEquipe}";
                 label.Name = "lblJoueur" + i.ToString();
-                label.Location = new System.Drawing.Point(posX + 135, posY);
+                label.Location = new System.Drawing.Point(posX + 135, posY2);
                 //on l'ajoute à la liste des labels
                 this.Controls.Add(label);
 
                 //on créer une nouvelle textebox
                 TextBox textBoxPlacement = new TextBox();
                 //on indique la position de l'élément
-                textBoxPlacement.Location = new System.Drawing.Point(posX + 250, posY);
+                textBoxPlacement.Location = new System.Drawing.Point(posX + 250, posY2);
                 textBoxPlacement.Size = new System.Drawing.Size(100, 20);
                 textBoxPlacement.Name = "tbxJoueur" + i.ToString(); // Nommer la TextBox de manière unique
                 this.Controls.Add(textBoxPlacement);
@@ -109,13 +109,13 @@ namespace ProjetPerso
                 //o céer un label pour^indiquer que c'est la textbox des kills
                 Label labelKill = new Label();
                 labelKill.Text = $"Kill globaux";
-                labelKill.Location = new System.Drawing.Point(posX + 450, posY + 30);
+                labelKill.Location = new System.Drawing.Point(posX + 450, posY2 + 30);
                 this.Controls.Add(labelKill);
 
                 //on ajoute une nouvelle textbox
                 TextBox textBoxKill = new TextBox();
                 //on définit la position
-                textBoxKill.Location = new System.Drawing.Point(posX + 425, posY);
+                textBoxKill.Location = new System.Drawing.Point(posX + 425, posY2);
                 textBoxKill.Size = new System.Drawing.Size(100, 20);
                 textBoxKill.Name = "tbxJoueur" + i.ToString(); // Nommer la TextBox de manière unique
                 this.Controls.Add(textBoxKill);
@@ -123,7 +123,7 @@ namespace ProjetPerso
                 listTextboxKill.Add(textBoxKill);
 
                 //on ajoute 50 a posY
-                posY = posY + 50;
+                posY2 = posY2 + 60;
             }
         }
 
@@ -155,24 +155,29 @@ namespace ProjetPerso
 
         static void Calcul(List<Partie> parties, List<Equipe> equipes, List<Systpoint> systpoint)
         {
+            int pointPlacement = 0;
+            int pointKillGlobalEquipe = 0;
             //on fait une boucle de la taille de la liste des équipes
             for (int i = 0;i < equipes.Count;i++)
             {
+                string listPartieClassement = parties[i].Placement.ToString();
                 //on stock et on convertit les nombres de points par top 1 et kills
-                int multiplicateurClassement = Convert.ToInt32(systpoint[0].Pointclass);
                 int multiplicateurKills = Convert.ToInt32(systpoint[0].Pointelim);
-
-                //les points de placement
-                int pointDePlacement = 0;
-
-                //si l'équipes fait top 1
-                if (parties[i].Placement == 1)
+                List<int> listSystPointInt = new List<int>();
+                for (int j = 0; j <= systpoint.Count; j++)
                 {
-                    //on ajoute le nombre de points
-                    pointDePlacement = pointDePlacement + multiplicateurClassement;
+                    listSystPointInt.Add(Convert.ToInt32(systpoint[i].Pointclass));
                 }
+                for (int j = 0;j <= listSystPointInt.Count;j++)
+                {
+                    if (listPartieClassement[i] == listSystPointInt[j])
+                    {
+                        pointPlacement = pointPlacement + listSystPointInt[j];
+                    }
+                }
+
                 //et on ajoute les points selon les kills
-                int pointKillGlobalEquipe = parties[i].Kill * multiplicateurKills;
+                pointKillGlobalEquipe = parties[i].Kill * multiplicateurKills;
             }
         }
 
