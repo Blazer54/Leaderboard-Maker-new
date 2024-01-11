@@ -27,8 +27,7 @@ namespace ProjetPerso
             return $"{NomEquipe} {Placement} {Kill}";
         }
     }
-<<<<<<< HEAD
+
 }
-=======
-}
->>>>>>> 76b7dd9da4dd016259dfe7892d996b9b993730b7
+
+
