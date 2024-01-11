@@ -47,12 +47,14 @@
             // 
             // btnValider
             // 
+            this.btnValider.BackColor = System.Drawing.Color.Lime;
+            this.btnValider.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnValider.Location = new System.Drawing.Point(36, 15);
             this.btnValider.Name = "btnValider";
             this.btnValider.Size = new System.Drawing.Size(142, 75);
             this.btnValider.TabIndex = 31;
             this.btnValider.Text = "Valider";
-            this.btnValider.UseVisualStyleBackColor = true;
+            this.btnValider.UseVisualStyleBackColor = false;
             this.btnValider.Click += new System.EventHandler(this.btnValider_Click);
             // 
             // tbxNone
@@ -76,7 +78,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.BackColor = System.Drawing.Color.Aqua;
             this.ClientSize = new System.Drawing.Size(1077, 564);
             this.Controls.Add(this.cbxNone);
             this.Controls.Add(this.tbxNone);

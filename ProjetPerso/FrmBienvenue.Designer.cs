@@ -45,8 +45,8 @@
             // 
             // btnCommencer
             // 
-            this.btnCommencer.BackColor = System.Drawing.Color.LawnGreen;
-            this.btnCommencer.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCommencer.BackColor = System.Drawing.Color.Lime;
+            this.btnCommencer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCommencer.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCommencer.Location = new System.Drawing.Point(435, 194);
             this.btnCommencer.Name = "btnCommencer";
@@ -60,7 +60,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.ForestGreen;
+            this.BackColor = System.Drawing.Color.Aqua;
             this.ClientSize = new System.Drawing.Size(1077, 564);
             this.Controls.Add(this.btnCommencer);
             this.Controls.Add(this.lblBienvenue);

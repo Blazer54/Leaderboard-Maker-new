@@ -63,6 +63,8 @@
             // 
             // cbxjeux
             // 
+            this.cbxjeux.BackColor = System.Drawing.Color.Chartreuse;
+            this.cbxjeux.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbxjeux.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxjeux.FormattingEnabled = true;
             this.cbxjeux.Items.AddRange(new object[] {
@@ -86,11 +88,12 @@
             // chbequipe
             // 
             this.chbequipe.AutoSize = true;
+            this.chbequipe.BackColor = System.Drawing.Color.Chartreuse;
             this.chbequipe.Location = new System.Drawing.Point(94, 63);
             this.chbequipe.Name = "chbequipe";
             this.chbequipe.Size = new System.Drawing.Size(15, 14);
             this.chbequipe.TabIndex = 7;
-            this.chbequipe.UseVisualStyleBackColor = true;
+            this.chbequipe.UseVisualStyleBackColor = false;
             this.chbequipe.CheckedChanged += new System.EventHandler(this.chbequipe_CheckedChanged);
             // 
             // lblnbrequipe
@@ -105,16 +108,20 @@
             // 
             // btnvalider
             // 
+            this.btnvalider.BackColor = System.Drawing.Color.Lime;
+            this.btnvalider.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnvalider.Location = new System.Drawing.Point(25, 125);
             this.btnvalider.Name = "btnvalider";
             this.btnvalider.Size = new System.Drawing.Size(184, 113);
             this.btnvalider.TabIndex = 23;
             this.btnvalider.Text = "Valider";
-            this.btnvalider.UseVisualStyleBackColor = true;
+            this.btnvalider.UseVisualStyleBackColor = false;
             this.btnvalider.Click += new System.EventHandler(this.btnvalider_Click);
             // 
             // tbxnbrequipe
             // 
+            this.tbxnbrequipe.BackColor = System.Drawing.Color.Chartreuse;
+            this.tbxnbrequipe.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbxnbrequipe.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxnbrequipe.Location = new System.Drawing.Point(646, 59);
             this.tbxnbrequipe.Name = "tbxnbrequipe";
@@ -124,16 +131,20 @@
             // 
             // btnValidernbrequipe
             // 
+            this.btnValidernbrequipe.BackColor = System.Drawing.Color.Chartreuse;
+            this.btnValidernbrequipe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnValidernbrequipe.Location = new System.Drawing.Point(677, 83);
             this.btnValidernbrequipe.Name = "btnValidernbrequipe";
             this.btnValidernbrequipe.Size = new System.Drawing.Size(75, 23);
             this.btnValidernbrequipe.TabIndex = 25;
             this.btnValidernbrequipe.Text = "Valider";
-            this.btnValidernbrequipe.UseVisualStyleBackColor = true;
+            this.btnValidernbrequipe.UseVisualStyleBackColor = false;
             this.btnValidernbrequipe.Click += new System.EventHandler(this.btnValidernbrequipe_Click);
             // 
             // tbxnbrjoueur
             // 
+            this.tbxnbrjoueur.BackColor = System.Drawing.Color.Chartreuse;
+            this.tbxnbrjoueur.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbxnbrjoueur.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxnbrjoueur.Location = new System.Drawing.Point(162, 20);
             this.tbxnbrjoueur.Name = "tbxnbrjoueur";
@@ -145,7 +156,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.BackColor = System.Drawing.Color.Aqua;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.tbxnbrjoueur);
             this.Controls.Add(this.btnValidernbrequipe);

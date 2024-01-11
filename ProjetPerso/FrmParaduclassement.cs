@@ -41,7 +41,6 @@ namespace ProjetPerso
 
         private void FrmParaduclassement_Load(object sender, EventArgs e)//quand la forme ce charge //
         {
-            
             tbxnbrequipe.Hide();
             lblnbrequipe.Hide();
             btnValidernbrequipe.Hide();
@@ -85,16 +84,16 @@ namespace ProjetPerso
             int nbrcbxnbrequipe = Convert.ToInt32(tbxnbrequipe.Text);
             for (int i = 1; i <= nbrcbxnbrequipe / 2; i++)
             {
-                int posX = 180;
+                int posX = 200;
                 // Créer un Label
                 Label label = new Label();
                 label.Text = "Nom equipe : " + i.ToString();
                 label.Name = "lblEquipe" + i.ToString();
-                label.Location = new System.Drawing.Point(posX + 25, 50 * i + 50);
+                label.Location = new System.Drawing.Point(posX + 25, 50 * i + 70);
                 this.Controls.Add(label);
                 
                 TextBox textBox = new TextBox();
-                textBox.Location = new System.Drawing.Point(posX + 125, 50 * i + 50);
+                textBox.Location = new System.Drawing.Point(posX + 125, 50 * i + 70);
                 textBox.Size = new System.Drawing.Size(100, 20);
                 textBox.Name = "tbxnomequipe" + i.ToString(); // Nommer la TextBox de manière unique
                 tbxequipe.Add(textBox);
@@ -104,16 +103,16 @@ namespace ProjetPerso
             for (int i = nbrcbxnbrequipe / 2 + 1; i <= nbrcbxnbrequipe; i++)
             {
 
-                int posX = 480;
+                int posX = 500;
                 // Créer un Label
                 Label label = new Label();
                 label.Text = "Nom equipe : " + i.ToString();
                 label.Name = "lblEquipe" + i.ToString();
-                label.Location = new System.Drawing.Point(posX + 25, 50 * (i - nbrcbxnbrequipe / 2) + 50);
+                label.Location = new System.Drawing.Point(posX + 25, 50 * (i - nbrcbxnbrequipe / 2) + 70);
                 this.Controls.Add(label);
 
                 TextBox textBox = new TextBox();
-                textBox.Location = new System.Drawing.Point(posX + 125, 50 * (i - nbrcbxnbrequipe / 2) + 50);
+                textBox.Location = new System.Drawing.Point(posX + 125, 50 * (i - nbrcbxnbrequipe / 2) + 70);
                 textBox.Size = new System.Drawing.Size(100, 20);
                 textBox.Name = "tbxnomequipe" + i.ToString(); // Nommer la TextBox de manière unique
                 tbxequipe.Add(textBox);
