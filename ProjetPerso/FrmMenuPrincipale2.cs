@@ -30,7 +30,7 @@ namespace ProjetPerso
         private void btnAfficherClass_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FrmLeaderboard frmleaderboardequipe = new FrmLeaderboard(equipe, joueur, systpoints, partie, stockagePoints);//création d'une nouvelle form//
+            FrmLeaderboard frmleaderboardequipe = new FrmLeaderboard(equipe, joueur, systpoints, partie, stockagePoint);//création d'une nouvelle form//
             frmleaderboardequipe.ShowDialog();
         }
 

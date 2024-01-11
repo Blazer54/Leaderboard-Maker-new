@@ -66,6 +66,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FrmLeaderboard";
             this.Text = "Form2";
+            this.Load += new System.EventHandler(this.FrmLeaderboard_Load_1);
             this.ResumeLayout(false);
             this.PerformLayout();
 

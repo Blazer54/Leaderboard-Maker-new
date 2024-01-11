@@ -29,19 +29,40 @@ namespace ProjetPerso
             stockagePoint = stockagePoints;
         }
 
-        private void FrmLeaderboard_Load(object sender, EventArgs e)
+        private void btnok_Click(object sender, EventArgs e)
+        {
+            FrmMenuPrincipale2 frmMenuPrincipale2 = new FrmMenuPrincipale2(systpoint, equipes, joueurs, partie, stockagePoint);
+            frmMenuPrincipale2.ShowDialog();
+            this.Hide();
+        }
+
+        private void FrmLeaderboard_Load_1(object sender, EventArgs e)
         {
             int nombreDeJoueur = joueurs.Count;
             int nombreEquipe = equipes.Count - 1;
             //ajout de label pour afficher le nom des équipes, la position, le nombre d'elimination// 
             for (int i = 0; i <= nombreEquipe / 2; i++)
             {
-                int posX = 250;
+                int posX = 600;
                 Label label = new Label();
-                label.Text = partie[i].ToString();
+                label.Text = equipes[i].ToString();
                 label.Name = "lblEquipeHaut" + i.ToString();
                 label.Location = new System.Drawing.Point(posX * (i + 1), 50);
                 this.Controls.Add(label);
+                int posX1 = 750;
+                Label label1 = new Label();
+                label1.Text = "Nombre de point de clasement : "+stockagePoint[i].Pointclass.ToString();
+                label1.Name = "lblpointequipe" + i.ToString();
+                label1.Location = new System.Drawing.Point(posX1 * (i + 1), 50);
+                label1.Size = new System.Drawing.Size(150, 20);
+                this.Controls.Add(label1);
+                int posX2 = 1000;
+                Label label2 = new Label();
+                label2.Text = "Nombre de point d'elimination : " + stockagePoint[i].Pointelim.ToString();
+                label2.Name = "lblpointelim" + i.ToString();
+                label2.Location = new System.Drawing.Point(posX2 * (i + 1), 250);
+                label1.Size = new System.Drawing.Size(150, 20);
+                this.Controls.Add(label2);
                 int joueurNumEquipe = 0;
                 for (int f = 0; f < nombreDeJoueur; f++)
                 {
@@ -57,14 +78,27 @@ namespace ProjetPerso
                 }
             }
             for (int i = nombreEquipe / 2 + 1; i <= nombreEquipe; i++)
-            {
+            { 
                 int posX = 250;
                 Label label = new Label();
-                label.Text = partie[i].ToString();
+                label.Text = equipes[i].ToString();
                 label.Name = "lblEquipeBas" + i.ToString();
                 label.Location = new System.Drawing.Point(posX * (i - nombreEquipe / 2), 250);
                 this.Controls.Add(label);
+                int posX1 = 270;
+                Label label1 = new Label();
+                label1.Text = "Nombre de point de clasement : " + stockagePoint[i].Pointclass.ToString();
+                label1.Name = "lblpointequipe" + i.ToString();
+                label1.Location = new System.Drawing.Point(posX1 * (i - nombreEquipe / 2), 250);
+                this.Controls.Add(label1);
+                int posX2 = 280;
+                Label label2 = new Label();
+                label2.Text = "Nombre de point d'elimination : " + stockagePoint[i].Pointelim.ToString();
+                label2.Name = "lblpointelim" + i.ToString();
+                label2.Location = new System.Drawing.Point(posX2 * (i - nombreEquipe / 2), 250);
+                this.Controls.Add(label2);
                 int joueurNumEquipe = 0;
+
                 for (int f = 0; f < nombreDeJoueur; f++)
                 {
                     if (joueurs[f].NomEquipe == equipes[i].NomEquipe)
@@ -79,12 +113,7 @@ namespace ProjetPerso
                 }
             }
         }
-
-        private void btnok_Click(object sender, EventArgs e)
-        {
-            FrmMenuPrincipale2 frmMenuPrincipale2 = new FrmMenuPrincipale2(systpoint, equipes, joueurs, partie,stockagePoint);
-            frmMenuPrincipale2.ShowDialog();
-        }
     }
 }
+
 
