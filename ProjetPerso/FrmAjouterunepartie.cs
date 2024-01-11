@@ -156,11 +156,12 @@ namespace ProjetPerso
 
         static void Calcul(List<Partie> parties, List<Equipe> equipes, List<Systpoint> systpoint, List<StockagePoint> stockagesPoints)
         {
-            int pointPlacement = 0;
-            int pointKillGlobalEquipe = 0;
             //on fait une boucle de la taille de la liste des équipes
             for (int i = 0;i < equipes.Count;i++)
             {
+                int pointPlacement = 0;
+                int pointKillGlobalEquipe = 0;
+
                 string listPartieClassement = parties[i].Placement.ToString();
                 //on stock et on convertit les nombres de points par top 1 et kills
                 int multiplicateurKills = Convert.ToInt32(systpoint[0].Pointelim);
@@ -178,13 +179,11 @@ namespace ProjetPerso
                 }
 
                 //et on ajoute les points selon les kills
-<<<<<<< HEAD
-                pointKillGlobalEquipe = parties[i].Kill * multiplicateurKills;
-=======
-                int pointKillGlobalEquipe = parties[i].Kill * multiplicateurKills;
 
-                stockagesPoints.Add(new StockagePoint(pointDePlacement, pointKillGlobalEquipe));
->>>>>>> 76b7dd9da4dd016259dfe7892d996b9b993730b7
+                pointKillGlobalEquipe = parties[i].Kill * multiplicateurKills;
+
+                stockagesPoints.Add(new StockagePoint(pointPlacement, pointKillGlobalEquipe));
+
             }
         }
 
