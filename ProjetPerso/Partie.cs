@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace ProjetPerso
 {
-    internal class Partie
+    public class Partie
     {
         private string nomEquipe;
         private int placement;
         private int kill;
 
-        public Partie(string nomEquipe, int placement, int kill) 
+        public Partie(string nomEquipe, int placement, int kill)
         {
             this.NomEquipe = nomEquipe;
             this.Placement = placement;
@@ -27,5 +27,4 @@ namespace ProjetPerso
             return $"{NomEquipe} {Placement} {Kill}";
         }
     }
-
 }

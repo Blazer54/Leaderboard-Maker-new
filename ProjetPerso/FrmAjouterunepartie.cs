@@ -20,6 +20,7 @@ namespace ProjetPerso
         List<Partie> parties = new List<Partie>();
         List<TextBox> listTextboxPlacement = new List<TextBox>();
         List<TextBox> listTextboxKill = new List<TextBox>();
+        List<StockagePoint> stockagesPoints = new List<StockagePoint>();
         public FormAjouterPartie(List<Equipe> equipe, List<Joueur> joueur, List<Systpoint> systpoints)
         {
             //on récupère les différentes informations
@@ -133,7 +134,7 @@ namespace ProjetPerso
             //appelle fonction pour ajouter des parties
             AjouterPartie(listTextboxPlacement, listTextboxKill, parties, equipes);
             //fonction pour faire le calcul des points
-            Calcul(parties, equipes, systpoint);
+            Calcul(parties, equipes, systpoint,stockagesPoints);
             //on passe à la form Menu principal 2
             FrmMenuPrincipale2 frmMenuPrincipale2 = new FrmMenuPrincipale2(systpoint, equipes, joueurs,  parties);
             frmMenuPrincipale2.ShowDialog();
@@ -152,7 +153,7 @@ namespace ProjetPerso
             }
         }
 
-        static void Calcul(List<Partie> parties, List<Equipe> equipes, List<Systpoint> systpoint)
+        static void Calcul(List<Partie> parties, List<Equipe> equipes, List<Systpoint> systpoint, List<StockagePoint> stockagesPoints)
         {
             //on fait une boucle de la taille de la liste des équipes
             for (int i = 0;i < equipes.Count;i++)
@@ -172,6 +173,8 @@ namespace ProjetPerso
                 }
                 //et on ajoute les points selon les kills
                 int pointKillGlobalEquipe = parties[i].Kill * multiplicateurKills;
+
+                stockagesPoints.Add(new StockagePoint(pointDePlacement, pointKillGlobalEquipe));
             }
         }
 
