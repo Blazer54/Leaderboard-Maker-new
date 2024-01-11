@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProjetPerso
 {
-    internal class Partie
+    public class Partie
     {
         private string nomEquipe;
         private int placement;
@@ -27,5 +27,4 @@ namespace ProjetPerso
             return $"{NomEquipe} {Placement} {Kill}";
         }
     }
-
 }
