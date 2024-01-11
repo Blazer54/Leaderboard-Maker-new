@@ -165,28 +165,44 @@ namespace ProjetPerso
                 string listPartieClassement = parties[i].Placement.ToString();
                 //on stock et on convertit les nombres de points par top 1 et kills
                 int multiplicateurKills = Convert.ToInt32(systpoint[0].Pointelim);
+                //on va convertir la list des point de classement en Int
                 List<int> listSystPointInt = new List<int>();
+                //on convertit tout les éléments de la liste en int et on les ajoute à la nouvelle liste en int
                 for (int j = 0; j <= systpoint.Count; j++)
                 {
                     listSystPointInt.Add(Convert.ToInt32(systpoint[i].Pointclass));
                 }
-                for (int j = 0;j <= listSystPointInt.Count;j++)
-                {
-                    if (listPartieClassement[i] == listSystPointInt[j])
-                    {
-                        pointPlacement = pointPlacement + listSystPointInt[j];
-                    }
-                }
+
+                //on déclare une variable qui va représenté le placement
+                int placementEquipe = parties[i].Placement;
+                //on récupère la valeur de points de classement 
+                int pointEquipeClassementTest = TrouverPointsPourPlacements(placementEquipe, parties, listSystPointInt);
+
+                
 
                 //et on ajoute les points selon les kills
 
                 pointKillGlobalEquipe = parties[i].Kill * multiplicateurKills;
-
-                stockagesPoints.Add(new StockagePoint(pointPlacement, pointKillGlobalEquipe));
+                //on stock ensuite les points pour chaque equipe
+                stockagesPoints.Add(new StockagePoint(pointEquipeClassementTest, pointKillGlobalEquipe));
 
             }
         }
 
-
+        //fonction pour trouver le nombre de points à ajouter selon le placement
+        static int TrouverPointsPourPlacements(int placementEquipe, List<Partie> parties, List<int> listSystPointInt)
+        {
+            //on parcoure la liste des parties
+            for (int i = 0; i <= parties.Count; i++) 
+            {
+                //on vérifie le placement
+                if (placementEquipe == parties[i].Placement) 
+                {
+                    //et on retourne le nombre de points à ajouter
+                    return listSystPointInt[i];
+                }
+            }
+            return 0;
+        }
     }
 }
