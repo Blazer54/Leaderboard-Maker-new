@@ -38,7 +38,7 @@ namespace ProjetPerso
         {
             int posY = 80;
 
-            for (int i = 0; i <= equipes.Count / 2 - 1; i++)
+            for (int i = 0; i <= equipes.Count / 2 -1  ; i++)
             {
                 //on définit une variable qui va être la position de x des éléments
                 int posX = 90;
@@ -78,6 +78,7 @@ namespace ProjetPerso
 
                 listTextboxKill.Add(textBoxKill);
 
+                posY = posY + 50;
             }
 
 
