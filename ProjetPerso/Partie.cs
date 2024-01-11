@@ -12,7 +12,7 @@ namespace ProjetPerso
         private int placement;
         private int kill;
 
-        public Partie(string nomEquipe, int placement, int kill) 
+        public Partie(string nomEquipe, int placement, int kill)
         {
             this.NomEquipe = nomEquipe;
             this.Placement = placement;
@@ -27,4 +27,8 @@ namespace ProjetPerso
             return $"{NomEquipe} {Placement} {Kill}";
         }
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 76b7dd9da4dd016259dfe7892d996b9b993730b7
